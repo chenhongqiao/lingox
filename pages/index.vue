@@ -13,7 +13,7 @@
         </div>
       </div>
     </v-container>
-    <v-parallax height="700" class="mt-4" :src="require('@/assets/images/hero.jpg')" />
+    <v-parallax height="600" class="mt-4" :src="require('@/assets/images/hero.jpg')" />
     <v-container class="py-4 py-lg-8 mt-4">
       <v-row align="center">
         <v-col cols="12" md="6">
