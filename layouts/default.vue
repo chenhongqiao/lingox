@@ -187,7 +187,7 @@ export default defineComponent({
 
     const info: Ref<Route[]> = ref([{
       text: 'Mission',
-      link: '/mission'
+      link: '/about/mission'
     }])
 
     const actions: Ref<Route[]> = ref([
