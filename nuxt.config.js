@@ -54,7 +54,7 @@ export default {
     ['@nuxtjs/google-fonts', {
       families: {
         Poppins: [100, 200, 300, 400, 500, 600, 700, 900],
-        Alice: [400]
+        Alice: [400, 500]
       }
     }],
     'nuxt-compress'

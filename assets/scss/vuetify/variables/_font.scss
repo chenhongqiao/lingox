@@ -85,19 +85,18 @@ $headings: (
     'font-family': $body-font-family
   ),
   'body-1': (
-    'size': 1.2rem,
-    'font-family': $alice-and-alternatives
+    'size': 1.125rem,
+    'font-family': $alice-and-alternatives,
+    'line-height': 1.8rem,
+    'letter-spacing': 0rem
   ),
   'body-2': (
-    'size': 1rem,
-    'font-family': $alice-and-alternatives
+    'size': 0.9rem,
+    'font-family': $alice-and-alternatives,
+    'letter-spacing': 0rem
   )
 );
 
-.text-body-1 {
-  opacity: 0.85;
-}
-
 .text-body-2 {
-  opacity: 0.85;
+  opacity: 0.95;
 }
