@@ -27,9 +27,9 @@
             Ensuring that all students have access to quality, authentic foreign language education, regardless of income level.
           </div>
           <div class="mt-4">
-            <router-link to="#" class="text-decoration-none font-weight-bold text-h6">
+            <nuxt-link to="/about/mission" class="text-decoration-none font-weight-bold text-h6">
               Learn More
-            </router-link>
+            </nuxt-link>
           </div>
         </v-col>
       </v-row>
@@ -44,9 +44,9 @@
             Meet the people behind the scenes of LingoX.
           </div>
           <div class="mt-4">
-            <router-link to="#" class="text-decoration-none font-weight-bold text-h6">
+            <nuxt-link to="/team/board" class="text-decoration-none font-weight-bold text-h6">
               Learn More
-            </router-link>
+            </nuxt-link>
           </div>
         </v-col>
         <v-col cols="12" md="6">
