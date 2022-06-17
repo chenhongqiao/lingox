@@ -20,7 +20,7 @@
           <v-img :src="require('@/assets/images/feature-1.jpg')" class="rounded-lg elevation-6" max-height="480" />
         </v-col>
         <v-col cols="12" md="6">
-          <h3 class="text-h3 primary--text">
+          <h3 class="text-h3">
             Our Mission
           </h3>
           <div class="text-body-1 mt-5">
@@ -37,7 +37,7 @@
     <v-container class="py-4 py-lg-8 mt-4">
       <v-row align="center">
         <v-col cols="12" md="6">
-          <h3 class="text-h3 primary--text">
+          <h3 class="text-h3">
             Our Team
           </h3>
           <div class="text-body-1 mt-5">
