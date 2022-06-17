@@ -1,6 +1,6 @@
 <template>
   <div>
-    <v-container class="mt-12 mb-4 text-center">
+    <v-container class="mt-8 mb-4 text-center">
       <v-img :src="require('~/assets/images/mission-1.jpg')" alt="" class="rounded elevation-3 mb-6" />
     </v-container>
     <v-container class="my-4">
@@ -24,14 +24,14 @@
         </v-col>
       </v-row>
     </v-container>
-    <v-container class="my-6">
+    <v-container class="mt-6 mb-12">
       <v-row align="center">
         <v-col cols="4">
           <v-img :src="require('@/assets/images/mission-3.jpg')" class="rounded-lg elevation-6" max-height="480" />
         </v-col>
         <v-col>
           <div>
-            <div class="text-h5" style="font-family: Alice !important">
+            <div class="text-h5" style="font-family: Alice, sans-serif !important">
               <i>"LingoX’s work has opened up countless windows of opportunity for our students."</i>
             </div>
             <div class="text-h6 mt-3">
@@ -47,5 +47,8 @@
   </div>
 </template>
 <script lang="ts">
-
+import { defineComponent } from '@nuxtjs/composition-api'
+export default defineComponent({
+  name: 'MissionPage'
+})
 </script>
