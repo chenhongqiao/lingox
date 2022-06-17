@@ -154,7 +154,7 @@ export default defineComponent({
   setup () {
     const routes: Ref<Array<Group | Route>> = ref([
       {
-        text: 'About us',
+        text: 'About Us',
         base: '/about',
         routes: [
           { text: 'Mission', link: '/mission' },
