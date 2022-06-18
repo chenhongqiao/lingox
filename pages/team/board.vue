@@ -7,39 +7,16 @@
       <div style="width: 80px; height: 4px" class="my-4 secondary mx-auto" />
     </v-responsive>
 
-    <div v-for="(person, i) in team" :key="i">
-      <v-divider v-if="i !== 0" />
-      <v-row class="py-3" align="center">
-        <v-col cols="3">
-          <v-img :src="person.image" max-height="400" class="elevation-6 rounded" />
-        </v-col>
-        <v-col>
-          <div class="text-h5">
-            {{ person.name }}
-          </div>
-          <div class="text-h6 secondary--text">
-            {{ person.position }}
-          </div>
-          <div class="text-body-1 mt-3">
-            {{ person.bio }}
-          </div>
-        </v-col>
-      </v-row>
-    </div>
+    <Roster :team="team" />
   </v-container>
 </template>
 <script lang="ts">
 import { defineComponent, ref, Ref } from '@nuxtjs/composition-api'
-interface BoardMember {
-  name: string
-  position?: string
-  bio: string
-  image: string
-}
+import { Member } from '~/components/Roster.vue'
 export default defineComponent({
   name: 'BoardPage',
   setup () {
-    const team: Ref<BoardMember[]> = ref([
+    const team: Ref<Member[]> = ref([
       {
         name: 'Mia Lee',
         position: 'Founder + CEO',
@@ -52,6 +29,12 @@ export default defineComponent({
         bio: 'David is currently a senior at University High School in Irvine, California. Being involved in different activities such as MUN and FBLA, he has learned about the importance of both communication and the importance of trying to help out one\'s community. At LingoX, he hopes to achieve this goal by making English a more accessible language to those who may not have the opportunities. Outside of school, David enjoys playing golf and listening to music.',
         image: require('@/assets/images/team/david.jpg')
       }, {
+        name: 'Hannah Choi',
+        position: 'Assistant Marketing Officer',
+        bio: 'Coming from a multicultural background, Hannah values learning about different cultures and languages. Through LingoX, she hopes that she will be able to encourage and empower other students to also be passionate about their culture. During her free time, Hannah enjoys drawing, going to the beach, and playing the piano.',
+        image: require('@/assets/images/team/hannah.png')
+      },
+      {
         name: 'Jane Wang',
         position: 'Assistant Marketing Officer',
         bio: 'As a first-generation immigrant with parents in the education industry, Jane Wang recognizes the importance of English education for youth in underserved communities. It is essential for those to communicate and connect with people they could not understand before,  and therefore understand the world in a more enormous scope. Jane hopes to utilize her previous experience in advertising and marketing to reach a larger international audience, especially young women wanting to pursue higher education.. Outside of her academics, Jane enjoys pursuing visual arts and designing escape rooms.',
