@@ -48,7 +48,8 @@ export default {
     ['@nuxtjs/vuetify', {
       customVariables: ['~/assets/scss/vuetify/variables/_index.scss'],
       optionsPath: '~/configs/vuetify.js',
-      treeShake: true
+      treeShake: true,
+      extractCSS: true
     }],
     '@nuxt/content',
     ['@nuxtjs/google-fonts', {
