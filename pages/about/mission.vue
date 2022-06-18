@@ -27,7 +27,7 @@
         </v-col>
       </v-row>
     </v-container>
-    <v-container class="mt-6 mb-12">
+    <!--v-container class="mt-6 mb-12">
       <v-row align="center">
         <v-col cols="4">
           <v-img :src="require('@/assets/images/mission-3.jpg')" class="rounded-lg elevation-6" max-height="480" />
@@ -46,7 +46,7 @@
           </div>
         </v-col>
       </v-row>
-    </v-container>
+    </v-container-->
   </div>
 </template>
 <script lang="ts">
