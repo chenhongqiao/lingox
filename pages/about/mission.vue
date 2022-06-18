@@ -10,13 +10,16 @@
             Our Mission
           </h3>
           <div class="text-body-1 mt-5">
-            Especially in the past few decades, language has become one of the most integral components of education, especially English and Chinese. For many, they’re even mandated as a second languages due to their universality. In fact, those with greater English and Chinese proficiency are often rewarded with many more opportunities in the workforce. However, students living in less urban areas often lack sufficient resources and support to help them improve in foreign languages.
+            Especially in the past few decades, language has become one of the most integral components of education and, in turn, life success. In particular, English and Chinese have stood out as two key global languages, with several billion people using both languages for business or everyday communication. For many, they are even mandated as second languages due to their universality. In fact, those with greater English and Chinese proficiency are often rewarded with many more opportunities in the workforce, which then leads to improved life outcomes such as higher salaries and a better standard of living. However, students living in less urban areas often lack sufficient resources and support to help them improve in foreign languages.
           </div>
           <div class="text-body-1 mt-3">
-            In order to address this problem, LingoX connects English-speaking and Chinese-speaking volunteers to these students for the purpose of providing live instruction and an opportunity to converse with native speakers. Within the curriculum, there is a heavy emphasis on conversational language that can be used in the workforce and in daily life.
+            In order to address this problem, LingoX connects English-speaking and Chinese-speaking volunteers to these students for the purpose of providing free live instruction and conversation with native speakers. Within the curriculum, there is a heavy emphasis on conversational language that can be used in the workforce and in daily life. In order to match society’s ever-developing needs, the curriculum taught by LingoX tutors is also updated weekly by specialized developers with real-world experience to ensure that our students are kept at the forefront of versatile education.
           </div>
           <div class="text-body-1 mt-3">
-            LingoX recognizes the potential that every student encompasses and strives to provide them with all the necessary resources to succeed in a future career path of their choice, making sure that socioeconomic status is never a barrier.
+            LingoX recognizes the potential that every student encompasses and strives to provide them with all the necessary resources to succeed in a future career path of their choice, making sure that socioeconomic status and lacking language skills is never a barrier. Here at LingoX, our uniqueness is our flexibility. We refuse to impose an unconforming, rigid curriculum upon our students, LingoX tutors work around the student’s schedule, at a pace which suits the student’s personal learning speed.
+          </div>
+          <div class="text-body-1 mt-3">
+            Our work is directed toward assisting underserved schoolchildren in communities such as China, Africa, and India by teaching English and Chinese. More broadly, however, LingoX strives to support all students, including refugees of war, who lack proper educational assistance  – which is why any students in need of aid are welcome to enroll completely free of charge.
           </div>
         </v-col>
         <v-col cols="12" md="5" class="d-md-flex d-none">

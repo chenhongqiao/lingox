@@ -68,7 +68,7 @@ export default {
       {
         code: 'zh',
         iso: 'zh-CN',
-        file: 'english.strings.js'
+        file: 'chinese.strings.js'
       }],
       langDir: 'lang/',
       defaultLocale: 'en'
