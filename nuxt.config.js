@@ -58,7 +58,21 @@ export default {
         Alice: [400, 500]
       }
     }],
-    'nuxt-compress'
+    'nuxt-compress',
+    ['@nuxtjs/i18n', {
+      locales: [{
+        code: 'en',
+        iso: 'en-US',
+        file: 'english.strings.js'
+      },
+      {
+        code: 'zh',
+        iso: 'zh-CN',
+        file: 'english.strings.js'
+      }],
+      langDir: 'lang/',
+      defaultLocale: 'en'
+    }]
   ],
 
   // Build Configuration: https://go.nuxtjs.dev/config-build
