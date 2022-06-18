@@ -97,6 +97,15 @@
             <div class="text-body-1">
               <div>“Making Language Education Accessible for All”</div>
             </div>
+
+            <div class="mt-2">
+              <a class="mr-2" @click.prevent.stop="$i18n.setLocale('zh')">
+                中文
+              </a>
+              <a @click.prevent.stop="$i18n.setLocale('en')">
+                English
+              </a>
+            </div>
           </v-col>
           <!--v-col
             cols="12"
