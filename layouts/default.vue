@@ -46,6 +46,7 @@
           <span
             v-for="(item, index) in routes"
             :key="index"
+            class="mr-1"
           >
             <span v-if="item.link">
               <v-btn :to="item.link" text>
