@@ -167,8 +167,8 @@ export default defineComponent({
         routes: [
           { text: 'Executive Board', link: '/board' },
           { text: 'International Chapters', link: '/chapters' },
-          { text: 'Educational Consultants', link: '/consultants' },
-          { text: 'Featured Tutors', link: '/tutors' }
+          { text: 'Educational Consultants', link: '/consultants' }
+          //, { text: 'Featured Tutors', link: '/tutors' }
         ]
       }
       /* ,{
