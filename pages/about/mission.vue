@@ -6,7 +6,7 @@
     <v-container class="my-4">
       <v-row align="center">
         <v-col cols="12" md="7">
-          <h3 class="text-h3 primary--text">
+          <h3 class="text-h3">
             Our Mission
           </h3>
           <div class="text-body-1 mt-5">
