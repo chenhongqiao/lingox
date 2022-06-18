@@ -34,7 +34,7 @@ export default defineComponent({
         image: require('@/assets/images/team/yuhua.png')
       }, {
         name: 'William Choi',
-        position: 'JHU BS ‘21 | Harvard MBE ‘22 | Brown MD ‘26',
+        position: 'JHU BS | Harvard MBE | Brown MD',
         bio: 'William Choi received his BS with honors in Neuroscience and double majored in Philosophy at the Johns Hopkins University. Since his undergraduate years, William has conducted research relating to various neuroethical issues, such as a quality-of-life study on caregivers of individuals with a rare neurological disorder and a capstone project on stakeholders\' perspectives on acceptable outcomes after acquired brain injury. As a rising student doctor, he is interested in studying diverse philosophical approaches to death and dying, and developing patient-centered decision-making models for individuals with neuropsychiatric conditions. He recently completed his Master of Bioethics degree at Harvard, and will be attending the Warren Alpert Medical School of Brown University this upcoming fall.',
         image: require('@/assets/images/team/william.png')
       }, {
@@ -42,6 +42,17 @@ export default defineComponent({
         position: 'UC Berkeley',
         bio: 'Rey will be studying sociology with a focus on its applications in healthcare at UC Berkeley in the fall. During high school, they did a lot of acting and speech & debate, and became nationally recognized in both by senior year! On top of this, Rey has worked with various professors to conduct research on topics like the decriminalization of illicit substances and its links to the prison industrial complex. When Rey’s not pursuing my academic interests, they love to knit and embroider gifts for friends!',
         image: require('@/assets/images/team/rey.jpeg')
+      }, {
+        name: 'Anjali Anbu',
+        bio: 'Anjali Anbu (Cornell University) is a prospective Global & Public Health Sciences major with a vested interest in institutional equity and a strong passion for the biological & chemical sciences. She is Secretary-General of Academy Model UN at the Bergen County Academies, and specializes in biomedical debate and healthcare policy. In her free time, she works with a student-run nonprofit to promote healthcare equity in rural and urban North India, and is a certified Emergency Medical Technician for pre-hospital emergency services in New Jersey. She enjoys talking to students about how to integrate public health into activism & career services, and she can be reached via email at anjanb2022@gmail.com',
+        position: 'Cornell University',
+        image: require('@/assets/images/team/anjali.jpeg')
+      },
+      {
+        name: 'Alex Fu',
+        bio: 'Alex Fu is a rising freshman at the University of California, Los Angeles, studying environmental science as well as international relations. An avid fishkeeper and gardener, Alex has pursued his interests through his business selling fish, shrimp, and aquatic plants, and is also the vice president of SEEDs, a gardening club. Additionally, he is the captain of the policy debate team, and vice president of mock trial, where he has researched topics ranging from 4th amendment rights to water protection. He was awarded High Honors for his essay on nuclear diplomacy in the 2021 John Locke Essay Competition, and attended California Boys State.',
+        position: 'UCLA',
+        image: require('@/assets/images/team/alex.jpeg')
       }
     ])
 
