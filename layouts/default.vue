@@ -77,9 +77,9 @@
           </span>
         </div>
 
-        <v-btn color="primary" large outlined rounded>
+        <!--v-btn color="primary" large outlined rounded>
           Donate
-        </v-btn>
+        </v-btn-->
       </v-container>
     </v-app-bar>
     <v-main>
@@ -88,7 +88,7 @@
     <v-footer class="secondary" dark>
       <v-container class="py-5">
         <v-row>
-          <v-col cols="12" md="4">
+          <v-col cols="12" md="6">
             <div class="mb-2">
               <div class="text-uppercase text-h7 text-truncate">
                 © 2022 LingoX
@@ -98,9 +98,9 @@
               <div>“Making Language Education Accessible for All”</div>
             </div>
           </v-col>
-          <v-col
+          <!--v-col
             cols="12"
-            md="4"
+            md="6"
           >
             <div class="text-uppercase text-h7 text-truncate mb-2">
               Info
@@ -114,8 +114,8 @@
                 {{ item.text }}
               </nuxt-link>
             </div>
-          </v-col>
-          <v-col
+          </v-col-->
+          <!--v-col
             cols="12"
             md="4"
           >
@@ -131,7 +131,7 @@
                 {{ item.text }}
               </nuxt-link>
             </div>
-          </v-col>
+          </v-col!-->
         </v-row>
       </v-container>
     </v-footer>
@@ -170,8 +170,8 @@ export default defineComponent({
           { text: 'Educational Consultants', link: '/consultants' },
           { text: 'Featured Tutors', link: '/tutors' }
         ]
-      },
-      {
+      }
+      /* ,{
         text: 'Get Involved',
         base: '/involved',
         routes: [
@@ -182,7 +182,7 @@ export default defineComponent({
       },
       { text: 'Partners', link: '/partners' },
       { text: 'Press', link: '/press' },
-      { text: 'Contact', link: '/contact' }
+      { text: 'Contact', link: '/contact' } */
     ])
 
     const info: Ref<Route[]> = ref([{

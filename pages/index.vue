@@ -66,8 +66,11 @@
           <div class="text-body-1">
             {{ item.content }}
           </div>
-          <v-btn :to="item.link" x-large color="primary" class="mt-4">
+          <!--v-btn :to="item.link" x-large color="primary" class="mt-4">
             Learn More
+          </v-btn-->
+          <v-btn :to="item.link" x-large color="primary" class="mt-4" disabled>
+            Coming Soon
           </v-btn>
         </v-col>
       </v-row>
