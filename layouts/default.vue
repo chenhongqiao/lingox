@@ -31,7 +31,7 @@
       </template>
     </v-navigation-drawer>
 
-    <v-app-bar height="80" flat>
+    <v-app-bar flat max-height="80" height="80">
       <v-app-bar-nav-icon class="d-md-none" @click="drawer = !drawer" />
       <v-container class="py-0 px-0 px-sm-2 fill-height">
         <nuxt-link to="/" class="d-flex align-center text-decoration-none mr-2">
@@ -179,8 +179,8 @@ export default defineComponent({
           { text: 'Educational Consultants', link: '/consultants' }
           //, { text: 'Featured Tutors', link: '/tutors' }
         ]
-      }
-      /* ,{
+      },
+      {
         text: 'Get Involved',
         base: '/involved',
         routes: [
@@ -188,7 +188,7 @@ export default defineComponent({
           { text: 'Become a Tutor', link: '/tutor' },
           { text: 'Join Our Team', link: '/join' }
         ]
-      },
+      }/*,
       { text: 'Partners', link: '/partners' },
       { text: 'Press', link: '/press' },
       { text: 'Contact', link: '/contact' } */
