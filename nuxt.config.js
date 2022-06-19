@@ -72,7 +72,8 @@ export default {
     }],
     ['@nuxt/image', {
       dir: 'static/images'
-    }]
+    }],
+    '@nuxtjs/axios'
   ],
 
   // Build Configuration: https://go.nuxtjs.dev/config-build
