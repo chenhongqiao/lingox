@@ -1,5 +1,5 @@
 <template>
-  <v-container class="py-4 py-lg-8">
+  <v-container class="py-4 py-md-8">
     <v-responsive max-width="1200" class="mx-auto text-center">
       <h2 class="text-h3">
         Frequently Asked Questions
@@ -7,7 +7,7 @@
       <div style="width: 80px; height: 4px" class="my-4 secondary mx-auto" />
     </v-responsive>
 
-    <v-row class="mt-6">
+    <v-row class="mt-md-6 mt-2">
       <v-col
         v-for="(item, i) in FAQs"
         :key="i"

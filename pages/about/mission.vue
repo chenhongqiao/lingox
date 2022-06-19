@@ -1,9 +1,9 @@
 <template>
   <div>
-    <v-container class="mt-8 mb-4 text-center">
+    <v-container class="pt-md-8 pb-md-4 text-center pt-4">
       <v-img :src="require('~/assets/images/mission-1.jpg')" alt="" class="rounded elevation-3 mb-6" />
     </v-container>
-    <v-container class="my-4">
+    <v-container class="py-md-4 pt-0">
       <v-row align="center">
         <v-col cols="12" md="7">
           <h3 class="text-h3">

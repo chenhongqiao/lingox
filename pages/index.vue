@@ -1,11 +1,11 @@
 <template>
-  <div class="my-8">
+  <div class="my-md-8 my-4">
     <v-container>
       <div class="mx-md-14">
         <div class="text-uppercase font-weight-bold primary--text mb-2">
           Our Mission
         </div>
-        <h1 class="text-h1">
+        <h1 class="text-md-h1 text-h2">
           Educate.
         </h1>
         <div class="text-body-1 secondary--text mt-4">
@@ -13,8 +13,8 @@
         </div>
       </div>
     </v-container>
-    <v-parallax height="600" class="mt-4" :src="require('@/assets/images/hero.jpg')" />
-    <v-container class="py-4 py-lg-8 mt-4">
+    <v-parallax max-height="600" class="mt-4" :src="require('@/assets/images/hero.jpg')" />
+    <v-container class="py-4 py-md-10">
       <v-row align="center">
         <v-col cols="12" md="6">
           <v-img :src="require('@/assets/images/feature-1.jpg')" class="rounded-lg elevation-6" max-height="480" />
@@ -34,8 +34,11 @@
         </v-col>
       </v-row>
     </v-container>
-    <v-container class="py-4 py-lg-8 mt-4">
+    <v-container class="py-4 py-md-10">
       <v-row align="center">
+        <v-col cols="12" md="6" class="d-md-none">
+          <v-img :src="require('@/assets/images/feature-2.jpeg')" class="rounded-lg elevation-6" max-height="480" />
+        </v-col>
         <v-col cols="12" md="6">
           <h3 class="text-h3">
             Our Team
@@ -49,12 +52,12 @@
             </nuxt-link>
           </div>
         </v-col>
-        <v-col cols="12" md="6">
+        <v-col cols="12" md="6" class="d-none d-md-flex">
           <v-img :src="require('@/assets/images/feature-2.jpeg')" class="rounded-lg elevation-6" max-height="480" />
         </v-col>
       </v-row>
     </v-container>
-    <v-container class="mt-6">
+    <v-container class="py-4 py-md-8">
       <h3 class="text-h3">
         Get Involved
       </h3>

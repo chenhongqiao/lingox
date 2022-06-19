@@ -3,10 +3,10 @@
     <div v-for="(person, i) in team" :key="i">
       <v-divider v-if="i !== 0" />
       <v-row class="py-3" align="center">
-        <v-col cols="3">
+        <v-col sm="3" cols="12">
           <v-img :src="person.image" max-height="400" class="elevation-6 rounded" />
         </v-col>
-        <v-col>
+        <v-col sm="9" cols="12">
           <div class="text-h5">
             {{ person.name }}
           </div>
