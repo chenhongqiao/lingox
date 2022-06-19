@@ -9,7 +9,7 @@
           Educate.
         </h1>
         <div class="text-body-1 secondary--text mt-4">
-          We provide free 1-on-1 English language tutoring to student from underserved communities all over the world.
+          We provide free language tutoring to students from underserved communities all over the world.
         </div>
       </div>
     </v-container>
@@ -113,7 +113,7 @@ export default defineComponent({
       {
         hid: 'description',
         name: 'description',
-        content: 'LingoX provides free 1-on-1 English language tutoring to student from underserved communities all over the world.'
+        content: 'LingoX provides free language tutoring to students from underserved communities all over the world.'
       }
     ]
   }
