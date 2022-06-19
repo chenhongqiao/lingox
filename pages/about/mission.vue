@@ -1,7 +1,7 @@
 <template>
   <div>
     <v-container class="pt-md-8 pb-md-4 text-center pt-4">
-      <v-img :src="require('~/assets/images/mission-1.jpg')" alt="" class="rounded elevation-3 mb-6" />
+      <v-img :src="require('~/static/images/mission-1.jpg')" alt="" class="rounded elevation-3 mb-6" />
     </v-container>
     <v-container class="py-md-4 pt-0">
       <v-row align="center">
@@ -23,7 +23,7 @@
           </div>
         </v-col>
         <v-col cols="12" md="5" class="d-md-flex d-none">
-          <v-img :src="require('@/assets/images/mission-2.jpg')" class="rounded-lg elevation-6" max-height="480" />
+          <v-img :src="require('@/static/images/mission-2.jpg')" class="rounded-lg elevation-6" max-height="480" />
         </v-col>
       </v-row>
     </v-container>

@@ -13,11 +13,11 @@
         </div>
       </div>
     </v-container>
-    <v-parallax max-height="600" class="mt-4" :src="require('@/assets/images/hero.jpg')" />
+    <v-parallax max-height="600" class="mt-4" :src="require('@/static/images/hero.jpg')" />
     <v-container class="py-4 py-md-10">
       <v-row align="center">
         <v-col cols="12" md="6">
-          <v-img :src="require('@/assets/images/feature-1.jpg')" class="rounded-lg elevation-6" max-height="480" />
+          <v-img :src="require('@/static/images/feature-1.jpg')" class="rounded-lg elevation-6" max-height="480" />
         </v-col>
         <v-col cols="12" md="6">
           <h3 class="text-h3">
@@ -37,7 +37,7 @@
     <v-container class="py-4 py-md-10">
       <v-row align="center">
         <v-col cols="12" md="6" class="d-md-none">
-          <v-img :src="require('@/assets/images/feature-2.jpeg')" class="rounded-lg elevation-6" max-height="480" />
+          <v-img :src="require('@/static/images/feature-2.jpeg')" class="rounded-lg elevation-6" max-height="480" />
         </v-col>
         <v-col cols="12" md="6">
           <h3 class="text-h3">
@@ -53,7 +53,7 @@
           </div>
         </v-col>
         <v-col cols="12" md="6" class="d-none d-md-flex">
-          <v-img :src="require('@/assets/images/feature-2.jpeg')" class="rounded-lg elevation-6" max-height="480" />
+          <v-img :src="require('@/static/images/feature-2.jpeg')" class="rounded-lg elevation-6" max-height="480" />
         </v-col>
       </v-row>
     </v-container>
