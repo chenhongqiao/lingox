@@ -72,8 +72,8 @@
           <!--v-btn :to="item.link" x-large color="primary" class="mt-4">
             Learn More
           </v-btn-->
-          <v-btn :to="item.link" x-large color="primary" class="mt-4" disabled>
-            Coming Soon
+          <v-btn :to="item.link" x-large color="primary" class="mt-4">
+            Learn More
           </v-btn>
         </v-col>
       </v-row>
@@ -106,6 +106,16 @@ export default defineComponent({
     }])
 
     return { involved }
+  },
+  head: {
+    title: 'Home',
+    meta: [
+      {
+        hid: 'description',
+        name: 'description',
+        content: 'LingoX provides free 1-on-1 English language tutoring to student from underserved communities all over the world.'
+      }
+    ]
   }
 })
 </script>
