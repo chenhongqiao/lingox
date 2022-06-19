@@ -18,32 +18,33 @@
   </v-container>
 </template>
 <script lang="ts">
-import { defineComponent, ref, Ref } from '@nuxtjs/composition-api'
+import { defineComponent, ref, Ref, useContext } from '@nuxtjs/composition-api'
 import { Member } from '@/components/Roster.vue'
 export default defineComponent({
   name: 'ChapterPage',
   setup () {
+    const { $img } = useContext()
     const southwest: Ref<Member[]> = ref([
       {
         name: 'Christina Chen',
         position: 'Director of Development',
         bio: 'Christina Chen is a senior two student in Chongqing No.1 international high school. Although she has not systematically studied media now (but will apply and study media major in the future), she is very interested in media and wants to transmit and obtain information to the outside world through the Internet. Christina enjoys dancing, singing and listening to music in her daily life.',
-        image: require('@/static/images/team/christina.png')
+        image: $img('team/christina.png')
       },
       {
         name: 'Anastasia Mo',
         bio: 'Anastasia Mo (Anastasia Lorente), senior high student of Chongqing Nankai International Study Center, 15 years old. She is a crazy music lover with an artistic soul, also a huge fan of painting and dancing. But she chooses abnormal psychology as her major and dreams to be an criminal psychologist. Psychology, art, and environmental protection fulfill her life.',
-        image: require('@/static/images/team/anastasia.png')
+        image: $img('team/anastasia.png')
       },
       {
         name: 'Ethan Chen',
         bio: 'Ethan Chen is a student who has just finished the high school entrance examination and graduated from Chongqing No. 1 Middle School. He has no formal international education, but he is very interested in finance and economics. Also he is very willing to participate in public welfare activities. In his spare time, he is fond of playing basketball. He is also the person who particularly good at percussion.',
-        image: require('@/static/images/team/ethan.png')
+        image: $img('team/ethan.png')
       },
       {
         name: 'Daisy Wang',
         bio: 'Daisy Wang is a senior 2 student in Chongqing no.1 international high school. She is learning calculus, statistics, physics, economics and many other subjects. She is interested in everything and is looking forward to her future major（maybe law or biochemistry). Daisy enjoys listening to Kpop and watching SF.',
-        image: require('@/static/images/team/daisy.png')
+        image: $img('team/daisy.png')
       }
     ])
 
@@ -52,7 +53,7 @@ export default defineComponent({
         name: 'Maggie Liu',
         position: 'Regional Director of Development',
         bio: 'Maggie Liu is a rising Sophomore at LSE majoring in sociology. She is particularly interested in investigating social problems e.g. social inequality through a multi-dimensional approach, excited about how perspectives from different fields within social science interact with each other to unveil the complexity of social issues. She loves sophisticated theories, but she enjoys detailed life experiences more. While keeping a keen interest in what is going on within and beyond Chinese society, she also loves hanging out with friends, making connections with different people, playing and making music, particularly of an impressionist style, of her own, and she is an experienced dancer in Chinese folk dance e.g. Dai dance for over ten years.',
-        image: require('@/static/images/team/maggie.png')
+        image: $img('team/maggie.png')
       }
     ])
 

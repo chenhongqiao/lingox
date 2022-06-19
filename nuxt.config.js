@@ -69,6 +69,9 @@ export default {
       }],
       langDir: 'lang/',
       defaultLocale: 'en'
+    }],
+    ['@nuxt/image', {
+      dir: 'static/images'
     }]
   ],
 

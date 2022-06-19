@@ -16,76 +16,76 @@ import { Member } from '~/components/Roster.vue'
 export default defineComponent({
   name: 'BoardPage',
   setup () {
-    const { i18n } = useContext()
+    const { i18n, $img } = useContext()
     const team: Ref<Member[]> = ref([
       {
         name: 'Mia Lee',
         position: 'Founder + CEO',
         bio: i18n.t('bio.mial').toString(),
-        image: require('@/static/images/team/mial.jpg')
+        image: $img('team/mial.jpg')
       },
       {
         name: 'David Chen',
         position: 'Chief Marketing Officer',
         bio: i18n.t('bio.david').toString(),
-        image: require('@/static/images/team/david.jpg')
+        image: $img('team/david.jpg')
       }, {
         name: 'Hannah Choi',
         position: 'Assistant Marketing Officer',
         bio: i18n.t('bio.hannah').toString(),
-        image: require('@/static/images/team/hannah.png')
+        image: $img('team/hannah.png')
       },
       {
         name: 'Jane Wang',
         position: 'Assistant Marketing Officer',
         bio: i18n.t('bio.jane').toString(),
-        image: require('@/static/images/team/jane.png')
+        image: $img('team/jane.png')
       },
       {
         name: 'Mia Hennequin',
         position: 'Chief Development Officer',
         bio: i18n.t('bio.miah').toString(),
-        image: require('@/static/images/team/miah.png')
+        image: $img('team/miah.png')
       }, {
         name: 'Shivali Shrivastava',
         position: 'Assistant Development Officer',
         bio: i18n.t('bio.shivali').toString(),
-        image: require('@/static/images/team/shivali.png')
+        image: $img('team/shivali.png')
       }, {
         name: 'Sarah Xie',
         position: 'Assistant Development Officer',
         bio: i18n.t('bio.sarah').toString(),
-        image: require('@/static/images/team/sarah.png')
+        image: $img('team/sarah.png')
       }, {
         name: 'Sanjana Ramakrishnan',
         position: 'Chief Financial Officer',
         bio: i18n.t('bio.sanjana').toString(),
-        image: require('@/static/images/team/sanjana.jpg')
+        image: $img('team/sanjana.jpg')
       }, {
         name: 'Jia An',
         position: 'Assistant Financial Officer',
         bio: i18n.t('bio.jia').toString(),
-        image: require('@/static/images/team/jia.png')
+        image: $img('team/jia.png')
       }, {
         name: 'Harry Chen',
         position: 'Chief Technology Officer',
         bio: i18n.t('bio.harry').toString(),
-        image: require('@/static/images/team/harry.png')
+        image: $img('team/harry.png')
       }, {
         name: 'Tyler Truong',
         position: 'Assistant Technology Officer',
         bio: i18n.t('bio.tyler').toString(),
-        image: require('@/static/images/team/tyler.png')
+        image: $img('team/tyler.png')
       }, {
         name: 'Simone Rothaupt',
         position: 'Chief Public Relations Officer',
         bio: i18n.t('bio.simone').toString(),
-        image: require('@/static/images/team/simone.png')
+        image: $img('team/simone.png')
       }, {
         name: 'Abby Warnock',
         position: 'Assistant Public Relations Officer',
         bio: i18n.t('bio.abby').toString(),
-        image: require('@/static/images/team/abby.png')
+        image: $img('team/abby.png')
       }
     ])
 
