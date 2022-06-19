@@ -7,7 +7,7 @@
         </v-subheader>
         <div v-for="(item, index) in displayRoutes" :key="index">
           <v-list-item v-if="item.link" :to="item.link">
-            <v-list-item-content :to="item.link">
+            <v-list-item-content>
               <v-list-item-title>
                 {{ item.text }}
               </v-list-item-title>
@@ -163,6 +163,7 @@ export default defineComponent({
   name: 'DefaultLayout',
   setup () {
     const routes: Ref<Array<Group | Route>> = ref([
+      { text: 'Home', link: '/' },
       {
         text: 'About Us',
         base: '/about',
@@ -215,7 +216,7 @@ export default defineComponent({
     const displayMenuRoutes = computed(() => {
       if (currentGroup.value !== -1) {
         // @ts-ignore
-        return routes.value[currentGroup.value].routes.map((route) => { return { text: route.text, link: route.link + routes.value[currentGroup.value].base } })
+        return routes.value[currentGroup.value].routes.map((route) => { return { text: route.text, link: routes.value[currentGroup.value].base + route.link } })
       } else {
         return routes.value
       }
