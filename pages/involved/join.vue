@@ -30,6 +30,9 @@
 <script lang="ts">
 import { defineComponent } from '@nuxtjs/composition-api'
 export default defineComponent({
-  name: 'JoinTeamPage'
+  name: 'JoinTeamPage',
+  head: {
+    title: 'Join Our Team'
+  }
 })
 </script>

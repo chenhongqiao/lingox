@@ -30,6 +30,9 @@ export default defineComponent({
     ])
 
     return { tutors }
+  },
+  head: {
+    title: 'Featured Tutors'
   }
 })
 </script>

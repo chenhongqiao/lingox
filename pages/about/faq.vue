@@ -53,6 +53,9 @@ export default defineComponent({
     ])
 
     return { FAQs }
+  },
+  head: {
+    title: 'FAQs'
   }
 })
 </script>

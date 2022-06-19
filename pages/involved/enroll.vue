@@ -30,6 +30,9 @@
 <script lang="ts">
 import { defineComponent } from '@nuxtjs/composition-api'
 export default defineComponent({
-  name: 'EnrollPage'
+  name: 'EnrollPage',
+  head: {
+    title: 'Enroll a Student'
+  }
 })
 </script>

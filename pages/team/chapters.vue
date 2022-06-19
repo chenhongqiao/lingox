@@ -57,6 +57,9 @@ export default defineComponent({
     ])
 
     return { southwest, south }
+  },
+  head: {
+    title: 'International Chapters'
   }
 })
 </script>

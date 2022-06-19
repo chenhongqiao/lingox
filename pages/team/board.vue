@@ -90,6 +90,9 @@ export default defineComponent({
     ])
 
     return { team }
+  },
+  head: {
+    title: 'Executive Board'
   }
 })
 </script>

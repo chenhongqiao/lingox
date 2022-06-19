@@ -57,6 +57,9 @@ export default defineComponent({
     ])
 
     return { consultants }
+  },
+  head: {
+    title: 'Educational Consultants'
   }
 })
 </script>
