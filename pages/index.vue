@@ -87,6 +87,7 @@ interface Involved {
   content: string
   link: string
 }
+//test
 export default defineComponent({
   name: 'IndexPage',
   setup () {
