@@ -19,7 +19,7 @@
             LingoX recognizes the potential that every student encompasses and strives to provide them with all the necessary resources to succeed in a future career path of their choice, making sure that socioeconomic status and lacking language skills is never a barrier. Here at LingoX, our uniqueness is our flexibility. We refuse to impose an unconforming, rigid curriculum upon our students, LingoX tutors work around the student’s schedule, at a pace which suits the student’s personal learning speed.
           </div>
           <div class="text-body-1 mt-3">
-            Our work is directed toward assisting underserved schoolchildren in communities such as China, Africa, and India by teaching English and Chinese. More broadly, however, LingoX strives to support all students, including refugees of war, who lack proper educational assistance  – which is why any students in need of aid are welcome to enroll completely free of charge.
+            Besides language education, LingoX also offers free training camps for those who wish to improve their public speaking as well as a mentorship program directed toward protecting mental health. LingoX strives to support all students, including refugees of war, who lack proper educational assistance – which is why any students in need of aid are welcome to enroll completely free of charge.
           </div>
         </v-col>
         <v-col cols="12" md="5" class="d-md-flex d-none">
