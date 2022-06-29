@@ -60,15 +60,16 @@ export default {
       locales: [{
         code: 'en',
         iso: 'en-US',
-        file: 'english.strings.js'
+        file: 'english.custom.yaml'
       },
       {
         code: 'zh',
         iso: 'zh-CN',
-        file: 'chinese.strings.js'
+        file: 'chinese.custom.yaml'
       }],
-      langDir: 'lang/',
-      defaultLocale: 'en'
+      langDir: 'locales/',
+      defaultLocale: 'en',
+      vueI18nLoader: true
     }],
     ['@nuxt/image', {
       dir: 'static/images'
@@ -78,5 +79,11 @@ export default {
 
   // Build Configuration: https://go.nuxtjs.dev/config-build
   build: {
+    extend (config) {
+      config.module.rules.push({
+        test: /\.(custom.yaml)$/,
+        use: 'yaml-loader'
+      })
+    }
   }
 }
