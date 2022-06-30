@@ -3,20 +3,20 @@
     <v-navigation-drawer v-model="drawer" app temporary>
       <v-list dense nav>
         <v-subheader class="text-uppercase font-weight-bold">
-          {{ displayMenuTitle }}
+          {{ $t(displayMenuTitle) }}
         </v-subheader>
         <div v-for="(item, index) in displayRoutes" :key="index">
           <v-list-item v-if="item.link" :to="item.link">
             <v-list-item-content>
               <v-list-item-title>
-                {{ item.text }}
+                {{ $t(item.text) }}
               </v-list-item-title>
             </v-list-item-content>
           </v-list-item>
           <v-list-item v-else-if="item.routes" @click="currentGroup=index">
             <v-list-item-content>
               <v-list-item-title>
-                {{ item.text }}
+                {{ $t(item.text) }}
               </v-list-item-title>
             </v-list-item-content>
           </v-list-item>
@@ -25,7 +25,7 @@
       <template #prepend>
         <div v-if="currentGroup!==-1" class="px-2 pt-1">
           <v-btn outlined block class="mb-2" @click="currentGroup=-1">
-            Go Back
+            {{ $t('goBack') }}
           </v-btn>
         </div>
       </template>
