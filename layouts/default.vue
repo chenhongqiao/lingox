@@ -198,7 +198,8 @@ export default defineComponent({
         base: '/about',
         routes: [
           { text: 'ourMission', link: '/mission' },
-          { text: 'faqShort', link: '/faq' }
+          { text: 'faqShort', link: '/faq' },
+          { text: 'Letter from Founder', link: '/founder' }
         ]
       },
       {
