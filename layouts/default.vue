@@ -50,7 +50,7 @@
           >
             <span v-if="item.link">
               <v-btn :to="item.link" text>
-                {{ item.text }}
+                {{ $t(item.text) }}
               </v-btn>
             </span>
             <span v-else-if="item.routes">
@@ -61,7 +61,7 @@
                     v-bind="attrs"
                     v-on="on"
                   >
-                    {{ item.text }}
+                    {{ $t(item.text) }}
                   </v-btn>
                 </template>
                 <v-list>
@@ -70,7 +70,7 @@
                     :key="pindex"
                     :to="item.base+page.link"
                   >
-                    {{ page.text }}
+                    {{ $t(page.text) }}
                   </v-list-item>
                 </v-list>
               </v-menu>
@@ -84,29 +84,36 @@
       </v-container>
     </v-app-bar>
     <v-main>
-      <Nuxt />
+      <Nuxt class="mb-6" />
     </v-main>
     <v-footer class="secondary" dark>
       <v-container class="py-5">
-        <v-row>
-          <v-col cols="12" md="6">
+        <v-row align="center">
+          <v-col cols="12" sm="7" md="9">
             <div class="mb-2">
               <div class="text-uppercase text-h7 text-truncate">
                 © 2022 LingoX
               </div>
             </div>
             <div class="text-body-1">
-              <div>“Making Language Education Accessible for All”</div>
+              <div>"{{ $t('makingLanguageAccessible') }}"</div>
             </div>
-
-            <!--div class="mt-2">
-              <a class="mr-2" @click.prevent.stop="$i18n.setLocale('zh')">
-                中文
-              </a>
-              <a @click.prevent.stop="$i18n.setLocale('en')">
-                English
-              </a>
-            </div-->
+          </v-col>
+          <v-col cols="12" sm="5" md="3">
+            <div>
+              <v-responsive max-width="160px">
+                <v-select
+                  v-model="activeLocale"
+                  prepend-icon="mdi-google-translate"
+                  dark
+                  dense
+                  outlined
+                  :items="locales"
+                  item-text="displayName"
+                  item-value="code"
+                />
+              </v-responsive>
+            </div>
           </v-col>
           <!--v-col
             cols="12"
@@ -149,46 +156,68 @@
 </template>
 
 <script lang="ts">
-import { defineComponent, computed, ref, Ref } from '@nuxtjs/composition-api'
-interface Route {
+import { defineComponent, computed, ref, Ref, useContext, watch } from '@nuxtjs/composition-api'
+interface Page {
   text: string
   link: string
 }
 interface Group {
   text: string
   base: string
-  routes: Route[]
+  routes: Page[]
+}
+interface Locale {
+  code: string
+  displayName: string
 }
 export default defineComponent({
   name: 'DefaultLayout',
   setup () {
-    const routes: Ref<Array<Group | Route>> = ref([
-      { text: 'Home', link: '/' },
+    const locales: Ref<Locale[]> = ref([
       {
-        text: 'About Us',
+        code: 'en',
+        displayName: 'English'
+      },
+      {
+        code: 'zh',
+        displayName: '简体中文'
+      }
+    ])
+
+    const { i18n } = useContext()
+    const activeLocale = ref(i18n.locale)
+
+    watch(activeLocale, (currentValue) => {
+      i18n.setLocale(currentValue)
+    })
+
+    const routes: Ref<Array<Group | Page>> = ref([
+      { text: 'home', link: '/' },
+      {
+        text: 'aboutUs',
         base: '/about',
         routes: [
-          { text: 'Mission', link: '/mission' },
-          { text: 'FAQs', link: '/faq' }
+          { text: 'ourMission', link: '/mission' },
+          { text: 'faqShort', link: '/faq' }
         ]
       },
       {
-        text: 'Our Team',
+        text: 'ourTeam',
         base: '/team',
         routes: [
-          { text: 'Executive Board', link: '/board' },
+          { text: 'executiveBoard', link: '/board' },
           // { text: 'International Chapters', link: '/chapters' },
-          { text: 'Educational Consultants', link: '/consultants' }
+          { text: 'educationalConsultants', link: '/consultants' }
           //, { text: 'Featured Tutors', link: '/tutors' }
         ]
       },
       {
-        text: 'Get Involved',
+        text: 'getInvolved',
         base: '/involved',
         routes: [
-          { text: 'Enroll a Student', link: '/enroll' },
-          { text: 'Become a Tutor', link: '/tutor' },
-          { text: 'Join Our Team', link: '/join' }
+          { text: 'enrollStudent', link: '/enroll' },
+          { text: 'becomeTutor', link: '/tutor' },
+          { text: 'joinTeam', link: '/join' }
         ]
       }/*,
       { text: 'Partners', link: '/partners' },
@@ -196,12 +225,12 @@ export default defineComponent({
       { text: 'Contact', link: '/contact' } */
     ])
 
-    const info: Ref<Route[]> = ref([{
+    const info: Ref<Page[]> = ref([{
       text: 'Mission',
       link: '/about/mission'
     }])
 
-    const actions: Ref<Route[]> = ref([
+    const actions: Ref<Page[]> = ref([
       { text: 'Enroll a Student', link: '/involved/enroll' },
       { text: 'Become a Tutor', link: '/involved/tutor' },
       { text: 'Join the LingoX Team', link: '/involved/join' },
@@ -231,7 +260,7 @@ export default defineComponent({
       }
     })
 
-    return { routes, drawer, currentGroup, displayRoutes: displayMenuRoutes, displayMenuTitle, info, actions }
+    return { routes, drawer, currentGroup, displayRoutes: displayMenuRoutes, displayMenuTitle, info, actions, locales, activeLocale }
   }
 })
 </script>
