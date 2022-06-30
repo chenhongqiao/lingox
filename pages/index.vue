@@ -82,7 +82,7 @@
 </template>
 <i18n lang="yaml">
 en:
-  teach: Teach.
+  teach: Educate.
   heroText: We provide free language tutoring to students from underserved communities all over the world.
   missionText: Ensuring that all students have access to quality, authentic foreign language education, regardless of income level.
   teamText: Meet the people behind the scenes of LingoX.
