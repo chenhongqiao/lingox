@@ -2,7 +2,7 @@
   <v-container class="py-4 py-md-8">
     <v-responsive max-width="1200" class="mx-auto text-center">
       <h2 class="text-h3">
-        Frequently Asked Questions
+        {{ $t('faq') }}
       </h2>
       <div style="width: 80px; height: 4px" class="my-4 secondary mx-auto" />
     </v-responsive>

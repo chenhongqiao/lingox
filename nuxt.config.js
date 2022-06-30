@@ -48,7 +48,6 @@ export default {
       treeShake: true,
       extractCSS: true
     }],
-    '@nuxt/content',
     ['@nuxtjs/google-fonts', {
       families: {
         Poppins: [100, 200, 300, 400, 500, 600, 700, 900],
@@ -60,15 +59,30 @@ export default {
       locales: [{
         code: 'en',
         iso: 'en-US',
-        file: 'english.strings.js'
+        file: 'english.custom.yaml'
       },
       {
         code: 'zh',
         iso: 'zh-CN',
-        file: 'chinese.strings.js'
+        file: 'chinese.custom.yaml'
       }],
-      langDir: 'lang/',
-      defaultLocale: 'en'
+      langDir: 'locales/',
+      fallbackLocale: 'en',
+      vueI18nLoader: true,
+      strategy: 'no_prefix',
+      detectBrowserLanguage: {
+        useCookie: true,
+        cookieKey: 'i18n_redirected'
+      },
+      vueI18n: {
+        fallbackLocale: {
+          'zh-Hant': ['zh'],
+          'zh-Hans': ['zh'],
+          'zh-HK': ['zh'],
+          'zh-TW': ['zh'],
+          default: ['en']
+        }
+      }
     }],
     ['@nuxt/image', {
       dir: 'static/images'
@@ -78,5 +92,11 @@ export default {
 
   // Build Configuration: https://go.nuxtjs.dev/config-build
   build: {
+    extend (config) {
+      config.module.rules.push({
+        test: /\.(custom.yaml)$/,
+        use: 'yaml-loader'
+      })
+    }
   }
 }
