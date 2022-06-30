@@ -94,8 +94,8 @@ zh:
   heroText: 我们为全世界未得到充分服务的群体提供免费的语言辅导。
   missionText: 致力于让所有学生，无论收入水平，都能获得高质量的地道外语教育。
   teamText: 在幕后运作LingoX的人们。
-  studentText: 获得免费的个性化英语直播辅导。
-  tutorText: 在线帮助远在中国的学生提升他们的英语。
+  studentText: 获得免费、个性化的线上语言辅导。
+  tutorText: 在线帮助有需要的学生提升汉语或英语能力。
   joinTeamText: 准备好为一个更好的世界贡献自己的力量了吗？加入我们的领导团队。
 </i18n>
 <script lang="ts">
