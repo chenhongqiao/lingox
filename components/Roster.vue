@@ -11,10 +11,10 @@
             {{ person.name }}
           </div>
           <div v-if="person.position" class="text-h6 secondary--text">
-            {{ person.position }}
+            {{ $parent.$t(person.position) }}
           </div>
           <div class="text-body-1 mt-3">
-            {{ person.bio }}
+            {{ $parent.$t(person.bio) }}
           </div>
         </v-col>
       </v-row>
