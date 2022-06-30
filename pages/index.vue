@@ -62,7 +62,7 @@
         {{ $t('getInvolved') }}
       </h3>
       <v-row class="mt-1">
-        <v-col v-for="(item,index) in involved" :key="index">
+        <v-col v-for="(item,index) in involved" :key="index" cols="12" sm="4">
           <div class="text-uppercase font-weight-bold primary--text mb-2">
             {{ $t(item.title) }}
           </div>
