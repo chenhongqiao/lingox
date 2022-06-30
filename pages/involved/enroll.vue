@@ -2,20 +2,20 @@
   <div>
     <v-container class="py-4 py-lg-8">
       <h3 class="text-h3">
-        Enroll a Student
+        {{ $t('enrollStudent') }}
       </h3>
       <v-row class="mt-4">
         <v-col cols="12" md="7">
           <div class="text-uppercase font-weight-bold primary--text mb-2">
-            Program Details
+            {{ $t('programDetails') }}
           </div>
-          <div class="text-body-1">
-            Enroll today with LingoX at zero cost and with a personalized curriculum! In order to make language-learning accessible to everyone, LingoX offers flexibility in course scheduling so that students are able to work at their own pace. We provide useful, relevant content taught by attentive tutors who want to see their students succeed.
+          <div class="text-body-1 mb-3">
+            {{ $t('programText') }}
           </div>
         </v-col>
         <v-col cols="12" md="5">
           <v-card class="pa-1" flat>
-            <v-card-title>Student Signup</v-card-title>
+            <v-card-title>{{ $t('studentSignup') }}</v-card-title>
             <v-card-text v-if="done" class="text-center">
               <div class="mt-1">
                 <v-icon size="60" color="success">
@@ -23,7 +23,7 @@
                 </v-icon>
               </div>
               <div class="mt-2">
-                Thank you for signing up! We will get in touch with you shortly.
+                {{ $t('formSubmitted') }}
               </div>
               <v-btn
                 class="mt-2"
@@ -32,7 +32,7 @@
                 large
                 @click="done=false"
               >
-                Sign Up Another Student
+                {{ $t('submitAnotherResponse') }}
               </v-btn>
             </v-card-text>
             <v-card-text v-else>
@@ -119,7 +119,7 @@
                 :loading="submitting"
                 @click="submit"
               >
-                Submit
+                {{ $t('submit') }}
               </v-btn>
             </v-card-text>
           </v-card>
@@ -134,6 +134,12 @@
     </v-snackbar>
   </div>
 </template>
+<i18n lang="yaml">
+en:
+  programText: Enroll today with LingoX at zero cost and with a personalized curriculum! In order to make language-learning accessible to everyone, LingoX offers flexibility in course scheduling so that students are able to work at their own pace. We provide useful, relevant content taught by attentive tutors who want to see their students succeed.
+zh:
+  programText: 您随时可以免费申请成为LingoX的学生并享受我们的个性化课程！为了让每个需要帮助的对象获得学习语言的机会，我们提供灵活的课程安排，帮助学生按照自己的节奏学习。我们的导师会根据学生的学习进程给予最大化的支持。
+</i18n>
 <script lang="ts">
 import { defineComponent, ref, useContext } from '@nuxtjs/composition-api'
 export default defineComponent({
