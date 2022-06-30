@@ -48,7 +48,6 @@ export default {
       treeShake: true,
       extractCSS: true
     }],
-    '@nuxt/content',
     ['@nuxtjs/google-fonts', {
       families: {
         Poppins: [100, 200, 300, 400, 500, 600, 700, 900],
@@ -68,8 +67,22 @@ export default {
         file: 'chinese.custom.yaml'
       }],
       langDir: 'locales/',
-      defaultLocale: 'en',
-      vueI18nLoader: true
+      fallbackLocale: 'en',
+      vueI18nLoader: true,
+      strategy: 'no_prefix',
+      detectBrowserLanguage: {
+        useCookie: true,
+        cookieKey: 'i18n_redirected'
+      },
+      vueI18n: {
+        fallbackLocale: {
+          'zh-Hant': ['zh'],
+          'zh-Hans': ['zh'],
+          'zh-HK': ['zh'],
+          'zh-TW': ['zh'],
+          default: ['en']
+        }
+      }
     }],
     ['@nuxt/image', {
       dir: 'static/images'
