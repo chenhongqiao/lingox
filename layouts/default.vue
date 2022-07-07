@@ -98,6 +98,9 @@
             <div class="text-body-1">
               <div>"{{ $t('makingLanguageAccessible') }}"</div>
             </div>
+            <v-btn color="primary" class="mt-4" href="https://www.lingox.org/signup" target="_blank">
+              Subscribe to Our Newsletter
+            </v-btn>
           </v-col>
           <v-col cols="12" sm="5" md="3">
             <div>
