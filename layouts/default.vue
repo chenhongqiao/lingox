@@ -210,7 +210,7 @@ export default defineComponent({
         base: '/team',
         routes: [
           { text: 'executiveBoard', link: '/board' },
-          // { text: 'International Chapters', link: '/chapters' },
+          { text: 'International Chapters', link: '/chapters' },
           { text: 'educationalConsultants', link: '/consultants' }
           //, { text: 'Featured Tutors', link: '/tutors' }
         ]
