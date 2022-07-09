@@ -41,7 +41,7 @@ export default defineComponent({
     const { $img } = useContext()
     const chapters: Ref<Chapter[]> = ref([
       {
-        name: 'Southwest Region - Chongqing',
+        name: 'Southwest China',
         members: [{
           name: 'Christina Chen',
           position: 'Director of Development',
@@ -71,17 +71,13 @@ export default defineComponent({
         }]
       },
       {
-        name: 'South Region',
+        name: 'South China',
         members: [{
           name: 'Maggie Liu',
           position: 'Regional Director of Development',
           bio: 'bio.maggie',
           image: $img('team/maggie.png')
-        }]
-      },
-      {
-        name: 'South Region - Shenzhen',
-        members: [{
+        }, {
           name: 'Derek Zhang',
           position: 'Director of Development',
           bio: 'bio.derek',
