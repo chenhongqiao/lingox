@@ -26,6 +26,7 @@ en:
     miah: Through her contributions to LingoX she hopes to help spread access to education around the world. Mia is looking forward to being able to utilize her experiences in other organizations to help LingoX encourage students to follow their passions. During her free time, Mia loves to go on hikes, explore outside, and hang out with her friends to make new experiences.
     shivali: Shivali Shrivastava is a rising sophomore. Being raised as a first-generation immigrant with Indian parents, she has been exposed to many valuable languages. She plans to use LingoX as a bridge to connect impoverished communities with quality education. During her free time, Shivali enjoys taking walks on the beach or making memories with her friends.
     sarah: As a Chinese-American student who studied in multiple countries, Sarah Xie deeply comprehends how English serves as a vital tool in every educational aspect. She wishes to help youngsters in underserved communities get the chance to achieve their dreams through LingoX. In her free time, Sarah enjoys playing tennis, painting as well as traveling.
+    judy: Judy Tao, an uprising junior who completed her first seven years of education in China, recognized the significance of studying and appreciating diverse languages and cultures. Thus, she wished to explore and enhance the education of languages through LingoX, and also assist the students who want to learn languages. During her free time, she enjoys dancing, painting, playing card games, and hanging out with her friends.
 zh:
   bio:
     mial: Mia 对教育充满热情，致力于帮助贫困社区和弱势家庭的学生获得平等、优质的教育资源。Mia 的业余爱好是弹钢琴，打高尔夫，写作和旅行。
@@ -41,6 +42,7 @@ zh:
     miah: Mia Hennequin 希望通过LingoX的公益活动，帮助世界各地的贫困儿童普及语言教育。Mia期待着能够利用她的热情和经验来鼓励LingoX的学生追随他们的梦想。Mia 爱好社交和创新，以及徒步探索世界。
     shivali: Shivali Shrivastava的父母是来自印度的第一代移民，她精通多门语言。她希望通过LingoX作为连接贫困社区并为他们提供优质教育的桥梁。Shivali喜欢在海滩上散步，与好友共享休闲时光。
     sarah: 作为一名曾在多个国家留学的美籍华裔学生，Sarah深知英语在学习和生活以及各个方面的重要性。她希望通过LingoX来帮助贫困社区的学生获得实现梦想的机会。闲暇时，Sarah喜欢打网球、画画以及旅游。
+    judy: Judy Tao, an uprising junior who completed her first seven years of education in China, recognized the significance of studying and appreciating diverse languages and cultures. Thus, she wished to explore and enhance the education of languages through LingoX, and also assist the students who want to learn languages. During her free time, she enjoys dancing, painting, playing card games, and hanging out with her friends.
 </i18n>
 <script lang="ts">
 import { defineComponent, ref, Ref, useContext } from '@nuxtjs/composition-api'
@@ -118,6 +120,12 @@ export default defineComponent({
         position: 'APRO',
         bio: 'bio.abby',
         image: $img('team/abby.png')
+      },
+      {
+        name: 'Judy Tao',
+        position: 'APRO',
+        bio: 'bio.judy',
+        image: $img('team/judy.png')
       }
     ])
 
