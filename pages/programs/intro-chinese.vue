@@ -9,7 +9,7 @@
           <div class="text-uppercase font-weight-bold primary--text mb-2">
             {{ $t('programDetails') }}
           </div>
-          <div v-for="text in $t('programParagraph')">
+          <div v-for="(text,index) in $t('programParagraph')" :key="index">
             <div class="text-body-1 mb-2">
               {{ text }}
             </div>
