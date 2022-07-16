@@ -111,16 +111,16 @@ export default defineComponent({
     const involved: Ref<Involved[]> = ref([{
       title: 'introChinese',
       content: 'introChineseText',
-      link: '/programs/chinese'
+      link: '/programs/intro-chinese'
     },
     {
       title: 'englishClassroom',
       content: 'introEnglishText',
-      link: '/programs/english'
+      link: '/programs/english-classroom'
     }, {
       title: 'speakerSeries',
       content: 'speakerSeriesText',
-      link: '/programs/speakers'
+      link: '/programs/speaker-series'
     }])
 
     return { involved }

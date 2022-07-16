@@ -219,11 +219,21 @@ export default defineComponent({
         text: 'programs',
         base: '/programs',
         routes: [
-          { text: 'introChinese', link: '/chinese' },
-          { text: 'englishClassroom', link: '/english' },
-          { text: 'speakerSeries', link: '/speakers' }
+          { text: 'introChinese', link: '/intro-chinese' },
+          { text: 'englishClassroom', link: '/english-classroom' },
+          { text: 'speakerSeries', link: '/speaker-series' }
         ]
-      }/*,
+      },
+      {
+        text: 'getInvolved',
+        base: '/involved',
+        routes: [
+          { text: 'startChapter', link: '/new-chapter' },
+          { text: 'becomeCurriculumDeveloper', link: '/curriculum-developer' },
+          { text: 'applyToBoard', link: '/apply-board' }
+        ]
+      }
+      /*,
       { text: 'Partners', link: '/partners' },
       { text: 'Press', link: '/press' },
       { text: 'Contact', link: '/contact' } */
