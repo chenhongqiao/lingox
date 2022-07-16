@@ -6,7 +6,7 @@
           {{ $t('ourMission') }}
         </div>
         <h1 class="text-md-h1 text-h2">
-          {{ $t('teach') }}
+          {{ $t('educate') }}
         </h1>
         <div class="text-body-1 secondary--text mt-4">
           {{ $t('heroText') }}
@@ -82,7 +82,7 @@
 </template>
 <i18n lang="yaml">
 en:
-  teach: Educate.
+  educate: Educate.
   heroText: We provide free language tutoring to students from underserved communities all over the world.
   missionText: Ensuring that all students have access to quality, authentic foreign language education, regardless of income level.
   teamText: Meet the people behind the scenes of LingoX.
@@ -90,7 +90,7 @@ en:
   tutorText: Meet virtually with students in China to help improve their English!
   joinTeamText: Ready to make a major change in the world? Apply to the LingoX board.
 zh:
-  teach: 教育
+  educate: 教育
   heroText: 我们为全世界未得到充分服务的群体提供免费的语言辅导。
   missionText: 致力于让所有学生，无论收入水平，都能获得高质量的地道外语教育。
   teamText: 在幕后运作LingoX的人们。
