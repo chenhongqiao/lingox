@@ -50,7 +50,7 @@ export default defineComponent({
         },
         {
           name: 'Lynn Zhang',
-          position: 'Director of Marketing',
+          position: 'Director of Human Resouces',
           bio: 'bio.lynn',
           image: $img('team/lynn.jpg')
         },
