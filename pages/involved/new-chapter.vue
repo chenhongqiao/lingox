@@ -83,9 +83,10 @@
                 />
                 <v-text-field
                   v-model="formData.plan"
-                  label="How do you plan on serving your community’s needs?*"
+                  label="Your Plans*"
+                  hint="How do you plan on serving your community’s needs?*"
                   :rules="[
-                    v => !!v || 'This field is required']"
+                    v => !!v || 'Plans are required']"
                 />
                 <v-text-field
                   v-model="formData.timeCommitment"
