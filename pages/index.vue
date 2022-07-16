@@ -59,7 +59,7 @@
     </v-container>
     <v-container class="py-4 py-md-8">
       <h3 class="text-h3">
-        {{ $t('getInvolved') }}
+        {{ $t('programs') }}
       </h3>
       <v-row class="mt-1">
         <v-col v-for="(item,index) in involved" :key="index" cols="12" sm="4">
@@ -86,17 +86,17 @@ en:
   heroText: We provide free language tutoring to students from underserved communities all over the world.
   missionText: Ensuring that all students have access to quality, authentic foreign language education, regardless of income level.
   teamText: Meet the people behind the scenes of LingoX.
-  studentText: Receive personalized, live English tutoring free-of-charge.
-  tutorText: Meet virtually with students in China to help improve their English!
-  joinTeamText: Ready to make a major change in the world? Apply to the LingoX board.
+  introChineseText: Interested in learning Chinese, but find yourself lacking the resources to get started? LingoX is offering a FREE introductory program open to students with demonstrated need!
+  introEnglishText: Do you want to improve your English skills? Register to join English Classroom, LingoX’s English amazing curriculum delivery program!
+  speakerSeriesText: Interested in learning about different pathways and careers, such as business, medicine, computer science, and international relations? Check out our Speaker Series!
 zh:
   educate: 教育
   heroText: 我们为全世界未得到充分服务的群体提供免费的语言辅导。
   missionText: 致力于让所有学生，无论收入水平，都能获得高质量的地道外语教育。
   teamText: 在幕后运作LingoX的人们。
-  studentText: 获得免费、个性化的线上语言辅导。
-  tutorText: 在线帮助有需要的学生提升汉语或英语能力。
-  joinTeamText: 准备好为一个更好的世界贡献自己的力量了吗？加入我们的领导团队。
+  introChineseText: Interested in learning Chinese, but find yourself lacking the resources to get started? LingoX is offering a FREE introductory program open to students with demonstrated need!
+  introEnglishText: Do you want to improve your English skills? Register to join English Classroom, LingoX’s English amazing curriculum delivery program!
+  speakerSeriesText: Interested in learning about different pathways and careers, such as business, medicine, computer science, and international relations? Check out our Speaker Series!
 </i18n>
 <script lang="ts">
 import { defineComponent, ref, Ref } from '@nuxtjs/composition-api'
@@ -109,18 +109,18 @@ export default defineComponent({
   name: 'IndexPage',
   setup () {
     const involved: Ref<Involved[]> = ref([{
-      title: 'enrollStudent',
-      content: 'studentText',
-      link: '/involved/enroll'
+      title: 'introChinese',
+      content: 'introChineseText',
+      link: '/programs/chinese'
     },
     {
-      title: 'becomeTutor',
-      content: 'tutorText',
-      link: '/involved/tutor'
+      title: 'englishClassroom',
+      content: 'introEnglishText',
+      link: '/programs/english'
     }, {
-      title: 'joinTeam',
-      content: 'joinTeamText',
-      link: '/involved/join'
+      title: 'speakerSeries',
+      content: 'speakerSeriesText',
+      link: '/programs/speakers'
     }])
 
     return { involved }

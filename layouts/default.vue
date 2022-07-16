@@ -216,30 +216,17 @@ export default defineComponent({
         ]
       },
       {
-        text: 'getInvolved',
-        base: '/involved',
+        text: 'programs',
+        base: '/programs',
         routes: [
-          { text: 'enrollStudent', link: '/enroll' },
-          { text: 'becomeTutor', link: '/tutor' },
-          { text: 'joinTeam', link: '/join' }
+          { text: 'introChinese', link: '/chinese' },
+          { text: 'englishClassroom', link: '/english' },
+          { text: 'speakerSeries', link: '/speakers' }
         ]
       }/*,
       { text: 'Partners', link: '/partners' },
       { text: 'Press', link: '/press' },
       { text: 'Contact', link: '/contact' } */
-    ])
-
-    const info: Ref<Page[]> = ref([{
-      text: 'Mission',
-      link: '/about/mission'
-    }])
-
-    const actions: Ref<Page[]> = ref([
-      { text: 'Enroll a Student', link: '/involved/enroll' },
-      { text: 'Become a Tutor', link: '/involved/tutor' },
-      { text: 'Join the LingoX Team', link: '/involved/join' },
-      { text: 'Contact', link: '/contact' },
-      { text: 'Donate', link: '/donate' }
     ])
 
     const drawer = ref(false)
@@ -264,7 +251,7 @@ export default defineComponent({
       }
     })
 
-    return { routes, drawer, currentGroup, displayRoutes: displayMenuRoutes, displayMenuTitle, info, actions, locales, activeLocale }
+    return { routes, drawer, currentGroup, displayRoutes: displayMenuRoutes, displayMenuTitle, locales, activeLocale }
   }
 })
 </script>
