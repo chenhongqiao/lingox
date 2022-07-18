@@ -57,7 +57,7 @@
                 <v-text-field
                   v-model="formData.location"
                   label="Location*"
-                  hint="Country, City/State"
+                  hint="City/State, Country"
                   :rules="[
                     v => !!v || 'Location is required']"
                 />
@@ -78,7 +78,7 @@
                 <v-text-field
                   v-model="formData.experience"
                   label="Teaching Experience*"
-                  hint="Discuss any previous experience with teaching (especially in language)."
+                  hint="Discuss any previous experience with teaching (especially in languages)."
                   :rules="[
                     v => !!v || 'Experience is required']"
                 />
