@@ -57,7 +57,7 @@
                 <v-text-field
                   v-model="formData.location"
                   label="Location*"
-                  hint="Country, City/State"
+                  hint="City/State, Country"
                   :rules="[
                     v => !!v || 'Location is required']"
                 />
@@ -73,7 +73,7 @@
                 />
                 <v-text-field
                   v-model="formData.parentOccupation"
-                  label="Parents' Occupation (if minor)"
+                  label="Parents' Occupation (if under 20)"
                 />
                 <v-text-field
                   v-model="formData.reason"
@@ -83,8 +83,8 @@
                 />
                 <v-text-field
                   v-model="formData.plan"
-                  label="Your Plans*"
-                  hint="How do you plan on serving your community’s needs?*"
+                  label="How do you plan on serving your community’s needs?*"
+                  hint="events, community service, fundraisers, etc.*"
                   :rules="[
                     v => !!v || 'Plans are required']"
                 />
