@@ -57,7 +57,7 @@
                 <v-text-field
                   v-model="formData.location"
                   label="Location*"
-                  hint="Country, City/State"
+                  hint="City/State, Country"
                   :rules="[
                     v => !!v || 'Location is required']"
                 />
