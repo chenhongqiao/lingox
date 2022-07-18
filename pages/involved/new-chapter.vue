@@ -157,7 +157,7 @@ export default defineComponent({
     const submit = async () => {
       submitting.value = true
       try {
-        await $axios.$post('https://v1.nocodeapi.com/harrychen/google_sheets/CPuMfhpdWCDJGuOe', formData.value)
+        await $axios.$post('https://form-submission.harrychen.workers.dev/CPuMfhpdWCDJGuOe', formData.value)
         done.value = true
         form.value.reset()
       } catch (err) {
