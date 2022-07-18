@@ -57,7 +57,7 @@
                 <v-text-field
                   v-model="formData.location"
                   label="Location*"
-                  hint="Country, City/State"
+                  hint="City/State, Country"
                   :rules="[
                     v => !!v || 'Location is required']"
                 />
@@ -82,7 +82,7 @@
                 />
                 <v-text-field
                   v-model="formData.distribution"
-                  label="Distribution*"
+                  label="Material Distribution*"
                   hint="How would you be able to distribute these materials?"
                   :rules="[
                     v => !!v || 'Distribution is required']"
@@ -90,7 +90,7 @@
                 <v-text-field
                   v-model="formData.verification"
                   label="Verification*"
-                  hint="Please type below “Yes” to verify that you will make these resources available to all students at your school."
+                  hint="Please type “Yes” to verify that you will make these resources available to all students at your school."
                   :rules="[
                     v => !!v || 'Verification is required']"
                 />
