@@ -27,6 +27,9 @@ en:
     gary: "Participating in voluntary teaching programs in Sri Lanka, Cambodia, and Shenzhen, China, Gary recognizes how the ability to speak and utilize English may change the life of the impoverished. Gary will be studying sociology at London School of Economics and Political Science. He loves to explore the differences among different cultures and discuss about the world’s issues with others. In his free time, Gary enjoys reading, watching movies, travelling, and, perhaps strangely, strolling around the city to observe people and to ponder about life."
     derek: "Derek is LingoX’s Shenzhen Chapter Director of Development. He is the class leader and a member of the school football team. Confidence, tenacity and humor are his major  characteristics. His cheerful personality enables him to establish a harmonious relationship with others. Derek believes that a sweet smile can always melt all the ice and snow. His motto is as follows: “I don't want to wonder if there will be cold wind and rain in the future. Since the target is the great mountain, it can only be left to those with serious and solid footprints. I don't want to think about whether the future is flat or muddy. As long as my heart is full of persistence and love, everything will turn out just fine!”"
     kristine: "Kristine is a double major, scholarship student who is currently in Berklee College of Music on both Film Scoring and Contemporary Writing and Production(CWP, undeclared). She has played the piano over ten years and has both the highest Grade Examination certifications which are approved by (CMA) Chinese Musicians’ Association and ABRSM (Associated Board of the Royal Schools of Music).  Moreover, she started learning composition by herself since she was in high school and currently has some scoring work with University student director. For Kristine’s study experience, she grew up in Chongqing, China then went to Auckland, New Zealand for the senior high school education for four years and currently focuses on music in Boston, US, which leads her to feel comfortable with both Mandarin and English."
+    eugenio: "Eugenio Ciarlandini is a current year 11 student at Upper Canada College, in Toronto, Ontario. His life has always revolved around the powers of his voice, from his passions for choral singing, justice, advocacy and diplomacy. He is an avid member of the Upper Canada College Model UN club, and has sung since his early years with St. Michael’s Choir School, and the Toronto Youth choir. In future, he hopes to raise his voice to fight for those that need to be heard through law, and international relations. Some of his passions include reading, city planning, exploring new places and baseball analytics. He speaks both English and French."
+    jerry: "Born in Nanjing, China, Jerry Immigrated to Canada at age 6. First living in Montreal, he quickly became fluent in French. For several years, He studied at Selwyn House School, a bilingual institution, where he developed both his English and French abilities. In 2015, he moved to Toronto to attend Upper Canada College, the most prestigious all-boys private school in Canada. In the summer of 2022, Jerry travelled to Iowa City to participate in the highly competitive and infamous Iowa Young Writer’s Studio, created by the U of Iowa’s MFA writer’s workshop."
+    alvin: "Alvin Zhou is a fourth year student at Eton College, taking Maths, Modern History, Latin and Ancient Greek for A Levels. He is particularly passionate about Ancient History and Classical literature , having written articles about topics such as the Second Punic War and translated famous passages of the Iliad and Aeneid. Outside of academics, Alvin is a keen singer, an avid gym-goer, and a fan of field hockey. He also enjoys a game of Minecraft now and then!"
 </i18n>
 <script lang="ts">
 import { defineComponent, ref, Ref, useContext } from '@nuxtjs/composition-api'
@@ -112,10 +115,14 @@ export default defineComponent({
         name: 'Canada',
         members: [
           {
-            name: 'Eugenio Ciarlandini'
+            name: 'Eugenio Ciarlandini',
+            bio: 'bio.eugenio',
+            image: $img('team/eugenio.jpg')
           },
           {
-            name: 'Jerry Jia'
+            name: 'Jerry Jia',
+            bio: 'bio.jerry',
+            image: $img('team/jerry.jpg')
           },
           {
             name: 'Roy Feng'
@@ -139,7 +146,9 @@ export default defineComponent({
         members: [
           {
             name: 'Alvin Chen',
-            position: 'Director of Development'
+            position: 'Director of Development',
+            bio: 'bio.alvin',
+            image: $img('team/alvin.png')
           }
         ]
       }
