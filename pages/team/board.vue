@@ -42,7 +42,6 @@ zh:
     miah: Mia Hennequin 希望通过LingoX的公益活动，帮助世界各地的贫困儿童普及语言教育。Mia期待着能够利用她的热情和经验来鼓励LingoX的学生追随他们的梦想。Mia 爱好社交和创新，以及徒步探索世界。
     shivali: Shivali Shrivastava的父母是来自印度的第一代移民，她精通多门语言。她希望通过LingoX作为连接贫困社区并为他们提供优质教育的桥梁。Shivali喜欢在海滩上散步，与好友共享休闲时光。
     sarah: 作为一名曾在多个国家留学的美籍华裔学生，Sarah深知英语在学习和生活以及各个方面的重要性。她希望通过LingoX来帮助贫困社区的学生获得实现梦想的机会。闲暇时，Sarah喜欢打网球、画画以及旅游。
-    judy: Judy Tao, an uprising junior who completed her first seven years of education in China, recognized the significance of studying and appreciating diverse languages and cultures. Thus, she wished to explore and enhance the education of languages through LingoX, and also assist the students who want to learn languages. During her free time, she enjoys dancing, painting, playing card games, and hanging out with her friends.
 </i18n>
 <script lang="ts">
 import { defineComponent, ref, Ref, useContext } from '@nuxtjs/composition-api'
