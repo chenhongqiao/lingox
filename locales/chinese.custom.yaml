@@ -2,8 +2,8 @@ ourMission: 我们的使命
 ourMissionButTask: 我们的任务
 learnMore: 了解更多
 ourTeam: 我们的团队
-programs: 课程
-introChinese: 初级中文
+programs: 我们的项目
+introChinese: 中文学习
 englishClassroom: 英语课堂
 recipientInfo: 接收人信息
 registrationForm: 注册问卷
@@ -25,7 +25,7 @@ executiveBoard: 领导团队
 home: 首页
 aboutUs: 关于我们
 educationalConsultants: 教育顾问
-programDetails: 详细信息
+programDetails: 项目细节
 formSubmitted: 谢谢！我们会尽快与您联系。
 submitAnotherResponse: 再填一个
 studentSignup: 学生注册
@@ -41,3 +41,4 @@ becomeCurriculumDeveloper: 编写课程
 applyToBoard: 加入领导团队
 applicationForm: 申请书
 closed: 已结束
+letterFromFounder: 创始人的信
