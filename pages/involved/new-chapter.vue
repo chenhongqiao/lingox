@@ -41,14 +41,14 @@
               <v-form ref="form" v-model="valid">
                 <v-text-field
                   v-model="formData.name"
-                  label="Full Name*"
+                  :label="$t('form.name')"
                   :rules="[
                     v => !!v || 'Name is required']"
                 />
                 <v-text-field
                   v-model="formData.email"
                   validate-on-blur
-                  label="Email*"
+                  :label="$t('form.email')"
                   :rules="[
                     v => !!v || 'Email is required',
                     v => /.+@.+\..+/.test(v) || 'Please enter an valid E-mail',
@@ -56,48 +56,48 @@
                 />
                 <v-text-field
                   v-model="formData.location"
-                  label="Location*"
+                  :label="$t('form.location')"
                   hint="City/State, Country"
                   :rules="[
                     v => !!v || 'Location is required']"
                 />
                 <v-text-field
                   v-model="formData.occupation"
-                  label="Occupation*"
+                  :label="$t('form.occupation')"
                   :rules="[
                     v => !!v || 'Occupation is required']"
                 />
                 <v-text-field
                   v-model="formData.school"
-                  label="School (if student)"
+                  :label="$t('form.school')"
                 />
                 <v-text-field
                   v-model="formData.parentOccupation"
-                  label="Parents' Occupation (if under 20)"
+                  :label="$t('form.parentOccupation')"
                 />
                 <v-text-field
                   v-model="formData.reason"
-                  label="Why do you wish to start a LingoX chapter?*"
+                  :label="$t('form.reason')"
                   :rules="[
                     v => !!v || 'This field is required']"
                 />
                 <v-text-field
                   v-model="formData.plan"
-                  label="How do you plan on serving your community’s needs?*"
+                  :label="$t('form.plan')"
                   hint="events, community service, fundraisers, etc.*"
                   :rules="[
                     v => !!v || 'Plans are required']"
                 />
                 <v-text-field
                   v-model="formData.timeCommitment"
-                  label="Time Commitment*"
+                  :label="$t('form.timeCommitment')"
                   hint="How much time are you able to commit to LingoX per week?"
                   :rules="[
                     v => !!v || 'Time Commitment is required']"
                 />
                 <v-text-field
                   v-model="formData.comments"
-                  label="Any additional comments?"
+                  :label="$t('form.comments')"
                 />
               </v-form>
               <v-btn
@@ -127,9 +127,31 @@
 en:
   programParagraph:
     - "Although founded in California, LingoX is proud to be represented by many chapters all over the world: from Toronto, Canada to Auckland, New Zealand! We are always looking for passionate minds to carry forth our mission and expand our operations to more communities. Now, you have the opportunity to start your own chapter!"
+  form:
+    name: "Name*"
+    email: "Email*"
+    location: "Location*"
+    occupation: "Occupation*"
+    school: "School (if student)"
+    parentOccupation: "Parents' Occupation (if under 20)"
+    reason: "Why do you wish to start a LingoX chapter?*"
+    plan: "How do you plan on serving your community’s needs?*"
+    timeCommitment: "Time Commitment*"
+    comments: "Any additional comments?"
 zh:
   programParagraph:
-    - "Although founded in California, LingoX is proud to be represented by many chapters all over the world: from Toronto, Canada to Auckland, New Zealand! We are always looking for passionate minds to carry forth our mission and expand our operations to more communities. Now, you have the opportunity to start your own chapter!"
+    - "LingoX成立于美国加利福尼亚州，目前我们已经在全球多个国家和地区设立了分部：加拿大（多伦多），新西兰（奥克兰），英国（伦敦），中国（深圳、重庆）以及更多其它地区！我们一直在寻找对语言教育充满激情和热爱的志愿者来加入我们，并将我们的服务拓展到更多的地区。现在，欢迎你加入我们并建立新的LingoX分部！"
+  form:
+    name: "姓名*"
+    email: "邮箱*"
+    location: "地区*"
+    occupation: "职业*"
+    school: "学校（如果你是学生）"
+    parentOccupation: "父母的职业（如果您是未成年人）"
+    reason: "您想要建立LingoX的分部的动力？*"
+    plan: "您服务社区的计划*"
+    timeCommitment: "您可以为我们付出多少时间*"
+    comments: "任何补充信息?"
 </i18n>
 <script lang="ts">
 import { defineComponent, ref, useContext } from '@nuxtjs/composition-api'
