@@ -201,7 +201,7 @@ export default defineComponent({
         routes: [
           { text: 'ourMission', link: '/mission' },
           { text: 'faqShort', link: '/faq' },
-          { text: 'Letter from Founder', link: '/founder' }
+          { text: 'letterFromFounder', link: '/founder' }
         ]
       },
       {
