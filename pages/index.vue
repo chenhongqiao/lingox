@@ -94,9 +94,9 @@ zh:
   heroText: 我们为全世界未得到充分服务的群体提供免费的语言辅导。
   missionText: 致力于让所有学生，无论收入水平，都能获得高质量的地道外语教育。
   teamText: 在幕后运作LingoX的人们。
-  introChineseText: Interested in learning Chinese, but find yourself lacking the resources to get started? LingoX is offering a FREE introductory program open to students with demonstrated need!
-  introEnglishText: Do you want to improve your English skills? Register to join English Classroom, LingoX’s English amazing curriculum delivery program!
-  speakerSeriesText: Interested in learning about different pathways and careers, such as business, medicine, computer science, and international relations? Check out our Speaker Series!
+  introChineseText: "LingoX 为全球需要学习汉语的学生提供免费的汉语入门课程！我们的课程重点教授“用得上，说得了”的实用汉语，帮助我们的学生快速掌握运用汉语进行日常交流。"
+  introEnglishText: "你想提高你的英语技能吗？欢迎申请LingoX“英语课堂”项目。 LingoX的课程开发团队针对中国学生量身定制了简单易懂，实用性极强的专属课程。"
+  speakerSeriesText: "LingoX每月定期邀请来自世界排名前20大学的优秀学生，与我们分享他们申请大学选择专业的经历和经验以及他们对所选专业未来发展前景和趋势的分析和看法。"
 </i18n>
 <script lang="ts">
 import { defineComponent, ref, Ref } from '@nuxtjs/composition-api'
