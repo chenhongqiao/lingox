@@ -11,7 +11,7 @@
         <div class="text-body-1 mb-3">
           {{ $t('programText') }}
         </div>
-        <div v-for="(position,index) in $t('positions')" :key="index" class="mt-4">
+        <div v-for="(position,index) in $t('positions')" :key="index" class="mt-4 mb-3">
           <div class="text-h6">
             <b>{{ position.name }}</b>
           </div>
@@ -31,6 +31,9 @@
               {{ requirement }}
             </li>
           </ul>
+        </div>
+        <div class="text-body-1 mb-3">
+          {{ $t('resume') }}
         </div>
       </v-col>
       <v-col cols="12" md="5">
@@ -172,6 +175,7 @@ en:
       - "Diligent and attentive"
       - "Adept at research"
       - "High-level professional writing skills"
+  resume: "You may also submit your resume to contact@lingox.org, with “Your Name - Executive Board Application (Desired Position)” in the subject line."
 </i18n>
 <script lang="ts">
 import { defineComponent, ref, useContext } from '@nuxtjs/composition-api'

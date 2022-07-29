@@ -127,6 +127,7 @@
 en:
   programParagraph:
     - "Although founded in California, LingoX is proud to be represented by many chapters all over the world: from Toronto, Canada to Auckland, New Zealand! We are always looking for passionate minds to carry forth our mission and expand our operations to more communities. Now, you have the opportunity to start your own chapter!"
+    - "You may also submit your resume to contact@lingox.org, with “Your Name - Start a Chapter” in the subject line."
   form:
     name: "Name*"
     email: "Email*"

@@ -30,6 +30,12 @@ en:
     eugenio: "Eugenio Ciarlandini is a current year 11 student at Upper Canada College, in Toronto, Ontario. His life has always revolved around the powers of his voice, from his passions for choral singing, justice, advocacy and diplomacy. He is an avid member of the Upper Canada College Model UN club, and has sung since his early years with St. Michael’s Choir School, and the Toronto Youth choir. In future, he hopes to raise his voice to fight for those that need to be heard through law, and international relations. Some of his passions include reading, city planning, exploring new places and baseball analytics. He speaks both English and French."
     jerry: "Born in Nanjing, China, Jerry Immigrated to Canada at age 6. First living in Montreal, he quickly became fluent in French. For several years, He studied at Selwyn House School, a bilingual institution, where he developed both his English and French abilities. In 2015, he moved to Toronto to attend Upper Canada College, the most prestigious all-boys private school in Canada. In the summer of 2022, Jerry travelled to Iowa City to participate in the highly competitive and infamous Iowa Young Writer’s Studio, created by the U of Iowa’s MFA writer’s workshop."
     alvin: "Alvin Zhou is a fourth year student at Eton College, taking Maths, Modern History, Latin and Ancient Greek for A Levels. He is particularly passionate about Ancient History and Classical literature , having written articles about topics such as the Second Punic War and translated famous passages of the Iliad and Aeneid. Outside of academics, Alvin is a keen singer, an avid gym-goer, and a fan of field hockey. He also enjoys a game of Minecraft now and then!"
+    roy: "Roy Feng is a multifaceted and eager year 11 student at Upper Canada College. Roy is fluent in multiple languages like many of the other members of the team. In his free time, Roy produces beats and songs, and shares them with the world. He’s passionate about volleyball, debate and basketball."
+    caleb: "Caleb is a very well rounded student at Upper Canada College. He’s proficient in multiple languages, and disciplines of all kinds. He is an extremely talented musician, taking his talents to the drums and the piano, and a true humanitarian: leader of UCC’s unicef organization. In his free time, Caleb enjoys practicing the drums and traveling."
+    jungly: "Jungly is a motivated and strong Upper Canada College student. He is involved in many of the college’s clubs, and is eager to succeed in many fields. In his free time, he enjoys rowing, as a leading member of UCC rowing, fishing and listening to music."
+    jeffrey: "Jeffrey is a high level thinker and creator in year 11 at Upper Canada College. Speaking multiple languages, he also enjoys playing hockey and baseball, hiking and researching in his free time."
+    kayden: "Kayden is a future engineer that balances athleticism with his academics. He takes up a range of disciplines, including hockey, where he is well decorated. He enjoys being on the ice, science, math and english in his free time."
+    botond: "Botond Horvath is a talented, aspiring astrophysicist and year 11 student at Upper Canada College. He is a proficient communicator, and fully trilingual in English, French and Hungarian, with a desire to learn more languages like Italian! In his free time, Botond enjoys reading, researching, martial arts, and performing traditional dances."
 </i18n>
 <script lang="ts">
 import { defineComponent, ref, Ref, useContext } from '@nuxtjs/composition-api'
@@ -125,16 +131,34 @@ export default defineComponent({
             image: $img('team/jerry.jpg')
           },
           {
-            name: 'Roy Feng'
+            name: 'Roy Feng',
+            bio: 'bio.roy'
+          },
+          {
+            name: 'Botond Horvath',
+            bio: 'bio.botond'
+          },
+          {
+            name: 'Caleb Chong',
+            bio: 'bio.caleb'
+          },
+          {
+            name: 'Jungly Chen',
+            bio: 'bio.jungly'
+          },
+          {
+            name: 'Jeffrey Li',
+            bio: 'bio.jeffrey'
+          },
+          {
+            name: 'Kayden Visram',
+            bio: 'bio.kayden'
           },
           {
             name: 'Noah Stein'
           },
           {
             name: 'Oliver Wong'
-          },
-          {
-            name: 'Botond Horvath'
           },
           {
             name: 'Khushi Sharma'
