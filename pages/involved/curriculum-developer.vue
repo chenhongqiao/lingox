@@ -41,14 +41,14 @@
               <v-form ref="form" v-model="valid">
                 <v-text-field
                   v-model="formData.name"
-                  label="Full Name*"
+                  :label="$t('form.name')"
                   :rules="[
                     v => !!v || 'Name is required']"
                 />
                 <v-text-field
                   v-model="formData.email"
                   validate-on-blur
-                  label="Email*"
+                  :label="$t('form.email')"
                   :rules="[
                     v => !!v || 'Email is required',
                     v => /.+@.+\..+/.test(v) || 'Please enter an valid E-mail',
@@ -56,49 +56,49 @@
                 />
                 <v-text-field
                   v-model="formData.location"
-                  label="Location*"
+                  :label="$t('form.location')"
                   hint="City/State, Country"
                   :rules="[
                     v => !!v || 'Location is required']"
                 />
                 <v-text-field
                   v-model="formData.language"
-                  label="Languages*"
+                  :label="$t('form.language')"
                   hint="Which languages are you fluent in?"
                   :rules="[
                     v => !!v || 'Languages are required']"
                 />
                 <v-text-field
                   v-model="formData.proficiency"
-                  label="Proficiency*"
+                  :label="$t('form.proficiency')"
                   hint="Describe your level of proficiency."
                   :rules="[
                     v => !!v || 'Proficiency is required']"
                 />
                 <v-text-field
                   v-model="formData.experience"
-                  label="Teaching Experience*"
+                  :label="$t('form.experience')"
                   hint="Discuss any previous experience with teaching (especially in languages)."
                   :rules="[
                     v => !!v || 'Experience is required']"
                 />
                 <v-text-field
                   v-model="formData.subject"
-                  label="Subjects*"
+                  :label="$t('form.subject')"
                   hint="What subjects are you passionate about? (STEM, humanities, etc.)"
                   :rules="[
                     v => !!v || 'Subjects are required']"
                 />
                 <v-text-field
                   v-model="formData.timeCommitment"
-                  label="Time Commitment*"
+                  :label="$t('form.timeCommitment')"
                   hint="How much time are you able to commit to LingoX per week?"
                   :rules="[
                     v => !!v || 'Time Commitment is required']"
                 />
                 <v-text-field
                   v-model="formData.comments"
-                  label="Any additional comments?"
+                  :label="$t('form.comments')"
                 />
               </v-form>
               <v-btn
@@ -128,9 +128,29 @@
 en:
   programParagraph:
     - "A major component of LingoX’s mission to convey accessible language education to communities in need is the provision of free lessons. These can be both live and asynchronous in format. In order to service as many people as possible, we are constantly working hard to create new language curriculums. If you’re passionate about teaching, communication, and international collaboration, sign up today to become a LingoX curriculum developer! Upon request, volunteer hours may be awarded."
+  form:
+    name: "Full Name*"
+    email: "Email*"
+    location: "Location*"
+    language: "Languages*"
+    proficiency: "Proficiency*"
+    experience: "Teaching Experience*"
+    subject: "Subjects*"
+    timeCommitment: "Time Commitment*"
+    comments: "Any additional comments?"
 zh:
   programParagraph:
-    - "A major component of LingoX’s mission to convey accessible language education to communities in need is the provision of free lessons. These can be both live and asynchronous in format. In order to service as many people as possible, we are constantly working hard to create new language curriculums. If you’re passionate about teaching, communication, and international collaboration, sign up today to become a LingoX curriculum developer! Upon request, volunteer hours may be awarded."
+    - "LingoX的使命是为有需要帮助的社区和个人提供免费的语言教育。因此，我们最主要的工作是为他们提供免费课程。它们可以是实时的，也可以是录播，阅读材料，和其它形式。为了尽可能帮助更多的人，我们不断努力设计，编写并完善我们的语言课程。如果你热衷于教学、交流和国际合作，请立即注册成为LingoX的课程开发者！如有需要，我们也可授予您志愿者时间。"
+  form:
+    name: "姓名*"
+    email: "邮箱*"
+    location: "地区*"
+    language: "想要参与编写的语言*"
+    proficiency: "对该语言的流利程度*"
+    experience: "教学经验*"
+    subject: "有经验的科目*"
+    timeCommitment: "您可以付出多少时间*"
+    comments: "任何补充信息?"
 </i18n>
 <script lang="ts">
 import { defineComponent, ref, useContext } from '@nuxtjs/composition-api'
