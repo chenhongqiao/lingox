@@ -229,7 +229,8 @@ export default defineComponent({
         routes: [
           { text: 'startChapter', link: '/new-chapter' },
           { text: 'becomeCurriculumDeveloper', link: '/curriculum-developer' },
-          { text: 'applyToBoard', link: '/apply-board' }
+          { text: 'applyToBoard', link: '/apply-board' },
+          { text: 'becomeEducationalConsultant', link: '/educational-consultant' }
         ]
       }
       /*,
