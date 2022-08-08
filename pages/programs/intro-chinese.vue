@@ -9,6 +9,9 @@
           <div class="text-uppercase font-weight-bold primary--text mb-2">
             {{ $t('programDetails') }}
           </div>
+          <div v-if="$t('notice')" class="mb-2">
+            <b>{{ $t('notice') }}</b>
+          </div>
           <div v-for="(text,index) in $t('programParagraph')" :key="index">
             <div class="text-body-1 mb-2">
               {{ text }}
@@ -38,7 +41,7 @@
               </v-btn>
             </v-card-text>
             <v-card-text v-else>
-              <v-form ref="form" v-model="valid">
+              <v-form ref="form" v-model="valid" disabled>
                 <v-text-field
                   v-model="formData.name"
                   :label="$t('form.name')"
@@ -123,6 +126,7 @@
 </template>
 <i18n lang="yaml">
 en:
+  notice: "Form is currently closed as we have reached our capacity. Thank you for signing up!"
   programParagraph:
     - "Interested in learning Chinese, but find yourself lacking the resources to get started? LingoX is offering a FREE introductory program open to students with demonstrated need! Classes will be live, taking place on Zoom every week. Our curriculum places a heavy emphasis on “speakable” Chinese and aims to have you talking in Mandarin by the end of our time together. With the help of our skilled and attentive teachers, students will find themselves greatly enjoying their educational experience."
     - "LingoX strives to aid students from underserved communities, who may normally lack such support. We hope that these interactive, accessible Chinese lessons will motivate students to learn a new language and be inspired to connect with others. These lessons will be supplemented by exciting practice in conversational skills, as well as witnessing the language in various forms of entertainment media. By curriculum design, students should be able to engage in conversation in the first session!"
@@ -141,6 +145,7 @@ en:
     income: "Household Income*"
     comments: "Additional Comments"
 zh:
+  notice: "注册已结束。谢谢！"
   programParagraph:
     - "LingoX 为全球需要学习汉语的学生提供免费的汉语入门课程！每周定时将在Zoom上现场直播教学。我们的课程重点教授“用得上，说得了”的实用汉语，帮助我们的学生快速掌握运用汉语进行日常交流。"
     - "LingoX努力帮助来自教育资源匮乏的社区的学生，为他们提供汉语学习的支持。我们希望这些简单易懂的汉语课程将激励学生学习一种新的语言，并鼓励他们与他人交流。根据课程设计，学生很可能在第一节课上就能参与对话。"
