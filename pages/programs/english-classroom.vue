@@ -40,10 +40,16 @@
             <v-card-text v-else>
               <v-form ref="form" v-model="valid">
                 <v-text-field
-                  v-model="formData.name"
-                  :label="$t('form.name')"
+                  v-model="formData.firstName"
+                  :label="$t('form.firstName')"
                   :rules="[
-                    v => !!v || 'Name is required']"
+                    v => !!v || 'First Name is required']"
+                />
+                <v-text-field
+                  v-model="formData.lastName"
+                  :label="$t('form.lastName')"
+                  :rules="[
+                    v => !!v || 'Last Name is required']"
                 />
                 <v-text-field
                   v-model="formData.email"
@@ -126,7 +132,8 @@ en:
     - "With specially curated audio files, participants will also have an opportunity to engage in conversation with native speakers to learn proper pronunciation and grammar. Unlike any other English-teaching program, English Classroom does not impose a rigid curriculum upon its audience, and instead, allows for flexibility in selecting lessons that match one’s need. Additionally, our curriculum is ever-evolving, meaning that you can rest assured that our participants will always be at the forefront of language development. So as to promote maximized outreach, English Classroom operates asynchronously. This means that students will be able to work at their own pace! Best part is? All expenses are covered. This includes curriculum costs, instructors’ time, worksheets, and costs of delivery."
     - "So what are you waiting for? Apply today to enjoy all that English Classroom has to offer!"
   form:
-    name: "Full Name*"
+    firstName: "First Name*"
+    lastName: "Last Name*"
     email: "Email*"
     location: "Location*"
     school: "School*"
@@ -144,7 +151,8 @@ zh:
     - "课堂上学生将与英语为母语的教学导师互动和对话，学习正确的发音和语法。与其他英语教学项目不同的是，“英语课室”并不是将公式化的枯燥课程强行灌输给学生，而是让学生灵活选择符合个人需要的全免费课程。"
     - "你还在等什么呢？今天就开始申请吧，体验“英语课堂”所提供的一切！"
   form:
-    name: "姓名*"
+    firstName: "名*"
+    lastName: "姓*"
     email: "邮箱*"
     location: "地区*"
     school: "学校*"
@@ -164,7 +172,8 @@ export default defineComponent({
   setup () {
     const { $axios } = useContext()
     const formData = ref({
-      name: '',
+      firstName: '',
+      lastName: '',
       email: '',
       location: '',
       school: '',

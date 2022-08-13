@@ -40,10 +40,16 @@
             <v-card-text v-else>
               <v-form ref="form" v-model="valid">
                 <v-text-field
-                  v-model="formData.name"
-                  :label="$t('form.name')"
+                  v-model="formData.firstName"
+                  :label="$t('form.firstName')"
                   :rules="[
-                    v => !!v || 'Name is required']"
+                    v => !!v || 'First Name is required']"
+                />
+                <v-text-field
+                  v-model="formData.lastName"
+                  :label="$t('form.lastName')"
+                  :rules="[
+                    v => !!v || 'Last Name is required']"
                 />
                 <v-text-field
                   v-model="formData.email"
@@ -102,7 +108,8 @@ en:
     - "Their expertise is heightened by the fact that all of them have gone through the same trials and tribulations that most students do. As such, tuning in to their firsthand experiences offers spectacular foresight into what one should expect when progressing through   certain academic or career journeys. Speakers will give you the insider’s perspective on their specialization, both the good and the bad, helping you to make an informed choice when it comes to the crossroads of life. After hearing their stories, you may even be inspired to pursue interdisciplinary studies, combining your favorite subjects. The possibilities are endless!"
     - "By following along with the series, you’ll learn about opportunities for high school students, the US college application process, how to make a college list, finding research internships, applying to jobs, and more! Sign up below to tune in!"
   form:
-    name: "Full Name*"
+    firstName: "First Name*"
+    lastName: "Last Name*"
     email: "Email*"
     location: "Location*"
     pathway: "Intended Pathway/Major*"
@@ -114,7 +121,8 @@ zh:
     - "我们的嘉宾讲座可以帮助你更多了解英美大学的申请过程，如何制定大学选校名单，加入研究性实习，申请入职等等。"
     - "如需深入了解和订阅，请填写右侧问卷完成注册!"
   form:
-    name: "姓名*"
+    firstName: "名*"
+    lastName: "姓*"
     email: "邮箱*"
     location: "地区*"
     pathway: "意向职业方向/专业*"
@@ -128,7 +136,8 @@ export default defineComponent({
   setup () {
     const { $axios } = useContext()
     const formData = ref({
-      name: '',
+      firstName: '',
+      lastName: '',
       email: '',
       location: '',
       pathway: '',

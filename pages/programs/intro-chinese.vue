@@ -43,10 +43,16 @@
             <v-card-text v-else>
               <v-form ref="form" v-model="valid" disabled>
                 <v-text-field
-                  v-model="formData.name"
-                  :label="$t('form.name')"
+                  v-model="formData.firstName"
+                  :label="$t('form.firstName')"
                   :rules="[
-                    v => !!v || 'Name is required']"
+                    v => !!v || 'First Name is required']"
+                />
+                <v-text-field
+                  v-model="formData.lastName"
+                  :label="$t('form.lastName')"
+                  :rules="[
+                    v => !!v || 'Last Name is required']"
                 />
                 <v-text-field
                   v-model="formData.email"
@@ -135,7 +141,8 @@ en:
     - "Note: As part of its commitment to serving impoverished students, LingoX may prioritize certain applicants based on their circumstances."
   longIntroChinese: Introduction to Chinese
   form:
-    name: "Full Name*"
+    firstName: "First Name*"
+    lastName : "Last Name*"
     email: "Email*"
     location: "Location*"
     school: "School*"
@@ -154,7 +161,8 @@ zh:
     - "温馨提示：本着优先服务经济困难学生的原则，LingoX会根据申请人的家庭收入水平和经济状况来考虑是否录取。"
   longIntroChinese: 汉语教室
   form:
-    name: "姓名*"
+    firstName: "名*"
+    lastName: "姓*"
     email: "邮箱*"
     location: "地区*"
     school: "学校*"
@@ -171,7 +179,8 @@ export default defineComponent({
   setup () {
     const { $axios } = useContext()
     const formData = ref({
-      name: '',
+      firstName: '',
+      lastName: '',
       email: '',
       location: '',
       school: '',
