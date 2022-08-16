@@ -8,6 +8,9 @@
         <div class="text-uppercase font-weight-bold primary--text mb-2">
           {{ $t('getInvolved') }}
         </div>
+        <div v-if="$t('notice')" class="mb-2">
+          <b>{{ $t('notice') }}</b>
+        </div>
         <div class="text-body-1 mb-3">
           {{ $t('programText') }}
         </div>
@@ -59,7 +62,7 @@
             </v-btn>
           </v-card-text>
           <v-card-text v-else>
-            <v-form ref="form" v-model="valid">
+            <v-form ref="form" v-model="valid" disabled>
               <v-text-field
                 v-model="formData.name"
                 label="Full Name*"
@@ -153,7 +156,8 @@
 </template>
 <i18n lang="yaml">
 en:
-  programText: "Applications for the 2022-2023 LingoX Executive Board are currently open!"
+  programText: "Positions for the 2022-2023 LingoX Executive Board are listed below!"
+  notice: "The form is now closed as we have met this application cycle’s deadline. Please check back in April 2023 for information regarding next year’s Executive Board selection process. You can also check out our Instagram @lingoxofficial for all the newest updates. Thanks for your interest."
   positions:
     - name: "ATO (Assistant Technology Officer)"
       responsibilities:
