@@ -232,6 +232,13 @@ export default defineComponent({
           { text: 'applyToBoard', link: '/apply-board' },
           { text: 'becomeEducationalConsultant', link: '/educational-consultant' }
         ]
+      },
+      {
+        text: 'resources',
+        base: '/resources',
+        routes: [
+          { text: 'mentalHealth', link: '/mental-health' }
+        ]
       }
       /*,
       { text: 'Partners', link: '/partners' },
