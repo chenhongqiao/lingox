@@ -132,7 +132,7 @@
 </template>
 <i18n lang="yaml">
 en:
-  notice: "Registration form is currently closed as we have reached this cycle’s capacity. Please check back in November to sign up for the second series of lessons! Thanks for your interest."
+  notice: "Registration form is currently closed as we have reached this cycle’s capacity. Please check back in November to sign up for the second series of lessons! Acceptance emails have been sent to those who applied for our upcoming Introduction to Chinese program. If you registered, please check your inbox and your spam folder too!"
   programParagraph:
     - "Interested in learning Chinese, but find yourself lacking the resources to get started? LingoX is offering a FREE introductory program open to students with demonstrated need! Classes will be live, taking place on Zoom every week. Our curriculum places a heavy emphasis on “speakable” Chinese and aims to have you talking in Mandarin by the end of our time together. With the help of our skilled and attentive teachers, students will find themselves greatly enjoying their educational experience."
     - "LingoX strives to aid students from underserved communities, who may normally lack such support. We hope that these interactive, accessible Chinese lessons will motivate students to learn a new language and be inspired to connect with others. These lessons will be supplemented by exciting practice in conversational skills, as well as witnessing the language in various forms of entertainment media. By curriculum design, students should be able to engage in conversation in the first session!"
