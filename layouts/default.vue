@@ -78,9 +78,9 @@
           </span>
         </div>
 
-        <!--v-btn color="primary" large outlined rounded>
+        <v-btn color="primary" outlined rounded href="https://www.paypal.com/donate/?hosted_button_id=XHAYQFP5C9PX4" target="_blank">
           Donate
-        </v-btn-->
+        </v-btn>
       </v-container>
     </v-app-bar>
     <v-main>
