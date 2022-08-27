@@ -120,6 +120,29 @@
                 />
               </v-responsive>
             </div>
+            <div class="text-center text-md-left mt-4 mt-lg-2">
+              <v-btn
+                fab
+                small
+                depressed
+                color="secondary"
+                target="_blank"
+                href="https://www.instagram.com/lingoxofficial/"
+              >
+                <v-icon>mdi-instagram</v-icon>
+              </v-btn>
+              <v-btn
+                fab
+                small
+                depressed
+                color="secondary"
+                target="_blank"
+                href="https://www.paypal.com/donate/?hosted_button_id=XHAYQFP5C9PX4"
+                class="ml-2"
+              >
+                <v-icon>mdi-hand-coin</v-icon>
+              </v-btn>
+            </div>
           </v-col>
           <!--v-col
             cols="12"
