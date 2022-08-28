@@ -9,7 +9,7 @@
           <div class="text-uppercase font-weight-bold primary--text mb-2">
             {{ $t('programDetails') }}
           </div>
-          <div v-if="$t('notice')" class="mb-2">
+          <div v-if="false" class="mb-2">
             <b>{{ $t('notice') }}</b>
           </div>
           <div v-for="(text,index) in $t('programParagraph')" :key="index">
@@ -41,7 +41,7 @@
               </v-btn>
             </v-card-text>
             <v-card-text v-else>
-              <v-form ref="form" v-model="valid" disabled>
+              <v-form ref="form" v-model="valid">
                 <v-text-field
                   v-model="formData.firstName"
                   :label="$t('form.firstName')"
