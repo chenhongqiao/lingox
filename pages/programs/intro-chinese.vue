@@ -139,7 +139,7 @@ en:
     - "Our course’s live format allows for students to ask questions and have them answered immediately, whilst also receiving ongoing support. Furthermore, our standby Tech Team is prepared to troubleshoot connectivity and software issues. We will also have after-class practice for participants to review and work on, in order to solidify the new knowledge."
     - "It is our firm belief that all those interested in learning Chinese should be granted the means to do so. Ready to study the most spoken language in the world? Sign up now, while limited spots last! No prior background in Chinese is required."
     - "Note: As part of its commitment to serving impoverished students, LingoX may prioritize certain applicants based on their circumstances."
-  longIntroChinese: "Shoujian Scholars Program"
+  longIntroChinese: "Shoujen Scholars Program"
   form:
     firstName: "First Name*"
     lastName : "Last Name*"
