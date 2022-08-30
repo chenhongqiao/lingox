@@ -166,11 +166,10 @@ zh:
     verificationHint: "请在输入“Yes”以保证您会让贵校所有的学生都有使用材料的权利。"
 </i18n>
 <script lang="ts">
-import { defineComponent, ref, useContext } from '@nuxtjs/composition-api'
 export default defineComponent({
   name: 'EnglishClassroom',
   setup () {
-    const { $axios } = useContext()
+    const { $axios } = useNuxtApp()
     const formData = ref({
       firstName: '',
       lastName: '',

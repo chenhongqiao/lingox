@@ -10,13 +10,11 @@
   </v-container>
 </template>
 <script lang="ts">
-import { defineComponent, ref, Ref, useContext } from '@nuxtjs/composition-api'
-import { Member } from '@/components/Roster.vue'
 export default defineComponent({
   name: 'TutorsPage',
   setup () {
-    const { $img } = useContext()
-    const tutors: Ref<Member[]> = ref([
+    const { $img } = useNuxtApp()
+    const tutors = ref([
       {
         name: 'Eric Gao',
         position: 'Stanford University',

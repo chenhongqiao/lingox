@@ -182,11 +182,10 @@ en:
   resume: "You may also submit your resume to contact@lingox.org, with “Your Name - Executive Board Application (Desired Position)” in the subject line."
 </i18n>
 <script lang="ts">
-import { defineComponent, ref, useContext } from '@nuxtjs/composition-api'
 export default defineComponent({
   name: 'ApplyBoard',
   setup () {
-    const { $axios } = useContext()
+    const { $axios } = useNuxtApp()
     const formData = ref({
       name: '',
       email: '',

@@ -1,4 +1,5 @@
-export default {
+import { defineNuxtConfig } from '@nuxt/bridge'
+export default defineNuxtConfig({
   // Target: https://go.nuxtjs.dev/config-target
   target: 'static',
 
@@ -41,15 +42,11 @@ export default {
 
   // Modules for dev and build (recommended): https://go.nuxtjs.dev/config-modules
   buildModules: [
-    // https://go.nuxtjs.dev/typescript
-    '@nuxt/typescript-build',
-    '@nuxtjs/composition-api/module',
     // https://go.nuxtjs.dev/vuetify
     ['@nuxtjs/vuetify', {
       customVariables: ['~/assets/scss/vuetify/variables/_index.scss'],
       optionsPath: '~/configs/vuetify.js',
-      treeShake: true,
-      extractCSS: true
+      treeShake: true
     }],
     ['@nuxtjs/google-fonts', {
       families: {
@@ -95,11 +92,11 @@ export default {
 
   // Build Configuration: https://go.nuxtjs.dev/config-build
   build: {
-    extend(config) {
+    extend (config) {
       config.module.rules.push({
         test: /\.(custom.yaml)$/,
         use: 'yaml-loader'
       })
     }
   }
-}
+})

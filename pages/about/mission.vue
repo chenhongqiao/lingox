@@ -64,7 +64,6 @@ zh:
     - 我们的工作旨在通过教授英语和汉语来帮助中国、非洲和印度等社区语言教育服务不足的学童。更广泛地说，LingoX 努力支持所有学生，包括那些缺乏合适教育的战争难民等提供援助 ——这就是为什么任何需要援助的学生都可以完全免费注册。
 </i18n>
 <script lang="ts">
-import { defineComponent } from '@nuxtjs/composition-api'
 export default defineComponent({
   name: 'MissionPage',
   head: {

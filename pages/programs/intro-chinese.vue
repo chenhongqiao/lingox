@@ -173,11 +173,10 @@ zh:
     comments: "额外补充信息"
 </i18n>
 <script lang="ts">
-import { defineComponent, ref, useContext } from '@nuxtjs/composition-api'
 export default defineComponent({
   name: 'IntroChinese',
   setup () {
-    const { $axios } = useContext()
+    const { $axios } = useNuxtApp()
     const formData = ref({
       firstName: '',
       lastName: '',

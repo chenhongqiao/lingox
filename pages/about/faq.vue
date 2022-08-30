@@ -25,15 +25,10 @@
   </v-container>
 </template>
 <script lang="ts">
-import { defineComponent, ref, Ref } from '@nuxtjs/composition-api'
-interface FAQ {
-  question: string
-  answer: string
-}
 export default defineComponent({
   name: 'FaqPage',
   setup () {
-    const FAQs: Ref<FAQ[]> = ref([
+    const FAQs = ref([
       {
         question: 'What is the cost of enrolling in a LingoX program?',
         answer: 'As part of our commitment to making education accessible to everyone, enrollment in any LingoX program is offered free of charge thanks to our wonderful volunteers and kind sponsors!'

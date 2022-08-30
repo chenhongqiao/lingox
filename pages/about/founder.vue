@@ -38,7 +38,6 @@ zh:
   signature: "Mia Lee（创始人兼首席执行官）"
 </i18n>
 <script lang="ts">
-import { defineComponent } from '@nuxtjs/composition-api'
 export default defineComponent({
   name: 'FounderPage',
   head: {

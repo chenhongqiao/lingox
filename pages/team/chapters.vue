@@ -38,17 +38,11 @@ en:
     botond: "Botond Horvath is a talented, aspiring astrophysicist and year 11 student at Upper Canada College. He is a proficient communicator, and fully trilingual in English, French and Hungarian, with a desire to learn more languages like Italian! In his free time, Botond enjoys reading, researching, martial arts, and performing traditional dances."
 </i18n>
 <script lang="ts">
-import { defineComponent, ref, Ref, useContext } from '@nuxtjs/composition-api'
-import { Member } from '@/components/Roster.vue'
-interface Chapter {
-  name: string,
-  members: Member[]
-}
 export default defineComponent({
   name: 'ChapterPage',
   setup () {
-    const { $img } = useContext()
-    const chapters: Ref<Chapter[]> = ref([
+    const { $img } = useNuxtApp()
+    const chapters = ref([
       {
         name: 'Southwest China',
         members: [{

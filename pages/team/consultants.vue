@@ -44,13 +44,11 @@ zh:
   ucla: UCLA
 </i18n>
 <script lang="ts">
-import { defineComponent, ref, Ref, useContext } from '@nuxtjs/composition-api'
-import { Member } from '@/components/Roster.vue'
 export default defineComponent({
   name: 'ConsultantsPage',
   setup () {
-    const { $img } = useContext()
-    const consultants: Ref<Member[]> = ref([
+    const { $img } = useNuxtApp()
+    const consultants = ref([
       {
         name: 'Eric Gao',
         position: 'stanford',

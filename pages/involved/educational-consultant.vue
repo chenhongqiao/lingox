@@ -131,11 +131,10 @@ en:
     recordingDevice: "Recording Device*"
 </i18n>
 <script lang="ts">
-import { defineComponent, ref, useContext } from '@nuxtjs/composition-api'
 export default defineComponent({
   name: 'BecomeDeveloper',
   setup () {
-    const { $axios } = useContext()
+    const { $axios } = useNuxtApp()
     const formData = ref({
       name: '',
       email: '',

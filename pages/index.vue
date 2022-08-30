@@ -62,7 +62,7 @@
         {{ $t('programs') }}
       </h3>
       <v-row class="mt-1">
-        <v-col v-for="(item,index) in involved" :key="index" cols="12" sm="4">
+        <v-col v-for="(item, index) in involved" :key="index" cols="12" sm="4">
           <div class="text-uppercase font-weight-bold primary--text mb-2">
             {{ $t(item.title) }}
           </div>
@@ -99,16 +99,10 @@ zh:
   speakerSeriesText: "LingoX每月定期邀请来自世界排名前20大学的优秀学生，与我们分享他们申请大学选择专业的经历和经验以及他们对所选专业未来发展前景和趋势的分析和看法。"
 </i18n>
 <script lang="ts">
-import { defineComponent, ref, Ref } from '@nuxtjs/composition-api'
-interface Involved {
-  title: string
-  content: string
-  link: string
-}
 export default defineComponent({
   name: 'IndexPage',
   setup () {
-    const involved: Ref<Involved[]> = ref([{
+    const involved = ref([{
       title: 'introChinese',
       content: 'introChineseText',
       link: '/programs/intro-chinese'

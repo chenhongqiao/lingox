@@ -22,13 +22,6 @@
   </div>
 </template>
 <script lang="ts">
-import { defineComponent } from '@nuxtjs/composition-api'
-export interface Member {
-  name: string
-  position?: string
-  bio?: string
-  image?: string
-}
 export default defineComponent({
   name: 'RosterComponent',
   props: {

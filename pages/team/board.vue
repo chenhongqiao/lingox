@@ -44,13 +44,11 @@ zh:
     sarah: 作为一名曾在多个国家留学的美籍华裔学生，Sarah深知英语在学习和生活以及各个方面的重要性。她希望通过LingoX来帮助贫困社区的学生获得实现梦想的机会。闲暇时，Sarah喜欢打网球、画画以及旅游。
 </i18n>
 <script lang="ts">
-import { defineComponent, ref, Ref, useContext } from '@nuxtjs/composition-api'
-import { Member } from '~/components/Roster.vue'
 export default defineComponent({
   name: 'BoardPage',
   setup () {
-    const { $img } = useContext()
-    const team: Ref<Member[]> = ref([
+    const { $img } = useNuxtApp()
+    const team = ref([
       {
         name: 'Mia Lee',
         position: 'CEO',
