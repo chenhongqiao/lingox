@@ -169,7 +169,7 @@ export default defineComponent({
         name: 'UK',
         members: [
           {
-            name: 'Alvin Chen',
+            name: 'Alvin Zhou',
             position: 'Director of Development',
             bio: 'bio.alvin',
             image: $img('team/alvin.png')
