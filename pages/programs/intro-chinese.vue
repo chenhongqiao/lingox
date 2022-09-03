@@ -2,106 +2,101 @@
   <div>
     <v-container class="py-4 py-lg-8">
       <h3 class="text-h3">
-        {{ $t('longIntroChinese') }}
+        {{ $t("longIntroChinese") }}
       </h3>
       <v-row class="mt-4">
         <v-col cols="12" md="7">
           <div class="text-uppercase font-weight-bold primary--text mb-2">
-            {{ $t('programDetails') }}
+            {{ $t("programDetails") }}
           </div>
-          <div class="mb-2">
-            <b>{{ $t('notice') }}</b>
+          <div v-if="false" class="mb-2">
+            <b>{{ $t("notice") }}</b>
           </div>
-          <div v-for="(text,index) in $t('programParagraph')" :key="index">
+          <div v-for="(text, index) in $t('programParagraph')" :key="index">
             <div class="text-body-1 mb-2">
               {{ text }}
             </div>
           </div>
         </v-col>
         <v-col cols="12" md="5">
-          <v-img :src="$img('intro-chinese.jpg')" class="rounded-lg elevation-6 mb-2" max-height="480" />
+          <v-img
+            :src="$img('intro-chinese.jpg')"
+            class="rounded-lg elevation-6 mb-2"
+            max-height="480"
+          />
           <v-card class="pa-1" flat>
-            <v-card-title>{{ $t('studentSignup') }}</v-card-title>
+            <v-card-title>{{ $t("studentSignup") }}</v-card-title>
             <v-card-text v-if="done" class="text-center">
               <div class="mt-1">
-                <v-icon size="60" color="success">
-                  mdi-check-circle
-                </v-icon>
+                <v-icon size="60" color="success"> mdi-check-circle </v-icon>
               </div>
               <div class="mt-2">
-                {{ $t('formSubmitted') }}
+                {{ $t("formSubmitted") }}
               </div>
               <v-btn
                 class="mt-2"
                 color="secondary"
                 block
                 large
-                @click="done=false"
+                @click="done = false"
               >
-                {{ $t('submitAnotherResponse') }}
+                {{ $t("submitAnotherResponse") }}
               </v-btn>
             </v-card-text>
             <v-card-text v-else>
-              <v-form ref="form" v-model="valid" disabled>
+              <v-form ref="form" v-model="valid">
                 <v-text-field
                   v-model="formData.firstName"
                   :label="$t('form.firstName')"
-                  :rules="[
-                    v => !!v || 'First Name is required']"
+                  :rules="[(v) => !!v || 'First Name is required']"
                 />
                 <v-text-field
                   v-model="formData.lastName"
                   :label="$t('form.lastName')"
-                  :rules="[
-                    v => !!v || 'Last Name is required']"
+                  :rules="[(v) => !!v || 'Last Name is required']"
                 />
                 <v-text-field
                   v-model="formData.email"
                   validate-on-blur
                   :label="$t('form.email')"
                   :rules="[
-                    v => !!v || 'Email is required',
-                    v => /.+@.+\..+/.test(v) || 'Please enter an valid E-mail',
+                    (v) => !!v || 'Email is required',
+                    (v) =>
+                      /.+@.+\..+/.test(v) || 'Please enter an valid E-mail',
                   ]"
                 />
                 <v-text-field
                   v-model="formData.location"
                   :label="$t('form.location')"
                   hint="City/State, Country"
-                  :rules="[
-                    v => !!v || 'Location is required']"
+                  :rules="[(v) => !!v || 'Location is required']"
                 />
                 <v-text-field
                   v-model="formData.school"
                   :label="$t('form.school')"
-                  :rules="[
-                    v => !!v || 'School is required']"
+                  :rules="[(v) => !!v || 'School is required']"
                 />
                 <v-text-field
                   v-model="formData.grade"
                   :label="$t('form.grade')"
-                  :rules="[
-                    v => !!v || 'Grade Level is required']"
+                  :rules="[(v) => !!v || 'Grade Level is required']"
                 />
                 <v-text-field
                   v-model="formData.proficiency"
                   :label="$t('form.proficiency')"
                   hint="Describe your level of proficiency in Chinese"
-                  :rules="[
-                    v => !!v || 'Proficiency Level is required']"
+                  :rules="[(v) => !!v || 'Proficiency Level is required']"
                 />
                 <v-text-field
                   v-model="formData.timeZone"
                   :label="$t('form.timeZone')"
-                  :rules="[
-                    v => !!v || 'Time Zone is required']"
+                  :rules="[(v) => !!v || 'Time Zone is required']"
                 />
                 <v-text-field
                   v-model="formData.income"
                   :label="$t('form.income')"
                   hint="Please state your approximate annual household income per year (for the purpose of determining eligibility)"
-                  :rules="[
-                    v => !!v || 'Income is required']"
+                  :rules="[(v) => !!v || 'Income is required']"
                 />
                 <v-text-field
                   v-model="formData.comments"
@@ -116,17 +111,14 @@
                 :loading="submitting"
                 @click="submit"
               >
-                {{ $t('submit') }}
+                {{ $t("submit") }}
               </v-btn>
             </v-card-text>
           </v-card>
         </v-col>
       </v-row>
     </v-container>
-    <v-snackbar
-      v-model="error"
-      color="error"
-    >
+    <v-snackbar v-model="error" color="error">
       An error has occurred while submitting the form. Please try again.
     </v-snackbar>
   </div>
@@ -175,43 +167,46 @@ zh:
     comments: "额外补充信息"
 </i18n>
 <script lang="ts">
-import { defineComponent, ref, useContext } from '@nuxtjs/composition-api'
+import { defineComponent, ref, useContext } from "@nuxtjs/composition-api";
 export default defineComponent({
-  name: 'IntroChinese',
-  setup () {
-    const { $axios } = useContext()
+  name: "IntroChinese",
+  setup() {
+    const { $axios } = useContext();
     const formData = ref({
-      firstName: '',
-      lastName: '',
-      email: '',
-      location: '',
-      school: '',
-      grade: '',
-      proficiency: '',
-      timeZone: '',
-      income: '',
-      comments: ''
-    })
-    const valid = ref(false)
-    const form: any = ref(null)
-    const submitting = ref(false)
-    const done = ref(false)
-    const error = ref(false)
+      firstName: "",
+      lastName: "",
+      email: "",
+      location: "",
+      school: "",
+      grade: "",
+      proficiency: "",
+      timeZone: "",
+      income: "",
+      comments: "",
+    });
+    const valid = ref(false);
+    const form: any = ref(null);
+    const submitting = ref(false);
+    const done = ref(false);
+    const error = ref(false);
     const submit = async () => {
-      submitting.value = true
+      submitting.value = true;
       try {
-        await $axios.$post('https://form-submission.harrychen.workers.dev/wQKrboWxpYGrcgwc', formData.value)
-        done.value = true
-        form.value.reset()
+        await $axios.$post(
+          "https://form-submission.harrychen.workers.dev/wQKrboWxpYGrcgwc",
+          formData.value
+        );
+        done.value = true;
+        form.value.reset();
       } catch (err) {
-        error.value = true
+        error.value = true;
       }
-      submitting.value = false
-    }
-    return { formData, valid, submit, submitting, form, done, error }
+      submitting.value = false;
+    };
+    return { formData, valid, submit, submitting, form, done, error };
   },
   head: {
-    title: 'Intro to Chinese'
-  }
-})
+    title: "Intro to Chinese",
+  },
+});
 </script>
