@@ -1,5 +1,8 @@
 import { defineNuxtConfig } from '@nuxt/bridge'
 export default defineNuxtConfig({
+  bridge: {
+    nitro: false
+  },
   // Target: https://go.nuxtjs.dev/config-target
   target: 'static',
 
