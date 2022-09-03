@@ -9,7 +9,7 @@
           <div class="text-uppercase font-weight-bold primary--text mb-2">
             {{ $t('programDetails') }}
           </div>
-          <div v-if="false" class="mb-2">
+          <div class="mb-2">
             <b>{{ $t('notice') }}</b>
           </div>
           <div v-for="(text,index) in $t('programParagraph')" :key="index">
@@ -19,6 +19,7 @@
           </div>
         </v-col>
         <v-col cols="12" md="5">
+          <v-img :src="$img('intro-chinese.jpg')" class="rounded-lg elevation-6 mb-2" max-height="480" />
           <v-card class="pa-1" flat>
             <v-card-title>{{ $t('studentSignup') }}</v-card-title>
             <v-card-text v-if="done" class="text-center">
@@ -41,7 +42,7 @@
               </v-btn>
             </v-card-text>
             <v-card-text v-else>
-              <v-form ref="form" v-model="valid">
+              <v-form ref="form" v-model="valid" disabled>
                 <v-text-field
                   v-model="formData.firstName"
                   :label="$t('form.firstName')"
@@ -132,7 +133,7 @@
 </template>
 <i18n lang="yaml">
 en:
-  notice: "Registration form is currently closed as we have reached this cycle’s capacity. Please check back in November to sign up for the second series of lessons! Acceptance emails have been sent to those who applied for our upcoming Introduction to Chinese program. If you registered, please check your inbox and your spam folder too!"
+  notice: "Due to an expansion in our organization’s capacity, we will not be accepting more applications to this program."
   programParagraph:
     - "Dates: August 28th - November 26th, 2022 | Time: 8:00-8:45am PDT"
     - "Interested in learning Chinese, but find yourself lacking the resources to get started? LingoX is offering a FREE introductory program open to students with demonstrated need! Classes will be live, taking place on Zoom every week. Our curriculum places a heavy emphasis on “speakable” Chinese and aims to have you talking in Mandarin by the end of our time together. With the help of our skilled and attentive teachers, students will find themselves greatly enjoying their educational experience."
