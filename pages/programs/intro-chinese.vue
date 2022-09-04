@@ -28,7 +28,9 @@
             <v-card-title>{{ $t("studentSignup") }}</v-card-title>
             <v-card-text v-if="done" class="text-center">
               <div class="mt-1">
-                <v-icon size="60" color="success"> mdi-check-circle </v-icon>
+                <v-icon size="60" color="success">
+                  mdi-check-circle
+                </v-icon>
               </div>
               <div class="mt-2">
                 {{ $t("formSubmitted") }}
@@ -167,46 +169,46 @@ zh:
     comments: "额外补充信息"
 </i18n>
 <script lang="ts">
-import { defineComponent, ref, useContext } from "@nuxtjs/composition-api";
+import { defineComponent, ref, useContext } from '@nuxtjs/composition-api'
 export default defineComponent({
-  name: "IntroChinese",
-  setup() {
-    const { $axios } = useContext();
+  name: 'IntroChinese',
+  setup () {
+    const { $axios } = useContext()
     const formData = ref({
-      firstName: "",
-      lastName: "",
-      email: "",
-      location: "",
-      school: "",
-      grade: "",
-      proficiency: "",
-      timeZone: "",
-      income: "",
-      comments: "",
-    });
-    const valid = ref(false);
-    const form: any = ref(null);
-    const submitting = ref(false);
-    const done = ref(false);
-    const error = ref(false);
+      firstName: '',
+      lastName: '',
+      email: '',
+      location: '',
+      school: '',
+      grade: '',
+      proficiency: '',
+      timeZone: '',
+      income: '',
+      comments: ''
+    })
+    const valid = ref(false)
+    const form: any = ref(null)
+    const submitting = ref(false)
+    const done = ref(false)
+    const error = ref(false)
     const submit = async () => {
-      submitting.value = true;
+      submitting.value = true
       try {
         await $axios.$post(
-          "https://form-submission.harrychen.workers.dev/wQKrboWxpYGrcgwc",
+          'https://form-submission.harrychen.workers.dev/wQKrboWxpYGrcgwc',
           formData.value
-        );
-        done.value = true;
-        form.value.reset();
+        )
+        done.value = true
+        form.value.reset()
       } catch (err) {
-        error.value = true;
+        error.value = true
       }
-      submitting.value = false;
-    };
-    return { formData, valid, submit, submitting, form, done, error };
+      submitting.value = false
+    }
+    return { formData, valid, submit, submitting, form, done, error }
   },
   head: {
-    title: "Intro to Chinese",
-  },
-});
+    title: 'Intro to Chinese'
+  }
+})
 </script>
