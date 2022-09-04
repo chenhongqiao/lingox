@@ -27,6 +27,8 @@ en:
     shivali: Shivali Shrivastava is a rising sophomore. Being raised as a first-generation immigrant with Indian parents, she has been exposed to many valuable languages. She plans to use LingoX as a bridge to connect impoverished communities with quality education. During her free time, Shivali enjoys taking walks on the beach or making memories with her friends.
     sarah: As a Chinese-American student who studied in multiple countries, Sarah Xie deeply comprehends how English serves as a vital tool in every educational aspect. She wishes to help youngsters in underserved communities get the chance to achieve their dreams through LingoX. In her free time, Sarah enjoys playing tennis, painting as well as traveling.
     judy: Judy Tao, an uprising junior who completed her first seven years of education in China, recognized the significance of studying and appreciating diverse languages and cultures. Thus, she wished to explore and enhance the education of languages through LingoX, and also assist the students who want to learn languages. During her free time, she enjoys dancing, painting, playing card games, and hanging out with her friends.
+    ryan: "Ryan is an aspiring neurosurgeon who takes a great interest in neuroscience and computer science. In his free time he likes to play with Rubik’s cubes, cook, and partake in public speaking events. He is currently fluent in two languages and is learning a third. Although he doesn’t want to go into a music career, Ryan also plays the viola and piano as a hobby. He is a very sociable person who will befriend anyone who approaches him."
+    bruno: "Bruno is a sophomore at University High School, where he writes for his school newspaper and participates in Mock Trial, Model United Nations, and Speech & Debate. From these activities, Bruno learned the significance of effective communication. As the son of two immigrants, Bruno was raised hearing stories from his parents about the struggles of learning English. In his free time, you might find Bruno playing with his two cats, eating an In-N-Out burger with friends, or playing board games with family."
 zh:
   bio:
     mial: Mia 对教育充满热情，致力于帮助贫困社区和弱势家庭的学生获得平等、优质的教育资源。Mia 的业余爱好是弹钢琴，打高尔夫，写作和旅行。
@@ -55,7 +57,7 @@ export default defineComponent({
         name: 'Mia Lee',
         position: 'CEO',
         bio: 'bio.mial',
-        image: $img('team/mial.jpg')
+        image: $img('team/mial.png')
       },
       {
         name: 'David Chen',
@@ -75,11 +77,6 @@ export default defineComponent({
         image: $img('team/jane.png')
       },
       {
-        name: 'Mia Hennequin',
-        position: 'CDO',
-        bio: 'bio.miah',
-        image: $img('team/miah.png')
-      }, {
         name: 'Shivali Shrivastava',
         position: 'ADO',
         bio: 'bio.shivali',
@@ -89,6 +86,12 @@ export default defineComponent({
         position: 'ADO',
         bio: 'bio.sarah',
         image: $img('team/sarah.png')
+      },
+      {
+        name: 'Bruno Diaz',
+        position: 'ADO',
+        bio: 'bio.bruno',
+        image: $img('team/bruno.jpg')
       }, {
         name: 'Sanjana Ramakrishnan',
         position: 'CFO',
@@ -109,7 +112,14 @@ export default defineComponent({
         position: 'ATO',
         bio: 'bio.tyler',
         image: $img('team/tyler.png')
-      }, {
+      },
+      {
+        name: 'Ryan',
+        position: 'ATO',
+        bio: 'bio.ryan',
+        image: $img('team/ryan.png')
+      },
+      {
         name: 'Simone Rothaupt',
         position: 'CPRO',
         bio: 'bio.simone',
