@@ -124,7 +124,7 @@ export default defineComponent({
         name: 'Kevin Chu',
         position: 'ATO',
         bio: 'bio.kevin',
-        image: $img('team/kevin.jpeg')
+        image: $img('team/kevin.jpg')
       },
       {
         name: 'Simone Rothaupt',
