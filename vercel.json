@@ -5,5 +5,12 @@
       "use": "@nuxtjs/vercel-builder",
       "config": {}
     }
+  ],
+  "redirects": [
+    {
+      "source": "/signup",
+      "destination": "https://eepurl.com/h5_6-z",
+      "permanent": true
+    }
   ]
 }
