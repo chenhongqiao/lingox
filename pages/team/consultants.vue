@@ -47,45 +47,44 @@ zh:
 export default defineComponent({
   name: 'ConsultantsPage',
   setup () {
-    const { $img } = useNuxtApp()
     const consultants = ref([
       {
         name: 'Eric Gao',
         position: 'stanford',
         bio: 'bio.eric',
-        image: $img('team/eric.jpeg')
+        image: '/images/team/eric.jpeg'
       },
       {
         name: 'Joseph Hwang',
         position: 'havard',
         bio: 'bio.joseph',
-        image: $img('team/joseph.png')
+        image: '/images/team/joseph.png'
       }, {
         name: 'Yuhua Chen',
         position: 'upenn',
         bio: 'bio.yuhua',
-        image: $img('team/yuhua.png')
+        image: '/images/team/yuhua.png'
       }, {
         name: 'William Choi',
         position: 'jhuAndOthers',
         bio: 'bio.william',
-        image: $img('team/william.png')
+        image: '/images/team/william.png'
       }, {
         name: 'Rey Shankar',
         position: 'berkeley',
         bio: 'bio.rey',
-        image: $img('team/rey.jpeg')
+        image: '/images/team/rey.jpeg'
       }, {
         name: 'Anjali Anbu',
         bio: 'bio.anjali',
         position: 'cornell',
-        image: $img('team/anjali.jpeg')
+        image: '/images/team/anjali.jpeg'
       },
       {
         name: 'Alex Fu',
         bio: 'bio.alex',
         position: 'ucla',
-        image: $img('team/alex.jpeg')
+        image: '/images/team/alex.jpeg'
       }
     ])
 

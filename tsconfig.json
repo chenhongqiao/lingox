@@ -3,10 +3,8 @@
   "compilerOptions": {
     "types": [
       "@nuxt/types",
-      "@nuxt/content",
       "@types/node",
       "@nuxtjs/i18n",
-      "@nuxt/image",
       "@nuxtjs/axios"
     ]
   }

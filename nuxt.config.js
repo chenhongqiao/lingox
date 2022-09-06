@@ -1,11 +1,12 @@
 import { defineNuxtConfig } from '@nuxt/bridge'
 export default defineNuxtConfig({
   // Target: https://go.nuxtjs.dev/config-target
-  target: 'static',
 
   bridge: {
     nitro: true
   },
+
+  target: 'server',
 
   // Global page headers: https://go.nuxtjs.dev/config-head
   head: {
@@ -45,20 +46,15 @@ export default defineNuxtConfig({
   components: true,
 
   // Modules for dev and build (recommended): https://go.nuxtjs.dev/config-modules
-  buildModules: [
+  modules: [
     // https://go.nuxtjs.dev/vuetify
-    ['@nuxtjs/vuetify', {
-      customVariables: ['~/assets/scss/vuetify/variables/_index.scss'],
-      optionsPath: '~/configs/vuetify.js',
-      treeShake: true
-    }],
+    '@nuxtjs/vuetify',
     ['@nuxtjs/google-fonts', {
       families: {
         Poppins: [100, 200, 300, 400, 500, 600, 700, 900],
         Alice: [400, 500]
       }
     }],
-    'nuxt-compress',
     ['@nuxtjs/i18n', {
       locales: [{
         code: 'en',
@@ -88,11 +84,14 @@ export default defineNuxtConfig({
         }
       }
     }],
-    ['@nuxt/image', {
-      dir: 'static/images'
-    }],
     '@nuxtjs/axios'
   ],
+
+  vuetify: {
+    customVariables: ['assets/scss/vuetify/variables/_index.scss'],
+    optionsPath: 'configs/vuetify.js',
+    treeShake: true
+  },
 
   // Build Configuration: https://go.nuxtjs.dev/config-build
   build: {

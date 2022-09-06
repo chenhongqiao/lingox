@@ -47,82 +47,81 @@ zh:
 export default defineComponent({
   name: 'BoardPage',
   setup () {
-    const { $img } = useNuxtApp()
     const team = ref([
       {
         name: 'Mia Lee',
         position: 'CEO',
         bio: 'bio.mial',
-        image: $img('team/mial.jpg')
+        image: '/images/team/mial.jpg'
       },
       {
         name: 'David Chen',
         position: 'CMO',
         bio: 'bio.david',
-        image: $img('team/david.jpg')
+        image: '/images/team/david.jpg'
       }, {
         name: 'Hannah Choi',
         position: 'AMO',
         bio: 'bio.hannah',
-        image: $img('team/hannah.png')
+        image: '/images/team/hannah.png'
       },
       {
         name: 'Jane Wang',
         position: 'AMO',
         bio: 'bio.jane',
-        image: $img('team/jane.png')
+        image: '/images/team/jane.png'
       },
       {
         name: 'Mia Hennequin',
         position: 'CDO',
         bio: 'bio.miah',
-        image: $img('team/miah.png')
+        image: '/images/team/miah.png'
       }, {
         name: 'Shivali Shrivastava',
         position: 'ADO',
         bio: 'bio.shivali',
-        image: $img('team/shivali.png')
+        image: '/images/team/shivali.png'
       }, {
         name: 'Sarah Xie',
         position: 'ADO',
         bio: 'bio.sarah',
-        image: $img('team/sarah.png')
+        image: '/images/team/sarah.png'
       }, {
         name: 'Sanjana Ramakrishnan',
         position: 'CFO',
         bio: 'bio.sanjana',
-        image: $img('team/sanjana.jpg')
+        image: '/images/team/sanjana.jpg'
       }, {
         name: 'Jia An',
         position: 'AFO',
         bio: 'bio.jia',
-        image: $img('team/jia.png')
+        image: '/images/team/jia.png'
       }, {
         name: 'Harry Chen',
         position: 'CTO',
         bio: 'bio.harry',
-        image: $img('team/harry.png')
+        image: '/images/team/harry.png'
       }, {
         name: 'Tyler Truong',
         position: 'ATO',
         bio: 'bio.tyler',
-        image: $img('team/tyler.png')
+        image: '/images/team/tyler.png'
       }, {
         name: 'Simone Rothaupt',
         position: 'CPRO',
         bio: 'bio.simone',
-        image: $img('team/simone.png')
+        image: '/images/team/simone.png'
       }, {
         name: 'Abby Warnock',
         position: 'APRO',
         bio: 'bio.abby',
-        image: $img('team/abby.png')
+        image: '/images/team/abby.png'
       },
       {
         name: 'Judy Tao',
         position: 'APRO',
         bio: 'bio.judy',
-        image: $img('team/judy.png')
+        image: '/images/team/judy.png'
       }
     ])
 

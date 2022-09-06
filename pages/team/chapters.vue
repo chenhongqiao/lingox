@@ -41,7 +41,6 @@ en:
 export default defineComponent({
   name: 'ChapterPage',
   setup () {
-    const { $img } = useNuxtApp()
     const chapters = ref([
       {
         name: 'Southwest China',
@@ -49,28 +48,28 @@ export default defineComponent({
           name: 'Christina Chen',
           position: 'Director of Development',
           bio: 'bio.christina',
-          image: $img('team/christina.png')
+          image: '/images/team/christina.png'
         },
         {
           name: 'Lynn Zhang',
           position: 'Director of Human Resouces',
           bio: 'bio.lynn',
-          image: $img('team/lynn.jpg')
+          image: '/images/team/lynn.jpg'
         },
         {
           name: 'Anastasia Mo',
           bio: 'bio.anastasia',
-          image: $img('team/anastasia.png')
+          image: '/images/team/anastasia.png'
         },
         {
           name: 'Ethan Chen',
           bio: 'bio.ethan',
-          image: $img('team/ethan.png')
+          image: '/images/team/ethan.png'
         },
         {
           name: 'Daisy Wang',
           bio: 'bio.daisy',
-          image: $img('team/daisy.png')
+          image: '/images/team/daisy.png'
         }]
       },
       {
@@ -79,24 +78,24 @@ export default defineComponent({
           name: 'Maggie Liu',
           position: 'Regional Director of Development',
           bio: 'bio.maggie',
-          image: $img('team/maggie.png')
+          image: '/images/team/maggie.png'
         }, {
           name: 'Derek Zhang',
           position: 'Director of Development',
           bio: 'bio.derek',
-          image: $img('team/derek.jpg')
+          image: '/images/team/derek.jpg'
         },
         {
           name: 'Vicky Zheng',
           position: 'Director of Human Resources',
           bio: 'bio.vicky',
-          image: $img('team/vicky.jpg')
+          image: '/images/team/vicky.jpg'
         },
         {
           name: 'Gary Yukun',
           position: 'Director of Marketing',
           bio: 'bio.gary',
-          image: $img('team/gary.png')
+          image: '/images/team/gary.png'
         }
         ]
       },
@@ -107,7 +106,7 @@ export default defineComponent({
             name: 'Kristine Peng',
             position: 'Director of Development',
             bio: 'bio.kristine',
-            image: $img('team/kristine.jpg')
+            image: '/images/team/kristine.jpg'
           }
         ]
       },
@@ -117,12 +116,12 @@ export default defineComponent({
           {
             name: 'Eugenio Ciarlandini',
             bio: 'bio.eugenio',
-            image: $img('team/eugenio.jpg')
+            image: '/images/team/eugenio.jpg'
           },
           {
             name: 'Jerry Jia',
             bio: 'bio.jerry',
-            image: $img('team/jerry.jpg')
+            image: '/images/team/jerry.jpg'
           },
           {
             name: 'Roy Feng',
@@ -166,7 +165,7 @@ export default defineComponent({
             name: 'Alvin Chen',
             position: 'Director of Development',
             bio: 'bio.alvin',
-            image: $img('team/alvin.png')
+            image: '/images/team/alvin.png'
           }
         ]
       }

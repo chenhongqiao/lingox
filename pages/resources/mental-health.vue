@@ -146,7 +146,7 @@ export default defineComponent({
       },
       {
         name: 'Lifeline International',
-        link: 'Lifeline International',
+        link: 'https://lifeline-intl.com/our-network/',
         description: 'LifeLine International is a member-based organisation. Our Members deliver crisis support helplines and community-based suicide prevention services across the world.'
       },
       {

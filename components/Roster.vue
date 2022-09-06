@@ -22,6 +22,12 @@
   </div>
 </template>
 <script lang="ts">
+interface Member {
+  name: string
+  image?: string
+  bio?: string
+  position?: string
+}
 export default defineComponent({
   name: 'RosterComponent',
   props: {

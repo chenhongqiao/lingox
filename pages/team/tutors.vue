@@ -13,18 +13,17 @@
 export default defineComponent({
   name: 'TutorsPage',
   setup () {
-    const { $img } = useNuxtApp()
     const tutors = ref([
       {
         name: 'Eric Gao',
         position: 'Stanford University',
         bio: 'Eric Gao is a rising Sophomore at Stanford University majoring in Economics and Mathematics, advised by Nobel Laureate Paul Milgrom. His main research interests lies in mechanism design, which utilizes game theoretic tools to improve resource allocations in the real world. While not theorizing about economics, Eric enjoys playing Chess, biking, and watching anime.',
-        image: $img('team/eric.jpeg')
+        image: '/images/team/eric.jpeg'
       }, {
         name: 'Rey Shankar',
         position: 'UC Berkeley',
         bio: 'Rey will be studying sociology with a focus on its applications in healthcare at UC Berkeley in the fall. During high school, they did a lot of acting and speech & debate, and became nationally recognized in both by senior year! On top of this, Rey has worked with various professors to conduct research on topics like the decriminalization of illicit substances and its links to the prison industrial complex. When Rey’s not pursuing my academic interests, they love to knit and embroider gifts for friends!',
-        image: $img('team/rey.jpeg')
+        image: '/images/team/rey.jpeg'
       }
     ])
 
