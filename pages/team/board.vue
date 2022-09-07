@@ -27,6 +27,9 @@ en:
     shivali: Shivali Shrivastava is a rising sophomore. Being raised as a first-generation immigrant with Indian parents, she has been exposed to many valuable languages. She plans to use LingoX as a bridge to connect impoverished communities with quality education. During her free time, Shivali enjoys taking walks on the beach or making memories with her friends.
     sarah: As a Chinese-American student who studied in multiple countries, Sarah Xie deeply comprehends how English serves as a vital tool in every educational aspect. She wishes to help youngsters in underserved communities get the chance to achieve their dreams through LingoX. In her free time, Sarah enjoys playing tennis, painting as well as traveling.
     judy: Judy Tao, an uprising junior who completed her first seven years of education in China, recognized the significance of studying and appreciating diverse languages and cultures. Thus, she wished to explore and enhance the education of languages through LingoX, and also assist the students who want to learn languages. During her free time, she enjoys dancing, painting, playing card games, and hanging out with her friends.
+    ryan: "Ryan is an aspiring neurosurgeon who takes a great interest in neuroscience and computer science. In his free time he likes to play with Rubik’s cubes, cook, and partake in public speaking events. He is currently fluent in two languages and is learning a third. Although he doesn’t want to go into a music career, Ryan also plays the viola and piano as a hobby. He is a very sociable person who will befriend anyone who approaches him."
+    bruno: "Bruno is a sophomore at University High School, where he writes for his school newspaper and participates in Mock Trial, Model United Nations, and Speech & Debate. From these activities, Bruno learned the significance of effective communication. As the son of two immigrants, Bruno was raised hearing stories from his parents about the struggles of learning English. In his free time, you might find Bruno playing with his two cats, eating an In-N-Out burger with friends, or playing board games with family."
+    kevin: "Kevin is currently a junior at Northwood High School in Irvine, California. Since he lived in multiple different countries, he realizes the need for students around the world to have an accessible education to help break language barriers. He is interested in computer science, and hopes to use it to benefit the global community. In his free time, Kevin enjoys music production, playing tennis, and sleeping."
 zh:
   bio:
     mial: Mia 对教育充满热情，致力于帮助贫困社区和弱势家庭的学生获得平等、优质的教育资源。Mia 的业余爱好是弹钢琴，打高尔夫，写作和旅行。
@@ -72,11 +75,6 @@ export default defineComponent({
         image: '/images/team/jane.jpg'
       },
       {
-        name: 'Mia Hennequin',
-        position: 'CDO',
-        bio: 'bio.miah',
-        image: '/images/team/miah.jpg'
-      }, {
         name: 'Shivali Shrivastava',
         position: 'ADO',
         bio: 'bio.shivali',
@@ -86,6 +84,12 @@ export default defineComponent({
         position: 'ADO',
         bio: 'bio.sarah',
         image: '/images/team/sarah.jpg'
+      },
+      {
+        name: 'Bruno Diaz',
+        position: 'ADO',
+        bio: 'bio.bruno',
+        image: '/images/team/bruno.jpg'
       }, {
         name: 'Sanjana Ramakrishnan',
         position: 'CFO',
@@ -106,7 +110,20 @@ export default defineComponent({
         position: 'ATO',
         bio: 'bio.tyler',
         image: '/images/team/tyler.jpg'
-      }, {
+      },
+      {
+        name: 'Ryan',
+        position: 'ATO',
+        bio: 'bio.ryan',
+        image: '/images/team/ryan.jpg'
+      },
+      {
+        name: 'Kevin Chu',
+        position: 'ATO',
+        bio: 'bio.kevin',
+        image: '/images/team/kevin.jpg'
+      },
+      {
         name: 'Simone Rothaupt',
         position: 'CPRO',
         bio: 'bio.simone',
