@@ -52,39 +52,39 @@ export default defineComponent({
         name: 'Eric Gao',
         position: 'stanford',
         bio: 'bio.eric',
-        image: '/images/team/eric.jpeg'
+        image: '/images/team/eric.jpg'
       },
       {
         name: 'Joseph Hwang',
         position: 'havard',
         bio: 'bio.joseph',
-        image: '/images/team/joseph.png'
+        image: '/images/team/joseph.jpg'
       }, {
         name: 'Yuhua Chen',
         position: 'upenn',
         bio: 'bio.yuhua',
-        image: '/images/team/yuhua.png'
+        image: '/images/team/yuhua.jpg'
       }, {
         name: 'William Choi',
         position: 'jhuAndOthers',
         bio: 'bio.william',
-        image: '/images/team/william.png'
+        image: '/images/team/william.jpg'
       }, {
         name: 'Rey Shankar',
         position: 'berkeley',
         bio: 'bio.rey',
-        image: '/images/team/rey.jpeg'
+        image: '/images/team/rey.jpg'
       }, {
         name: 'Anjali Anbu',
         bio: 'bio.anjali',
         position: 'cornell',
-        image: '/images/team/anjali.jpeg'
+        image: '/images/team/anjali.jpg'
       },
       {
         name: 'Alex Fu',
         bio: 'bio.alex',
         position: 'ucla',
-        image: '/images/team/alex.jpeg'
+        image: '/images/team/alex.jpg'
       }
     ])
 

@@ -63,29 +63,29 @@ export default defineComponent({
         name: 'Hannah Choi',
         position: 'AMO',
         bio: 'bio.hannah',
-        image: '/images/team/hannah.png'
+        image: '/images/team/hannah.jpg'
       },
       {
         name: 'Jane Wang',
         position: 'AMO',
         bio: 'bio.jane',
-        image: '/images/team/jane.png'
+        image: '/images/team/jane.jpg'
       },
       {
         name: 'Mia Hennequin',
         position: 'CDO',
         bio: 'bio.miah',
-        image: '/images/team/miah.png'
+        image: '/images/team/miah.jpg'
       }, {
         name: 'Shivali Shrivastava',
         position: 'ADO',
         bio: 'bio.shivali',
-        image: '/images/team/shivali.png'
+        image: '/images/team/shivali.jpg'
       }, {
         name: 'Sarah Xie',
         position: 'ADO',
         bio: 'bio.sarah',
-        image: '/images/team/sarah.png'
+        image: '/images/team/sarah.jpg'
       }, {
         name: 'Sanjana Ramakrishnan',
         position: 'CFO',
@@ -95,33 +95,33 @@ export default defineComponent({
         name: 'Jia An',
         position: 'AFO',
         bio: 'bio.jia',
-        image: '/images/team/jia.png'
+        image: '/images/team/jia.jpg'
       }, {
         name: 'Harry Chen',
         position: 'CTO',
         bio: 'bio.harry',
-        image: '/images/team/harry.png'
+        image: '/images/team/harry.jpg'
       }, {
         name: 'Tyler Truong',
         position: 'ATO',
         bio: 'bio.tyler',
-        image: '/images/team/tyler.png'
+        image: '/images/team/tyler.jpg'
       }, {
         name: 'Simone Rothaupt',
         position: 'CPRO',
         bio: 'bio.simone',
-        image: '/images/team/simone.png'
+        image: '/images/team/simone.jpg'
       }, {
         name: 'Abby Warnock',
         position: 'APRO',
         bio: 'bio.abby',
-        image: '/images/team/abby.png'
+        image: '/images/team/abby.jpg'
       },
       {
         name: 'Judy Tao',
         position: 'APRO',
         bio: 'bio.judy',
-        image: '/images/team/judy.png'
+        image: '/images/team/judy.jpg'
       }
     ])
 

@@ -48,7 +48,7 @@ export default defineComponent({
           name: 'Christina Chen',
           position: 'Director of Development',
           bio: 'bio.christina',
-          image: '/images/team/christina.png'
+          image: '/images/team/christina.jpg'
         },
         {
           name: 'Lynn Zhang',
@@ -59,17 +59,17 @@ export default defineComponent({
         {
           name: 'Anastasia Mo',
           bio: 'bio.anastasia',
-          image: '/images/team/anastasia.png'
+          image: '/images/team/anastasia.jpg'
         },
         {
           name: 'Ethan Chen',
           bio: 'bio.ethan',
-          image: '/images/team/ethan.png'
+          image: '/images/team/ethan.jpg'
         },
         {
           name: 'Daisy Wang',
           bio: 'bio.daisy',
-          image: '/images/team/daisy.png'
+          image: '/images/team/daisy.jpg'
         }]
       },
       {
@@ -78,7 +78,7 @@ export default defineComponent({
           name: 'Maggie Liu',
           position: 'Regional Director of Development',
           bio: 'bio.maggie',
-          image: '/images/team/maggie.png'
+          image: '/images/team/maggie.jpg'
         }, {
           name: 'Derek Zhang',
           position: 'Director of Development',
@@ -95,7 +95,7 @@ export default defineComponent({
           name: 'Gary Yukun',
           position: 'Director of Marketing',
           bio: 'bio.gary',
-          image: '/images/team/gary.png'
+          image: '/images/team/gary.jpg'
         }
         ]
       },
@@ -165,7 +165,7 @@ export default defineComponent({
             name: 'Alvin Chen',
             position: 'Director of Development',
             bio: 'bio.alvin',
-            image: '/images/team/alvin.png'
+            image: '/images/team/alvin.jpg'
           }
         ]
       }
