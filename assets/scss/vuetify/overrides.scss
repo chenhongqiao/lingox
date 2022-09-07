@@ -24,6 +24,7 @@
 }
 
 .v-application--is-rtl {
+
   .v-list-item__action:first-child,
   .v-list-item__icon:first-child {
     margin-right: 0 !important;
@@ -50,7 +51,7 @@
 }
 
 .v-list-group--sub-group .v-list-group__header {
-  padding-left: $spacer !important;
+  padding-left: $spacer  !important;
 }
 
 .v-list-group__items {
@@ -62,12 +63,17 @@
   background-color: transparent !important;
 }
 
+.v-btn {
+  font-weight: 400 !important;
+}
+
 // Buttons
 .theme--dark.v-btn:not(.v-btn--flat):not(.v-btn--text):not(.v-btn--outlined) {
   background-color: #273743;
 }
 
 // Carousel
-.v-window__prev, .v-window__next {
+.v-window__prev,
+.v-window__next {
   background: none !important;
 }

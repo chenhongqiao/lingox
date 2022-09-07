@@ -87,7 +87,8 @@ export default defineNuxtConfig({
   googleFonts: {
     families: {
       Poppins: [100, 200, 300, 400, 500, 600, 700, 900],
-      Alice: [400, 500]
+      Alice: [400, 500],
+      'League Spartan': [700]
     }
   },
 

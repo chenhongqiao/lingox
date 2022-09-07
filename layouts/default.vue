@@ -28,9 +28,9 @@
       <v-app-bar-nav-icon class="d-md-none" @click="drawer = !drawer" />
       <v-container class="py-0 px-0 px-sm-2 fill-height">
         <nuxt-link to="/" class="d-flex align-center text-decoration-none mr-2">
-          <h1 class="text-h4">
+          <div style="font-family: League Spartan; font-size: 2.4rem; !important">
             LingoX
-          </h1>
+          </div>
         </nuxt-link>
 
         <v-spacer />
