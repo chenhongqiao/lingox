@@ -2,15 +2,15 @@
   <div>
     <v-container class="py-4 py-lg-8">
       <h3 class="text-h3">
-        {{ $t("longIntroChinese") }}
+        {{ $t('longIntroChinese') }}
       </h3>
       <v-row class="mt-4">
         <v-col cols="12" md="7">
           <div class="text-uppercase font-weight-bold primary--text mb-2">
-            {{ $t("programDetails") }}
+            {{ $t('programDetails') }}
           </div>
           <div v-if="false" class="mb-2">
-            <b>{{ $t("notice") }}</b>
+            <b>{{ $t('notice') }}</b>
           </div>
           <div v-for="(text, index) in $t('programParagraph')" :key="index">
             <div class="text-body-1 mb-2">
@@ -25,7 +25,7 @@
             max-height="480"
           />
           <v-card class="pa-1" flat>
-            <v-card-title>{{ $t("studentSignup") }}</v-card-title>
+            <v-card-title>{{ $t('studentSignup') }}</v-card-title>
             <v-card-text v-if="done" class="text-center">
               <div class="mt-1">
                 <v-icon size="60" color="success">
@@ -33,7 +33,7 @@
                 </v-icon>
               </div>
               <div class="mt-2">
-                {{ $t("formSubmitted") }}
+                {{ $t('formSubmitted') }}
               </div>
               <v-btn
                 class="mt-2"
@@ -42,7 +42,7 @@
                 large
                 @click="done = false"
               >
-                {{ $t("submitAnotherResponse") }}
+                {{ $t('submitAnotherResponse') }}
               </v-btn>
             </v-card-text>
             <v-card-text v-else>
@@ -113,7 +113,7 @@
                 :loading="submitting"
                 @click="submit"
               >
-                {{ $t("submit") }}
+                {{ $t('submit') }}
               </v-btn>
             </v-card-text>
           </v-card>
