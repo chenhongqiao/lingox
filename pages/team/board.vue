@@ -47,101 +47,98 @@ zh:
     sarah: 作为一名曾在多个国家留学的美籍华裔学生，Sarah深知英语在学习和生活以及各个方面的重要性。她希望通过LingoX来帮助贫困社区的学生获得实现梦想的机会。闲暇时，Sarah喜欢打网球、画画以及旅游。
 </i18n>
 <script lang="ts">
-import { defineComponent, ref, Ref, useContext } from '@nuxtjs/composition-api'
-import { Member } from '~/components/Roster.vue'
 export default defineComponent({
   name: 'BoardPage',
   setup () {
-    const { $img } = useContext()
-    const team: Ref<Member[]> = ref([
+    const team = ref([
       {
         name: 'Mia Lee',
         position: 'CEO',
         bio: 'bio.mial',
-        image: $img('team/mial.png')
+        image: '/images/team/mial.jpg'
       },
       {
         name: 'David Chen',
         position: 'CMO',
         bio: 'bio.david',
-        image: $img('team/david.jpg')
+        image: '/images/team/david.jpg'
       }, {
         name: 'Hannah Choi',
         position: 'AMO',
         bio: 'bio.hannah',
-        image: $img('team/hannah.png')
+        image: '/images/team/hannah.jpg'
       },
       {
         name: 'Jane Wang',
         position: 'AMO',
         bio: 'bio.jane',
-        image: $img('team/jane.png')
+        image: '/images/team/jane.jpg'
       },
       {
         name: 'Shivali Shrivastava',
         position: 'ADO',
         bio: 'bio.shivali',
-        image: $img('team/shivali.png')
+        image: '/images/team/shivali.jpg'
       }, {
         name: 'Sarah Xie',
         position: 'ADO',
         bio: 'bio.sarah',
-        image: $img('team/sarah.png')
+        image: '/images/team/sarah.jpg'
       },
       {
         name: 'Bruno Diaz',
         position: 'ADO',
         bio: 'bio.bruno',
-        image: $img('team/bruno.jpg')
+        image: '/images/team/bruno.jpg'
       }, {
         name: 'Sanjana Ramakrishnan',
         position: 'CFO',
         bio: 'bio.sanjana',
-        image: $img('team/sanjana.jpg')
+        image: '/images/team/sanjana.jpg'
       }, {
         name: 'Jia An',
         position: 'AFO',
         bio: 'bio.jia',
-        image: $img('team/jia.png')
+        image: '/images/team/jia.jpg'
       }, {
         name: 'Harry Chen',
         position: 'CTO',
         bio: 'bio.harry',
-        image: $img('team/harry.png')
+        image: '/images/team/harry.jpg'
       }, {
         name: 'Tyler Truong',
         position: 'ATO',
         bio: 'bio.tyler',
-        image: $img('team/tyler.png')
+        image: '/images/team/tyler.jpg'
       },
       {
         name: 'Ryan',
         position: 'ATO',
         bio: 'bio.ryan',
-        image: $img('team/ryan.png')
+        image: '/images/team/ryan.jpg'
       },
       {
         name: 'Kevin Chu',
         position: 'ATO',
         bio: 'bio.kevin',
-        image: $img('team/kevin.jpeg')
+        image: '/images/team/kevin.jpg'
       },
       {
         name: 'Simone Rothaupt',
         position: 'CPRO',
         bio: 'bio.simone',
-        image: $img('team/simone.png')
+        image: '/images/team/simone.jpg'
       }, {
         name: 'Abby Warnock',
         position: 'APRO',
         bio: 'bio.abby',
-        image: $img('team/abby.png')
+        image: '/images/team/abby.jpg'
       },
       {
         name: 'Judy Tao',
         position: 'APRO',
         bio: 'bio.judy',
-        image: $img('team/judy.png')
+        image: '/images/team/judy.jpg'
       }
     ])
 

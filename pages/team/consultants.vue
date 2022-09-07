@@ -44,50 +44,47 @@ zh:
   ucla: UCLA
 </i18n>
 <script lang="ts">
-import { defineComponent, ref, Ref, useContext } from '@nuxtjs/composition-api'
-import { Member } from '@/components/Roster.vue'
 export default defineComponent({
   name: 'ConsultantsPage',
   setup () {
-    const { $img } = useContext()
-    const consultants: Ref<Member[]> = ref([
+    const consultants = ref([
       {
         name: 'Eric Gao',
         position: 'stanford',
         bio: 'bio.eric',
-        image: $img('team/eric.jpeg')
+        image: '/images/team/eric.jpg'
       },
       {
         name: 'Joseph Hwang',
         position: 'havard',
         bio: 'bio.joseph',
-        image: $img('team/joseph.png')
+        image: '/images/team/joseph.jpg'
       }, {
         name: 'Yuhua Chen',
         position: 'upenn',
         bio: 'bio.yuhua',
-        image: $img('team/yuhua.png')
+        image: '/images/team/yuhua.jpg'
       }, {
         name: 'William Choi',
         position: 'jhuAndOthers',
         bio: 'bio.william',
-        image: $img('team/william.png')
+        image: '/images/team/william.jpg'
       }, {
         name: 'Rey Shankar',
         position: 'berkeley',
         bio: 'bio.rey',
-        image: $img('team/rey.jpeg')
+        image: '/images/team/rey.jpg'
       }, {
         name: 'Anjali Anbu',
         bio: 'bio.anjali',
         position: 'cornell',
-        image: $img('team/anjali.jpeg')
+        image: '/images/team/anjali.jpg'
       },
       {
         name: 'Alex Fu',
         bio: 'bio.alex',
         position: 'ucla',
-        image: $img('team/alex.jpeg')
+        image: '/images/team/alex.jpg'
       }
     ])
 

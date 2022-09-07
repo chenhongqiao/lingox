@@ -1,6 +1,12 @@
-export default {
+import { defineNuxtConfig } from '@nuxt/bridge'
+export default defineNuxtConfig({
   // Target: https://go.nuxtjs.dev/config-target
-  target: 'static',
+
+  bridge: {
+    nitro: true
+  },
+
+  target: 'server',
 
   // Global page headers: https://go.nuxtjs.dev/config-head
   head: {
@@ -40,58 +46,56 @@ export default {
   components: true,
 
   // Modules for dev and build (recommended): https://go.nuxtjs.dev/config-modules
-  buildModules: [
-    // https://go.nuxtjs.dev/typescript
-    '@nuxt/typescript-build',
-    '@nuxtjs/composition-api/module',
+  modules: [
     // https://go.nuxtjs.dev/vuetify
-    ['@nuxtjs/vuetify', {
-      customVariables: ['~/assets/scss/vuetify/variables/_index.scss'],
-      optionsPath: '~/configs/vuetify.js',
-      treeShake: true,
-      extractCSS: true
-    }],
-    ['@nuxtjs/google-fonts', {
-      families: {
-        Poppins: [100, 200, 300, 400, 500, 600, 700, 900],
-        Alice: [400, 500]
-      }
-    }],
-    'nuxt-compress',
-    ['@nuxtjs/i18n', {
-      locales: [{
-        code: 'en',
-        iso: 'en-US',
-        file: 'english.custom.yaml'
-      },
-      {
-        code: 'zh',
-        iso: 'zh-CN',
-        file: 'chinese.custom.yaml'
-      }],
-      langDir: 'locales/',
-      fallbackLocale: 'en',
-      vueI18nLoader: true,
-      strategy: 'no_prefix',
-      detectBrowserLanguage: {
-        useCookie: true,
-        cookieKey: 'i18n_redirected'
-      },
-      vueI18n: {
-        fallbackLocale: {
-          'zh-Hant': ['zh'],
-          'zh-Hans': ['zh'],
-          'zh-HK': ['zh'],
-          'zh-TW': ['zh'],
-          default: ['en']
-        }
-      }
-    }],
-    ['@nuxt/image', {
-      dir: 'static/images'
-    }],
+    '@nuxtjs/vuetify',
+    '@nuxtjs/google-fonts',
+    '@nuxtjs/i18n',
     '@nuxtjs/axios'
   ],
+
+  i18n: {
+    locales: [{
+      code: 'en',
+      iso: 'en-US',
+      file: 'english.custom.yaml'
+    },
+    {
+      code: 'zh',
+      iso: 'zh-CN',
+      file: 'chinese.custom.yaml'
+    }],
+    langDir: 'locales/',
+    fallbackLocale: 'en',
+    vueI18nLoader: true,
+    strategy: 'no_prefix',
+    detectBrowserLanguage: {
+      useCookie: true,
+      cookieKey: 'i18n_redirected'
+    },
+    vueI18n: {
+      fallbackLocale: {
+        'zh-Hant': ['zh'],
+        'zh-Hans': ['zh'],
+        'zh-HK': ['zh'],
+        'zh-TW': ['zh'],
+        default: ['en']
+      }
+    }
+  },
+
+  googleFonts: {
+    families: {
+      Poppins: [100, 200, 300, 400, 500, 600, 700, 900],
+      Alice: [400, 500]
+    }
+  },
+
+  vuetify: {
+    customVariables: ['assets/scss/vuetify/variables/_index.scss'],
+    optionsPath: 'configs/vuetify.js',
+    treeShake: true
+  },
 
   // Build Configuration: https://go.nuxtjs.dev/config-build
   build: {
@@ -102,4 +106,4 @@ export default {
       })
     }
   }
-}
+})

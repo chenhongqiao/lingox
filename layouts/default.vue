@@ -6,14 +6,7 @@
           {{ $t(displayMenuTitle) }}
         </v-subheader>
         <div v-for="(item, index) in displayRoutes" :key="index">
-          <v-list-item v-if="item.link" :to="item.link">
-            <v-list-item-content>
-              <v-list-item-title>
-                {{ $t(item.text) }}
-              </v-list-item-title>
-            </v-list-item-content>
-          </v-list-item>
-          <v-list-item v-else-if="item.routes" @click="currentGroup=index">
+          <v-list-item @click="currentGroup=index">
             <v-list-item-content>
               <v-list-item-title>
                 {{ $t(item.text) }}
@@ -48,12 +41,7 @@
             :key="index"
             class="mr-1"
           >
-            <span v-if="item.link">
-              <v-btn :to="item.link" text>
-                {{ $t(item.text) }}
-              </v-btn>
-            </span>
-            <span v-else-if="item.routes">
+            <span>
               <v-menu offset-y>
                 <template #activator="{ on, attrs }">
                   <v-btn
@@ -185,24 +173,10 @@
 </template>
 
 <script lang="ts">
-import { defineComponent, computed, ref, Ref, useContext, watch } from '@nuxtjs/composition-api'
-interface Page {
-  text: string
-  link: string
-}
-interface Group {
-  text: string
-  base: string
-  routes: Page[]
-}
-interface Locale {
-  code: string
-  displayName: string
-}
 export default defineComponent({
   name: 'DefaultLayout',
   setup () {
-    const locales: Ref<Locale[]> = ref([
+    const locales = ref([
       {
         code: 'en',
         displayName: 'English'
@@ -213,14 +187,14 @@ export default defineComponent({
       }
     ])
 
-    const { i18n } = useContext()
-    const activeLocale = ref(i18n.locale)
+    const { $i18n } = useNuxtApp()
+    const activeLocale = ref($i18n.locale)
 
     watch(activeLocale, (currentValue) => {
-      i18n.setLocale(currentValue)
+      $i18n.setLocale(currentValue)
     })
 
-    const routes: Ref<Array<Group | Page>> = ref([
+    const routes = ref([
       {
         text: 'aboutUs',
         base: '/about',

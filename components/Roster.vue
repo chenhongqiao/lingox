@@ -22,12 +22,11 @@
   </div>
 </template>
 <script lang="ts">
-import { defineComponent } from '@nuxtjs/composition-api'
-export interface Member {
+interface Member {
   name: string
-  position?: string
-  bio?: string
   image?: string
+  bio?: string
+  position?: string
 }
 export default defineComponent({
   name: 'RosterComponent',

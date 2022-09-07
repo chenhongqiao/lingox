@@ -135,16 +135,10 @@ en:
   intro: "At LingoX, our mission is to support a balanced education for all students. As such, we focus on nurturing both your language abilities as well as a healthy mind. To help foster positive mental health, LingoX is committed to sharing a variety of helpful resources. The below options are available to support you through difficult situations; however, your best choice is always to consult a physician or responsible adult in your life, especially if you are struggling with serious issues."
 </i18n>
 <script lang="ts">
-import { defineComponent } from '@nuxtjs/composition-api'
-interface Resource {
-  name: string
-  link: string
-  description: string
-}
 export default defineComponent({
   name: 'MentalHealth',
   setup () {
-    const generalResources: Resource[] = [
+    const generalResources = [
       {
         name: 'Befrienders',
         link: 'http://www.befrienders.org/',
@@ -152,7 +146,7 @@ export default defineComponent({
       },
       {
         name: 'Lifeline International',
-        link: 'Lifeline International',
+        link: 'https://lifeline-intl.com/our-network/',
         description: 'LifeLine International is a member-based organisation. Our Members deliver crisis support helplines and community-based suicide prevention services across the world.'
       },
       {
@@ -177,7 +171,7 @@ export default defineComponent({
       }
     ]
 
-    const USResources: Resource[] = [
+    const USResources = [
       {
         name: 'National Alliance on Mental Illness',
         link: 'http://www.nami.org/',
@@ -193,7 +187,7 @@ export default defineComponent({
       }
     ]
 
-    const canadaResources: Resource[] = [
+    const canadaResources = [
       {
         name: 'Canadian Mental Health Association',
         link: 'https://cmha.ca/',
@@ -205,7 +199,7 @@ export default defineComponent({
       }
     ]
 
-    const europeResources: Resource[] = [
+    const europeResources = [
       {
         name: 'European Federation of Associations of Families of People with Mental Illness',
         link: 'http://www.eufami.org/',
@@ -217,7 +211,7 @@ export default defineComponent({
       }
     ]
 
-    const UKResources: Resource[] = [
+    const UKResources = [
       {
         name: 'Mental Health Foundation ',
         link: 'http://www.mentalhealth.org.uk/',
@@ -230,7 +224,7 @@ export default defineComponent({
       }
     ]
 
-    const australiaResources: Resource[] = [
+    const australiaResources = [
       {
         name: 'Your Health In Mind',
         link: 'https://www.yourhealthinmind.org/',
@@ -253,7 +247,7 @@ export default defineComponent({
       }
     ]
 
-    const newZealandResources: Resource[] = [
+    const newZealandResources = [
       {
         name: 'The Mental Health Foundation of New Zealand',
         link: 'https://www.mentalhealth.org.nz/',
@@ -261,7 +255,7 @@ export default defineComponent({
       }
     ]
 
-    const chinaResources: Resource[] = [
+    const chinaResources = [
       {
         name: 'Beijing Suicide Research and Prevention Center Hotline',
         link: 'http://www.crisis.org.cn/',
@@ -274,7 +268,7 @@ export default defineComponent({
       }
     ]
 
-    const africaResources: Resource[] = [
+    const africaResources = [
       {
         name: 'South African Federation for Mental Health',
         link: 'https://www.safmh.org/',

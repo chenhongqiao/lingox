@@ -13,11 +13,11 @@
         </div>
       </div>
     </v-container>
-    <v-parallax max-height="600" class="mt-4" :src="$img('hero.jpg')" />
+    <v-parallax max-height="600" class="mt-4" src="/images/hero.jpg" />
     <v-container class="py-4 py-md-10">
       <v-row align="center">
         <v-col cols="12" md="6">
-          <v-img :src="$img('feature-1.jpg')" class="rounded-lg elevation-6" max-height="480" />
+          <v-img src="/images/feature-1.jpg" class="rounded-lg elevation-6" max-height="480" />
         </v-col>
         <v-col cols="12" md="6">
           <h3 class="text-h3">
@@ -37,7 +37,7 @@
     <v-container class="py-4 py-md-10">
       <v-row align="center">
         <v-col cols="12" md="6" class="d-md-none">
-          <v-img :src="$img('feature-2.jpg')" class="rounded-lg elevation-6" max-height="480" />
+          <v-img src="/images/hero.jpg" class="rounded-lg elevation-6" max-height="480" />
         </v-col>
         <v-col cols="12" md="6">
           <h3 class="text-h3">
@@ -53,7 +53,7 @@
           </div>
         </v-col>
         <v-col cols="12" md="6" class="d-none d-md-flex">
-          <v-img :src="$img('feature-2.jpg')" class="rounded-lg elevation-6" max-height="480" />
+          <v-img src="/images/feature-2.jpg" class="rounded-lg elevation-6" max-height="480" />
         </v-col>
       </v-row>
     </v-container>
@@ -62,7 +62,7 @@
         {{ $t('programs') }}
       </h3>
       <v-row class="mt-1">
-        <v-col v-for="(item,index) in involved" :key="index" cols="12" sm="4">
+        <v-col v-for="(item, index) in involved" :key="index" cols="12" sm="4">
           <div class="text-uppercase font-weight-bold primary--text mb-2">
             {{ $t(item.title) }}
           </div>
@@ -99,16 +99,10 @@ zh:
   speakerSeriesText: "LingoX每月定期邀请来自世界排名前20大学的优秀学生，与我们分享他们申请大学选择专业的经历和经验以及他们对所选专业未来发展前景和趋势的分析和看法。"
 </i18n>
 <script lang="ts">
-import { defineComponent, ref, Ref } from '@nuxtjs/composition-api'
-interface Involved {
-  title: string
-  content: string
-  link: string
-}
 export default defineComponent({
   name: 'IndexPage',
   setup () {
-    const involved: Ref<Involved[]> = ref([{
+    const involved = ref([{
       title: 'introChinese',
       content: 'introChineseText',
       link: '/programs/intro-chinese'

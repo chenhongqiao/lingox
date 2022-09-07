@@ -130,11 +130,10 @@ zh:
 </i18n>
 </i18n>
 <script lang="ts">
-import { defineComponent, ref, useContext } from '@nuxtjs/composition-api'
 export default defineComponent({
   name: 'SpeakerSeries',
   setup () {
-    const { $axios } = useContext()
+    const { $axios } = useNuxtApp()
     const formData = ref({
       firstName: '',
       lastName: '',
