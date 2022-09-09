@@ -30,7 +30,7 @@ export default defineComponent({
   setup () {
     const FAQs = ref([
       {
-        question: 'What is the cost of enrolling in a LingoX program?',
+        question: 'What is the cost to enroll in a LingoX program?',
         answer: 'As part of our commitment to making education accessible to everyone, enrollment in any LingoX program is offered free of charge thanks to our wonderful volunteers and kind sponsors!'
       }, {
         question: 'When are the lessons?',
