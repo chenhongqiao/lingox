@@ -6,7 +6,14 @@
           {{ $t(displayMenuTitle) }}
         </v-subheader>
         <div v-for="(item, index) in displayRoutes" :key="index">
-          <v-list-item @click="currentGroup=index">
+          <v-list-item v-if="item.link" :to="item.link">
+            <v-list-item-content>
+              <v-list-item-title>
+                {{ $t(item.text) }}
+              </v-list-item-title>
+            </v-list-item-content>
+          </v-list-item>
+          <v-list-item v-else @click="currentGroup=index">
             <v-list-item-content>
               <v-list-item-title>
                 {{ $t(item.text) }}
