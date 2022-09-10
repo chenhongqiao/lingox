@@ -14,6 +14,7 @@
               {{ text }}
             </div>
           </div>
+          <v-img src="/images/international-chapters.jpg" class="mt-4" />
         </v-col>
         <v-col cols="12" md="5">
           <v-card class="pa-1" flat>
