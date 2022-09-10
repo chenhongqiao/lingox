@@ -4,26 +4,55 @@
       <h3 class="text-h3">
         {{ $t('longIntroChinese') }}
       </h3>
-      <v-row class="mt-4">
-        <v-col cols="12" md="7">
-          <div class="text-uppercase font-weight-bold primary--text mb-2">
-            {{ $t('programDetails') }}
+      <v-row class="mt-4 pb-0">
+        <v-col cols="12" md="7" class="pb-1">
+          <div class="text-h7">
+            We have served 500 students across 6 continents and 55 countries.
           </div>
-          <div v-if="false" class="mb-2">
-            <b>{{ $t('notice') }}</b>
-          </div>
-          <div v-for="(text, index) in $t('programParagraph')" :key="index">
-            <div class="text-body-1 mb-2">
-              {{ text }}
-            </div>
-          </div>
+          <v-row class="mt-2">
+            <v-col
+              v-for="(stat, i) in stats"
+              :key="i"
+              class="text-center"
+            >
+              <v-progress-circular
+                :value="stat.value"
+                :size="'80'"
+                rotate="-90"
+              >
+                {{ stat.value }}%
+              </v-progress-circular>
+              <div class="mt-2 text-h7">
+                {{ stat.label }}
+              </div>
+            </v-col>
+          </v-row>
         </v-col>
-        <v-col cols="12" md="5">
+        <v-col cols="12" md="5" class="pb-1">
           <v-img
             src="/images/intro-chinese.jpg"
             class="rounded-lg elevation-6 mb-2"
             max-height="480"
           />
+        </v-col>
+      </v-row>
+      <v-row class="mt-0 pt-0">
+        <v-col cols="12" md="7">
+          <div class="text-uppercase font-weight-bold primary--text mb-2">
+            {{ $t('programDetails') }}
+          </div>
+          <div v-if="$t('notice') !=='notice'" class="mb-2">
+            <b>{{ $t('notice') }}</b>
+          </div>
+          <div v-if="$t('programParagraph')!=='programParagraph'">
+            <div v-for="(text, index) in $t('programParagraph')" :key="index">
+              <div class="text-body-1 mb-2">
+                {{ text }}
+              </div>
+            </div>
+          </div>
+        </v-col>
+        <v-col cols="12" md="5">
           <v-card class="pa-1" flat>
             <v-card-title>{{ $t('studentSignup') }}</v-card-title>
             <v-card-text v-if="done" class="text-center">
@@ -127,7 +156,7 @@
 </template>
 <i18n lang="yaml">
 en:
-  notice: "Due to an expansion in our organization’s capacity, we will not be accepting more applications to this program."
+  notice: "If you have signed up for this program, please consistently check your email (including the spam folder) for updates. All information will be sent to your inbox. You can also follow us @lingoxofficial on Instagram for important announcements."
   programParagraph:
     - "Dates: August 28th - November 26th, 2022 | Time: 8:00-8:45am PDT"
     - "Interested in learning Chinese, but find yourself lacking the resources to get started? LingoX is offering a FREE introductory program open to students with demonstrated need! Classes will be live, taking place on Zoom every week. Our curriculum places a heavy emphasis on “speakable” Chinese and aims to have you talking in Mandarin by the end of our time together. With the help of our skilled and attentive teachers, students will find themselves greatly enjoying their educational experience."
@@ -204,7 +233,23 @@ export default defineComponent({
       }
       submitting.value = false
     }
-    return { formData, valid, submit, submitting, form, done, error }
+
+    const stats = ref([
+      {
+        label: 'Underserved Students',
+        value: '91.3'
+      },
+      {
+        label: 'Beginners',
+        value: '97.7'
+      },
+      {
+        label: 'Found It Helpful',
+        value: '100'
+      }
+    ])
+
+    return { formData, valid, submit, submitting, form, done, error, stats }
   },
   head: {
     title: 'Intro to Chinese'
