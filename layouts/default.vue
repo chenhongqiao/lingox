@@ -13,7 +13,7 @@
               </v-list-item-title>
             </v-list-item-content>
           </v-list-item>
-          <v-list-item v-else @click="currentGroup=index">
+          <v-list-item v-else @click="currentGroup=parseInt(index)">
             <v-list-item-content>
               <v-list-item-title>
                 {{ $t(item.text) }}
@@ -125,6 +125,17 @@
                 href="https://www.instagram.com/lingoxofficial/"
               >
                 <v-icon>mdi-instagram</v-icon>
+              </v-btn>
+              <v-btn
+                fab
+                small
+                depressed
+                color="secondary"
+                target="_blank"
+                class="ml-2"
+                href="https://www.facebook.com/lingoxofficial"
+              >
+                <v-icon>mdi-facebook</v-icon>
               </v-btn>
               <v-btn
                 fab
