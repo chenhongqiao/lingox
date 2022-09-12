@@ -9,15 +9,15 @@
           <div class="text-h6">
             We have served 600 students across 6 continents and 55 countries.
           </div>
-          <v-row class="mt-8">
+          <v-row class="mt-2">
             <v-col
               v-for="(stat, i) in stats"
               :key="i"
-              class="ml-n4 text-center text-h5"
+              class="text-center"
             >
               <v-progress-circular
                 :value="stat.value"
-                :size="'100'"
+                :size="'80'"
                 rotate="-90"
               >
                 {{ stat.value }}
@@ -246,10 +246,6 @@ export default defineComponent({
       {
         label: 'Found It Helpful',
         value: '100%'
-      },
-      {
-        label: 'Students Served',
-        value: '600'
       }
     ])
 
