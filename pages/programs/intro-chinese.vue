@@ -6,21 +6,21 @@
       </h3>
       <v-row class="mt-4 pb-0">
         <v-col cols="12" md="7" class="pb-1">
-          <div class="text-h7">
-            We have served 500 students across 6 continents and 55 countries.
+          <div class="text-h6">
+            We have served 600 students across 6 continents and 55 countries.
           </div>
-          <v-row class="mt-2">
+          <v-row class="mt-8">
             <v-col
               v-for="(stat, i) in stats"
               :key="i"
-              class="text-center"
+              class="ml-n4 text-center text-h5"
             >
               <v-progress-circular
                 :value="stat.value"
-                :size="'80'"
+                :size="'100'"
                 rotate="-90"
               >
-                {{ stat.value }}%
+                {{ stat.value }}
               </v-progress-circular>
               <div class="mt-2 text-h7">
                 {{ stat.label }}
@@ -237,15 +237,19 @@ export default defineComponent({
     const stats = ref([
       {
         label: 'Underserved Students',
-        value: '91.3'
+        value: '91.3%'
       },
       {
         label: 'Beginners',
-        value: '97.7'
+        value: '97.7%'
       },
       {
         label: 'Found It Helpful',
-        value: '100'
+        value: '100%'
+      },
+      {
+        label: 'Students Served',
+        value: '600'
       }
     ])
 
