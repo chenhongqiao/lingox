@@ -49,7 +49,7 @@ zh:
 <script lang="ts">
 export default defineComponent({
   name: 'BoardPage',
-  setup () {
+  setup() {
     const team = ref([
       {
         name: 'Mia Lee',
@@ -112,7 +112,7 @@ export default defineComponent({
         image: '/images/team/tyler.jpg'
       },
       {
-        name: 'Ryan',
+        name: 'Ryan Shahbaba',
         position: 'ATO',
         bio: 'bio.ryan',
         image: '/images/team/ryan.jpg'
