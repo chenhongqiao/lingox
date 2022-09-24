@@ -201,7 +201,7 @@ zh:
 export default defineComponent({
   name: 'IntroChinese',
   setup () {
-    const { $axios } = useNuxtApp()
+    const { $axios, $gtm } = useNuxtApp()
     const formData = ref({
       firstName: '',
       lastName: '',
@@ -232,6 +232,11 @@ export default defineComponent({
         error.value = true
       }
       submitting.value = false
+      try {
+        $gtm.push({ event: 'chinese-signup' })
+      } catch (err) {
+        console.error(err)
+      }
     }
 
     const stats = ref([

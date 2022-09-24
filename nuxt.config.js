@@ -51,8 +51,13 @@ export default defineNuxtConfig({
     '@nuxtjs/vuetify',
     '@nuxtjs/google-fonts',
     '@nuxtjs/i18n',
-    '@nuxtjs/axios'
+    '@nuxtjs/axios',
+    '@nuxtjs/gtm'
   ],
+
+  gtm: {
+    id: 'GTM-P4KVFDC'
+  },
 
   i18n: {
     locales: [{
