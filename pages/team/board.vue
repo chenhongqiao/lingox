@@ -56,8 +56,7 @@ export default defineComponent({
         position: 'CEO',
         bio: 'bio.mial',
         image: '/images/team/mial.jpg'
-      },
-      {
+      }, {
         name: 'David Chen',
         position: 'CMO',
         bio: 'bio.david',
@@ -67,25 +66,17 @@ export default defineComponent({
         position: 'AMO',
         bio: 'bio.hannah',
         image: '/images/team/hannah.jpg'
-      },
-      {
+      }, {
         name: 'Jane Wang',
         position: 'AMO',
         bio: 'bio.jane',
         image: '/images/team/jane.jpg'
-      },
-      {
-        name: 'Shivali Shrivastava',
-        position: 'ADO',
-        bio: 'bio.shivali',
-        image: '/images/team/shivali.jpg'
       }, {
         name: 'Sarah Xie',
         position: 'ADO',
         bio: 'bio.sarah',
         image: '/images/team/sarah.jpg'
-      },
-      {
+      }, {
         name: 'Bruno Diaz',
         position: 'ADO',
         bio: 'bio.bruno',
@@ -110,20 +101,17 @@ export default defineComponent({
         position: 'ATO',
         bio: 'bio.tyler',
         image: '/images/team/tyler.jpg'
-      },
-      {
+      }, {
         name: 'Ryan Shahbaba',
         position: 'ATO',
         bio: 'bio.ryan',
         image: '/images/team/ryan.jpg'
-      },
-      {
+      }, {
         name: 'Kevin Chu',
         position: 'ATO',
         bio: 'bio.kevin',
         image: '/images/team/kevin.jpg'
-      },
-      {
+      }, {
         name: 'Simone Rothaupt',
         position: 'CPRO',
         bio: 'bio.simone',
@@ -133,8 +121,7 @@ export default defineComponent({
         position: 'APRO',
         bio: 'bio.abby',
         image: '/images/team/abby.jpg'
-      },
-      {
+      }, {
         name: 'Judy Tao',
         position: 'APRO',
         bio: 'bio.judy',
