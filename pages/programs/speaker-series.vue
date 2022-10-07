@@ -61,11 +61,16 @@
                   ]"
                 />
                 <v-text-field
-                  v-model="formData.location"
-                  :label="$t('form.location')"
-                  hint="City/State, Country"
+                  v-model="formData.cityState"
+                  :label="$t('form.cityState')"
                   :rules="[
-                    v => !!v || 'Location is required']"
+                    v => !!v || 'City/State is required']"
+                />
+                <v-text-field
+                  v-model="formData.country"
+                  :label="$t('form.country')"
+                  :rules="[
+                    v => !!v || 'Country is required']"
                 />
                 <v-text-field
                   v-model="formData.pathway"
@@ -111,7 +116,8 @@ en:
     firstName: "First Name*"
     lastName: "Last Name*"
     email: "Email*"
-    location: "Location*"
+    cityState: "City/State*"
+    country: "Country*"
     pathway: "Intended Pathway/Major*"
     question: "Any question for our speakers?"
 
@@ -124,10 +130,10 @@ zh:
     firstName: "名*"
     lastName: "姓*"
     email: "邮箱*"
-    location: "地区*"
+    cityState: "城市*"
+    country: "国家*"
     pathway: "意向职业方向/专业*"
     question: "您有没有想问演讲者的任何问题？"
-</i18n>
 </i18n>
 <script lang="ts">
 export default defineComponent({
@@ -138,7 +144,8 @@ export default defineComponent({
       firstName: '',
       lastName: '',
       email: '',
-      location: '',
+      cityState: '',
+      country: '',
       pathway: '',
       question: ''
     })
