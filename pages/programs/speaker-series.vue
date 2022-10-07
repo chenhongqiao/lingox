@@ -63,14 +63,12 @@
                 <v-text-field
                   v-model="formData.cityState"
                   :label="$t('form.cityState')"
-                  hint="City/State"
                   :rules="[
                     v => !!v || 'City/State is required']"
                 />
                 <v-text-field
                   v-model="formData.country"
                   :label="$t('form.country')"
-                  hint="Country"
                   :rules="[
                     v => !!v || 'Country is required']"
                 />
@@ -136,7 +134,6 @@ zh:
     country: "国家*"
     pathway: "意向职业方向/专业*"
     question: "您有没有想问演讲者的任何问题？"
-</i18n>
 </i18n>
 <script lang="ts">
 export default defineComponent({

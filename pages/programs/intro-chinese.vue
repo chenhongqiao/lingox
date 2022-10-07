@@ -99,14 +99,12 @@
                 <v-text-field
                   v-model="formData.cityState"
                   :label="$t('form.cityState')"
-                  hint="City/State"
                   :rules="[
                     v => !!v || 'City/State is required']"
                 />
                 <v-text-field
                   v-model="formData.country"
                   :label="$t('form.country')"
-                  hint="Country"
                   :rules="[
                     v => !!v || 'Country is required']"
                 />
