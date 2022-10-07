@@ -61,11 +61,18 @@
                   ]"
                 />
                 <v-text-field
-                  v-model="formData.location"
-                  :label="$t('form.location')"
-                  hint="City/State, Country"
+                  v-model="formData.cityState"
+                  :label="$t('form.cityState')"
+                  hint="City/State"
                   :rules="[
-                    v => !!v || 'Location is required']"
+                    v => !!v || 'City/State is required']"
+                />
+                <v-text-field
+                  v-model="formData.country"
+                  :label="$t('form.country')"
+                  hint="Country"
+                  :rules="[
+                    v => !!v || 'Country is required']"
                 />
                 <v-text-field
                   v-model="formData.school"
@@ -135,11 +142,12 @@ en:
     firstName: "First Name*"
     lastName: "Last Name*"
     email: "Email*"
-    location: "Location*"
+    cityState: "City/State*"
+    country: "Country*"
     school: "School*"
     occupation: "Occupation*"
     needs: "Needs*"
-    needsHint: "Please describe your school’s needs (financially, in particular"
+    needsHint: "Please describe your school’s needs (financially, in particular)"
     distribution: "Material Distribution*"
     distributionHint: "How would you be able to distribute these materials?"
     verification: "Verification*"
@@ -154,7 +162,8 @@ zh:
     firstName: "名*"
     lastName: "姓*"
     email: "邮箱*"
-    location: "地区*"
+    cityState: "城市*"
+    country: "国家*"
     school: "学校*"
     grade: "年级*"
     occupation: "校内职务*"
@@ -174,7 +183,8 @@ export default defineComponent({
       firstName: '',
       lastName: '',
       email: '',
-      location: '',
+      cityState: '',
+      country: '',
       school: '',
       occupation: '',
       needs: '',
