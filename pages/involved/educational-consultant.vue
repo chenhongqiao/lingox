@@ -55,11 +55,16 @@
                   ]"
                 />
                 <v-text-field
-                  v-model="formData.location"
-                  :label="$t('form.location')"
-                  hint="City/State, Country"
+                  v-model="formData.cityState"
+                  :label="$t('form.cityState')"
                   :rules="[
-                    v => !!v || 'Location is required']"
+                    v => !!v || 'City/State is required']"
+                />
+                <v-text-field
+                  v-model="formData.country"
+                  :label="$t('form.country')"
+                  :rules="[
+                    v => !!v || 'Country is required']"
                 />
                 <v-text-field
                   v-model="formData.school"
@@ -123,7 +128,8 @@ en:
   form:
     name: "Full Name*"
     email: "Email*"
-    location: "Location*"
+    cityState: "City/State*"
+    country: "Country*"
     school: "School*"
     educationLevel: "Education Level*"
     major: "Major*"
@@ -138,7 +144,8 @@ export default defineComponent({
     const formData = ref({
       name: '',
       email: '',
-      location: '',
+      cityState: '',
+      country: '',
       school: '',
       educationLevel: '',
       major: '',
