@@ -79,6 +79,12 @@
                     v => !!v || 'Pathway is required']"
                 />
                 <v-text-field
+                  v-model="formData.income"
+                  :label="$t('form.income')"
+                  hint="Please state your approximate annual household income per year (for the purpose of determining eligibility)"
+                  :rules="[(v) => !!v || 'Income is required']"
+                />
+                <v-text-field
                   v-model="formData.question"
                   :label="$t('form.question')"
                 />
@@ -120,7 +126,7 @@ en:
     country: "Country*"
     pathway: "Intended Pathway/Major*"
     question: "Any question for our speakers?"
-
+    income: "Household Income*"
 zh:
   programParagraph:
     - "你想了解关于大学专业选择和未来职业发展吗？LingoX每月定期邀请来自世界排名前20大学的优秀学生，与我们分享他们申请大学选择专业的经历和经验以及他们对所选专业未来发展前景和趋势的分析和看法。他们分别来自哈佛大学、斯坦福大学、宾夕法尼亚大学、约翰霍普金斯大学、康奈尔大学、加州大学洛杉矶分校、加州大学伯克利分校，以及牛津大学，剑桥大学… 涉及的专业包括公商管理，金融，经济学，医学、计算机科学和国际关系等。"
@@ -133,42 +139,37 @@ zh:
     cityState: "城市*"
     country: "国家*"
     pathway: "意向职业方向/专业*"
+    income: "家庭收入*"
     question: "您有没有想问演讲者的任何问题？"
 </i18n>
-<script lang="ts">
-export default defineComponent({
-  name: 'SpeakerSeries',
-  setup () {
-    const { $axios } = useNuxtApp()
-    const formData = ref({
-      firstName: '',
-      lastName: '',
-      email: '',
-      cityState: '',
-      country: '',
-      pathway: '',
-      question: ''
-    })
-    const valid = ref(false)
-    const form: any = ref(null)
-    const submitting = ref(false)
-    const done = ref(false)
-    const error = ref(false)
-    const submit = async () => {
-      submitting.value = true
-      try {
-        await $axios.$post('https://form-submission.harrychen.workers.dev/yTtCTpNMoGRCXquU', formData.value)
-        done.value = true
-        form.value.reset()
-      } catch (err) {
-        error.value = true
-      }
-      submitting.value = false
-    }
-    return { formData, valid, submit, submitting, form, done, error }
-  },
-  head: {
-    title: 'Speaker Series'
-  }
+<script lang="ts" setup>
+useHead({ title: 'Speaker Series' })
+
+const { $axios } = useNuxtApp()
+const formData = ref({
+  firstName: '',
+  lastName: '',
+  email: '',
+  cityState: '',
+  country: '',
+  pathway: '',
+  income: '',
+  question: ''
 })
+const valid = ref(false)
+const form: any = ref(null)
+const submitting = ref(false)
+const done = ref(false)
+const error = ref(false)
+const submit = async () => {
+  submitting.value = true
+  try {
+    await $axios.$post('https://form-submission.harrychen.workers.dev/yTtCTpNMoGRCXquU', formData.value)
+    done.value = true
+    form.value.reset()
+  } catch (err) {
+    error.value = true
+  }
+  submitting.value = false
+}
 </script>

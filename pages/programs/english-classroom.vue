@@ -172,43 +172,36 @@ zh:
     verification: "证明"
     verificationHint: "请在输入“Yes”以保证您会让贵校所有的学生都有使用材料的权利。"
 </i18n>
-<script lang="ts">
-export default defineComponent({
-  name: 'EnglishClassroom',
-  setup () {
-    const { $axios } = useNuxtApp()
-    const formData = ref({
-      firstName: '',
-      lastName: '',
-      email: '',
-      cityState: '',
-      country: '',
-      school: '',
-      occupation: '',
-      needs: '',
-      distribution: '',
-      verification: ''
-    })
-    const valid = ref(false)
-    const form: any = ref(null)
-    const submitting = ref(false)
-    const done = ref(false)
-    const error = ref(false)
-    const submit = async () => {
-      submitting.value = true
-      try {
-        await $axios.$post('https://form-submission.harrychen.workers.dev/vwnRCzydUaCPbqrP', formData.value)
-        done.value = true
-        form.value.reset()
-      } catch (err) {
-        error.value = true
-      }
-      submitting.value = false
-    }
-    return { formData, valid, submit, submitting, form, done, error }
-  },
-  head: {
-    title: 'Intro to English'
-  }
+<script lang="ts" setup>
+useHead({ title: 'English Classroom' })
+
+const { $axios } = useNuxtApp()
+const formData = ref({
+  firstName: '',
+  lastName: '',
+  email: '',
+  cityState: '',
+  country: '',
+  school: '',
+  occupation: '',
+  needs: '',
+  distribution: '',
+  verification: ''
 })
+const valid = ref(false)
+const form: any = ref(null)
+const submitting = ref(false)
+const done = ref(false)
+const error = ref(false)
+const submit = async () => {
+  submitting.value = true
+  try {
+    await $axios.$post('https://form-submission.harrychen.workers.dev/vwnRCzydUaCPbqrP', formData.value)
+    done.value = true
+    form.value.reset()
+  } catch (err) {
+    error.value = true
+  }
+  submitting.value = false
+}
 </script>

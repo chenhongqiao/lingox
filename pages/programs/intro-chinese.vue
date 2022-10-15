@@ -205,68 +205,60 @@ zh:
     income: "家庭收入*"
     comments: "额外补充信息"
 </i18n>
-<script lang="ts">
-export default defineComponent({
-  name: 'IntroChinese',
-  setup () {
-    const { $axios, $gtm } = useNuxtApp()
-    const formData = ref({
-      firstName: '',
-      lastName: '',
-      email: '',
-      cityState: '',
-      country: '',
-      school: '',
-      grade: '',
-      proficiency: '',
-      timeZone: '',
-      income: '',
-      comments: ''
-    })
-    const valid = ref(false)
-    const form: any = ref(null)
-    const submitting = ref(false)
-    const done = ref(false)
-    const error = ref(false)
-    const submit = async () => {
-      submitting.value = true
-      try {
-        await $axios.$post(
-          'https://form-submission.harrychen.workers.dev/wQKrboWxpYGrcgwc',
-          formData.value
-        )
-        done.value = true
-        form.value.reset()
-      } catch (err) {
-        error.value = true
-      }
-      submitting.value = false
-      try {
-        $gtm.push({ event: 'chinese-signup' })
-      } catch (err) {
-        console.error(err)
-      }
-    }
+<script lang="ts" setup>
+useHead({ title: 'Intro to Chinese' })
 
-    const stats = ref([
-      {
-        label: 'Underserved Students',
-        value: '91.3%'
-      },
-      {
-        label: 'Beginners',
-        value: '97.7%'
-      },
-      {
-        label: 'Found It Helpful',
-        value: '100%'
-      }
-    ])
-
-    return { formData, valid, submit, submitting, form, done, error, stats }
-  },
-  head: {
-    title: 'Intro to Chinese'
-  }
+const { $axios, $gtm } = useNuxtApp()
+const formData = ref({
+  firstName: '',
+  lastName: '',
+  email: '',
+  cityState: '',
+  country: '',
+  school: '',
+  grade: '',
+  proficiency: '',
+  timeZone: '',
+  income: '',
+  comments: ''
 })
+const valid = ref(false)
+const form: any = ref(null)
+const submitting = ref(false)
+const done = ref(false)
+const error = ref(false)
+const submit = async () => {
+  submitting.value = true
+  try {
+    await $axios.$post(
+      'https://form-submission.harrychen.workers.dev/wQKrboWxpYGrcgwc',
+      formData.value
+    )
+    done.value = true
+    form.value.reset()
+  } catch (err) {
+    error.value = true
+  }
+  submitting.value = false
+  try {
+    $gtm.push({ event: 'chinese-signup' })
+  } catch (err) {
+    console.error(err)
+  }
+}
+
+const stats = ref([
+  {
+    label: 'Underserved Students',
+    value: '91.3%'
+  },
+  {
+    label: 'Beginners',
+    value: '97.7%'
+  },
+  {
+    label: 'Found It Helpful',
+    value: '100%'
+  }
+])
 </script>
