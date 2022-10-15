@@ -132,6 +132,7 @@
 <i18n lang="yaml">
 en:
   programParagraph:
+    - "UPDATE: We provide PVSA certificates to our volunteers."
     - "A major component of LingoX’s mission to convey accessible language education to communities in need is the provision of free lessons. These can be both live and asynchronous in format. In order to service as many people as possible, we are constantly working hard to create new language curriculums. If you’re passionate about teaching, communication, and international collaboration, sign up today to become a LingoX curriculum developer! Upon request, volunteer hours may be awarded."
   form:
     name: "Full Name*"
