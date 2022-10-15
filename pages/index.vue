@@ -144,7 +144,7 @@ const stats = ref([
     value: '600'
   },
   {
-    label: 'Countires',
+    label: 'Countries',
     value: '55'
   },
   {
