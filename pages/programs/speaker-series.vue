@@ -145,7 +145,7 @@ zh:
 <script lang="ts" setup>
 useHead({ title: 'Speaker Series' })
 
-const { $axios } = useNuxtApp()
+const { $axios, $gtm } = useNuxtApp()
 const formData = ref({
   firstName: '',
   lastName: '',
@@ -171,5 +171,10 @@ const submit = async () => {
     error.value = true
   }
   submitting.value = false
+  try {
+    $gtm.push({ event: 'speaker-signup' })
+  } catch (err) {
+    console.error(err)
+  }
 }
 </script>
