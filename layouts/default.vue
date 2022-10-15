@@ -1,3 +1,4 @@
+<!-- eslint-disable vue/multi-word-component-names -->
 <template>
   <v-app>
     <v-navigation-drawer v-model="drawer" app temporary>
@@ -5,7 +6,7 @@
         <v-subheader class="text-uppercase font-weight-bold">
           {{ $t(displayMenuTitle) }}
         </v-subheader>
-        <div v-for="(item, index) in displayRoutes" :key="index">
+        <div v-for="(item, index) in displayMenuRoutes" :key="index">
           <v-list-item v-if="item.link" :to="item.link">
             <v-list-item-content>
               <v-list-item-title class="py-1">
@@ -13,7 +14,7 @@
               </v-list-item-title>
             </v-list-item-content>
           </v-list-item>
-          <v-list-item v-else @click="currentGroup=parseInt(index)">
+          <v-list-item v-else @click="currentGroup=index">
             <v-list-item-content>
               <v-list-item-title class="py-1">
                 {{ $t(item.text) }}
@@ -187,106 +188,130 @@
         </v-row>
       </v-container>
     </v-footer>
+    <v-snackbar
+      v-model="banner"
+    >
+      Our free Chinese program is accepting new students!
+
+      <template #action="{ attrs }">
+        <v-btn
+          color="primary"
+          text
+          v-bind="attrs"
+          @click="banner=false"
+        >
+          Close
+        </v-btn>
+        <v-btn
+          color="primary"
+          text
+          v-bind="attrs"
+          @click="$router.push('/programs/intro-chinese');banner=false"
+        >
+          Signup
+        </v-btn>
+      </template>
+    </v-snackbar>
   </v-app>
 </template>
 
-<script lang="ts">
-export default defineComponent({
-  name: 'DefaultLayout',
-  setup () {
-    const locales = ref([
-      {
-        code: 'en',
-        displayName: 'English'
-      },
-      {
-        code: 'zh',
-        displayName: '简体中文'
-      }
-    ])
+<script lang="ts" setup>
+const locales = ref([
+  {
+    code: 'en',
+    displayName: 'English'
+  },
+  {
+    code: 'zh',
+    displayName: '简体中文'
+  }
+])
 
-    const { $i18n } = useNuxtApp()
-    const activeLocale = ref($i18n.locale)
+const { $i18n } = useNuxtApp()
+const activeLocale = ref($i18n.locale)
 
-    watch(activeLocale, (currentValue) => {
-      $i18n.setLocale(currentValue)
-    })
+const route = useRoute()
+const banner = ref(false)
 
-    const routes = ref([
-      {
-        text: 'aboutUs',
-        base: '/about',
-        routes: [
-          { text: 'ourMission', link: '/mission' },
-          { text: 'faqShort', link: '/faq' },
-          { text: 'letterFromFounder', link: '/founder' }
-        ]
-      },
-      {
-        text: 'ourTeam',
-        base: '/team',
-        routes: [
-          { text: 'executiveBoard', link: '/board' },
-          { text: 'International Chapters', link: '/chapters' },
-          { text: 'educationalConsultants', link: '/consultants' }
-          //, { text: 'Featured Tutors', link: '/tutors' }
-        ]
-      },
-      {
-        text: 'programs',
-        base: '/programs',
-        routes: [
-          { text: 'introChinese', link: '/intro-chinese' },
-          { text: 'englishClassroom', link: '/english-classroom' },
-          { text: 'speakerSeries', link: '/speaker-series' }
-        ]
-      },
-      {
-        text: 'getInvolved',
-        base: '/involved',
-        routes: [
-          { text: 'startChapter', link: '/new-chapter' },
-          { text: 'becomeCurriculumDeveloper', link: '/curriculum-developer' },
-          { text: 'applyToBoard', link: '/apply-board' },
-          { text: 'becomeEducationalConsultant', link: '/educational-consultant' }
-        ]
-      },
-      {
-        text: 'resources',
-        base: '/resources',
-        routes: [
-          { text: 'mentalHealth', link: '/mental-health' }
-        ]
-      }
-      /*,
+if (!route.path.startsWith('/programs/intro-chinese')) {
+  banner.value = true
+}
+
+watch(activeLocale, (currentValue) => {
+  $i18n.setLocale(currentValue)
+})
+
+const routes = ref([
+  {
+    text: 'aboutUs',
+    base: '/about',
+    routes: [
+      { text: 'ourMission', link: '/mission' },
+      { text: 'faqShort', link: '/faq' },
+      { text: 'letterFromFounder', link: '/founder' }
+    ]
+  },
+  {
+    text: 'ourTeam',
+    base: '/team',
+    routes: [
+      { text: 'executiveBoard', link: '/board' },
+      { text: 'International Chapters', link: '/chapters' },
+      { text: 'educationalConsultants', link: '/consultants' }
+      //, { text: 'Featured Tutors', link: '/tutors' }
+    ]
+  },
+  {
+    text: 'programs',
+    base: '/programs',
+    routes: [
+      { text: 'introChinese', link: '/intro-chinese' },
+      { text: 'englishClassroom', link: '/english-classroom' },
+      { text: 'speakerSeries', link: '/speaker-series' }
+    ]
+  },
+  {
+    text: 'getInvolved',
+    base: '/involved',
+    routes: [
+      { text: 'startChapter', link: '/new-chapter' },
+      { text: 'becomeCurriculumDeveloper', link: '/curriculum-developer' },
+      { text: 'applyToBoard', link: '/apply-board' },
+      { text: 'becomeEducationalConsultant', link: '/educational-consultant' }
+    ]
+  },
+  {
+    text: 'resources',
+    base: '/resources',
+    routes: [
+      { text: 'mentalHealth', link: '/mental-health' }
+    ]
+  }
+  /*,
       { text: 'Partners', link: '/partners' },
       { text: 'Press', link: '/press' },
       { text: 'Contact', link: '/contact' } */
-    ])
+])
 
-    const drawer = ref(false)
+const drawer = ref(false)
 
-    const currentGroup = ref(-1)
+const currentGroup = ref(-1)
 
-    const displayMenuRoutes = computed(() => {
-      if (currentGroup.value !== -1) {
-        // @ts-ignore
-        return routes.value[currentGroup.value].routes.map((route) => { return { text: route.text, link: routes.value[currentGroup.value].base + route.link } })
-      } else {
-        return routes.value
-      }
-    })
+const displayMenuRoutes = computed(() => {
+  if (currentGroup.value !== -1) {
+    // @ts-ignore
+    return routes.value[currentGroup.value].routes.map((route) => { return { text: route.text, link: routes.value[currentGroup.value].base + route.link } })
+  } else {
+    return routes.value
+  }
+})
 
-    const displayMenuTitle = computed(() => {
-      if (currentGroup.value !== -1) {
-        // @ts-ignore
-        return routes.value[currentGroup.value].text
-      } else {
-        return 'LingoX'
-      }
-    })
-
-    return { routes, drawer, currentGroup, displayRoutes: displayMenuRoutes, displayMenuTitle, locales, activeLocale }
+const displayMenuTitle = computed(() => {
+  if (currentGroup.value !== -1) {
+    // @ts-ignore
+    return routes.value[currentGroup.value].text
+  } else {
+    return 'LingoX'
   }
 })
 </script>
