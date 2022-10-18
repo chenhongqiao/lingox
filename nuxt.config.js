@@ -11,7 +11,7 @@ export default defineNuxtConfig({
   // Global page headers: https://go.nuxtjs.dev/config-head
   head: {
     titleTemplate: '%s - LingoX',
-    title: 'LingoX',
+    title: 'Home',
     htmlAttrs: {
       lang: 'en'
     },
