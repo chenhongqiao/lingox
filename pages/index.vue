@@ -57,6 +57,7 @@
         </v-col>
       </v-row>
     </v-container>
+    <!--
     <v-container class="py-4">
       <h3 class="text-h3">
         {{ $t('ourImpact') }}
@@ -80,6 +81,7 @@
         </v-col>
       </v-row>
     </v-container>
+    -->
     <v-container class="py-4 py-md-8">
       <h3 class="text-h3">
         {{ $t('programs') }}
