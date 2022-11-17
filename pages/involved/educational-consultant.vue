@@ -6,10 +6,10 @@
       </h3>
       <v-row class="mt-4">
         <v-col cols="12" md="7">
-          <div class="text-uppercase font-weight-bold primary--text mb-2">
+          <div class="text-uppercase font-weight-bold text-primary mb-2">
             {{ $t('getInvolved') }}
           </div>
-          <div v-for="(text,index) in $t('programParagraph')" :key="index">
+          <div v-for="(text, index) in $t('programParagraph')" :key="index">
             <div class="text-body-1 mb-2">
               {{ text }}
             </div>
@@ -27,85 +27,36 @@
               <div class="mt-2">
                 {{ $t('formSubmitted') }}
               </div>
-              <v-btn
-                class="mt-2"
-                color="secondary"
-                block
-                large
-                @click="done=false"
-              >
+              <v-btn class="mt-2" color="secondary" block large @click="done = false">
                 {{ $t('submitAnotherResponse') }}
               </v-btn>
             </v-card-text>
             <v-card-text v-else>
               <v-form ref="form" v-model="valid">
-                <v-text-field
-                  v-model="formData.name"
-                  :label="$t('form.name')"
-                  :rules="[
-                    v => !!v || 'Name is required']"
-                />
-                <v-text-field
-                  v-model="formData.email"
-                  validate-on-blur
-                  :label="$t('form.email')"
-                  :rules="[
-                    v => !!v || 'Email is required',
+                <v-text-field v-model="formData.name" :label="$t('form.name')" :rules="[
+                v => !!v || 'Name is required']" />
+                <v-text-field v-model="formData.email" validate-on-blur :label="$t('form.email')" :rules="[
+                  v => !!v || 'Email is required',
                     v => /.+@.+\..+/.test(v) || 'Please enter an valid E-mail',
-                  ]"
-                />
-                <v-text-field
-                  v-model="formData.cityState"
-                  :label="$t('form.cityState')"
-                  :rules="[
-                    v => !!v || 'City/State is required']"
-                />
-                <v-text-field
-                  v-model="formData.country"
-                  :label="$t('form.country')"
-                  :rules="[
-                    v => !!v || 'Country is required']"
-                />
-                <v-text-field
-                  v-model="formData.school"
-                  :label="$t('form.school')"
-                  :rules="[
-                    v => !!v || 'School is required']"
-                />
-                <v-text-field
-                  v-model="formData.educationLevel"
-                  :label="$t('form.educationLevel')"
-                  :rules="[
-                    v => !!v || 'Education Level is required']"
-                />
-                <v-text-field
-                  v-model="formData.major"
-                  :label="$t('form.major')"
-                  :rules="[
-                    v => !!v || 'Experience is required']"
-                />
-                <v-text-field
-                  v-model="formData.career"
-                  :label="$t('form.career')"
-                  :rules="[
-                    v => !!v || 'Career is required']"
-                />
-                <v-text-field
-                  v-model="formData.recordingDevice"
-                  :label="$t('form.recordingDevice')"
+                ]" />
+                <v-text-field v-model="formData.cityState" :label="$t('form.cityState')" :rules="[
+                v => !!v || 'City/State is required']" />
+                <v-text-field v-model="formData.country" :label="$t('form.country')" :rules="[
+                v => !!v || 'Country is required']" />
+                <v-text-field v-model="formData.school" :label="$t('form.school')" :rules="[
+                v => !!v || 'School is required']" />
+                <v-text-field v-model="formData.educationLevel" :label="$t('form.educationLevel')" :rules="[
+                v => !!v || 'Education Level is required']" />
+                <v-text-field v-model="formData.major" :label="$t('form.major')" :rules="[
+                v => !!v || 'Experience is required']" />
+                <v-text-field v-model="formData.career" :label="$t('form.career')" :rules="[
+                v => !!v || 'Career is required']" />
+                <v-text-field v-model="formData.recordingDevice" :label="$t('form.recordingDevice')"
                   hint="Do you have access to filming equipment that can produce clear footage and quality audio? (your phone counts!)"
                   :rules="[
-                    v => !!v || 'Recording Device is required']"
-                />
+                  v => !!v || 'Recording Device is required']" />
               </v-form>
-              <v-btn
-                block
-                color="primary"
-                large
-                :disabled="!valid"
-                :loading="submitting"
-                @click="submit"
-              >
+              <v-btn block color="primary" large :disabled="!valid" :loading="submitting" @click="submit">
                 {{ $t('submit') }}
               </v-btn>
             </v-card-text>
@@ -113,10 +64,7 @@
         </v-col>
       </v-row>
     </v-container>
-    <v-snackbar
-      v-model="error"
-      color="error"
-    >
+    <v-snackbar v-model="error" color="error">
       An error has occurred while submitting the form. Please try again.
     </v-snackbar>
   </div>

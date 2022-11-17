@@ -2,14 +2,14 @@
   <div class="my-md-8 my-4">
     <v-container>
       <div class="mx-md-14">
-        <div class="text-uppercase font-weight-bold primary--text mb-2">
+        <div class="text-uppercase font-weight-bold text-primary mb-2">
           {{ $t('ourMission') }}
         </div>
         <h1 class="text-md-h1 text-h2">
-          {{ $t('educate') }}
+          {{ lt('educate') }}
         </h1>
-        <div class="text-body-1 secondary--text mt-4">
-          {{ $t('heroText') }}
+        <div class="text-body-1 text-secondary mt-4">
+          {{ lt('heroText') }}
         </div>
       </div>
     </v-container>
@@ -24,10 +24,10 @@
             {{ $t('ourMissionButTask') }}
           </h3>
           <div class="text-body-1 mt-5">
-            {{ $t('missionText') }}
+            {{ lt('missionText') }}
           </div>
           <div class="mt-4">
-            <nuxt-link to="/about/mission" class="text-decoration-none font-weight-bold text-h6">
+            <nuxt-link to="/about/mission" class="text-decoration-none font-weight-bold text-h6 text-primary">
               {{ $t('learnMore') }}
             </nuxt-link>
           </div>
@@ -44,7 +44,7 @@
             {{ $t('ourTeam') }}
           </h3>
           <div class="text-body-1 mt-5">
-            {{ $t('teamText') }}
+            {{ lt('teamText') }}
           </div>
           <div class="mt-4">
             <nuxt-link to="/team/board" class="text-decoration-none font-weight-bold text-h6">
@@ -88,11 +88,11 @@
       </h3>
       <v-row class="mt-1">
         <v-col v-for="(item, index) in involved" :key="index" cols="12" sm="4">
-          <div class="text-uppercase font-weight-bold primary--text mb-2">
+          <div class="text-uppercase font-weight-bold text-primary mb-2">
             {{ $t(item.title) }}
           </div>
           <div class="text-body-1">
-            {{ $t(item.content) }}
+            {{ lt(item.content) }}
           </div>
           <!--v-btn :to="item.link" x-large color="primary" class="mt-4">
             Learn More
@@ -105,25 +105,10 @@
     </v-container>
   </div>
 </template>
-<i18n lang="yaml">
-en:
-  educate: Educate.
-  heroText: We provide free language tutoring to students from underserved communities all over the world.
-  missionText: Ensuring that all students have access to quality, authentic foreign language education, regardless of income level.
-  teamText: Meet the people behind the scenes of LingoX.
-  introChineseText: Interested in learning Chinese, but find yourself lacking the resources to get started? LingoX is offering a FREE introductory program open to students with demonstrated need!
-  introEnglishText: Do you want to improve your English skills? Register to join English Classroom, LingoX’s English amazing curriculum delivery program!
-  speakerSeriesText: Interested in learning about different pathways and careers, such as business, medicine, computer science, and international relations? Check out our Speaker Series!
-zh:
-  educate: 教育
-  heroText: 我们为全世界未得到充分服务的群体提供免费的语言辅导。
-  missionText: 致力于让所有学生，无论收入水平，都能获得高质量的地道外语教育。
-  teamText: 在幕后运作LingoX的人们。
-  introChineseText: "LingoX 为全球需要学习汉语的学生提供免费的汉语入门课程！我们的课程重点教授“用得上，说得了”的实用汉语，帮助我们的学生快速掌握运用汉语进行日常交流。"
-  introEnglishText: "你想提高你的英语技能吗？欢迎申请LingoX“英语课堂”项目。 LingoX的课程开发团队针对中国学生量身定制了简单易懂，实用性极强的专属课程。"
-  speakerSeriesText: "LingoX每月定期邀请来自世界排名前20大学的优秀学生，与我们分享他们申请大学选择专业的经历和经验以及他们对所选专业未来发展前景和趋势的分析和看法。"
-</i18n>
 <script lang="ts" setup>
+const { t: lt } = useI18n({
+  useScope: 'local'
+})
 
 const involved = ref([{
   title: 'introChinese',
@@ -177,3 +162,21 @@ useHead({
   ]
 })
 </script>
+<i18n lang="yaml">
+  en:
+    educate: Educate.
+    heroText: We provide free language tutoring to students from underserved communities all over the world.
+    missionText: Ensuring that all students have access to quality, authentic foreign language education, regardless of income level.
+    teamText: Meet the people behind the scenes of LingoX.
+    introChineseText: Interested in learning Chinese, but find yourself lacking the resources to get started? LingoX is offering a FREE introductory program open to students with demonstrated need!
+    introEnglishText: Do you want to improve your English skills? Register to join English Classroom, LingoX’s English amazing curriculum delivery program!
+    speakerSeriesText: Interested in learning about different pathways and careers, such as business, medicine, computer science, and international relations? Check out our Speaker Series!
+  zh:
+    educate: 教育
+    heroText: 我们为全世界未得到充分服务的群体提供免费的语言辅导。
+    missionText: 致力于让所有学生，无论收入水平，都能获得高质量的地道外语教育。
+    teamText: 在幕后运作LingoX的人们。
+    introChineseText: "LingoX 为全球需要学习汉语的学生提供免费的汉语入门课程！我们的课程重点教授“用得上，说得了”的实用汉语，帮助我们的学生快速掌握运用汉语进行日常交流。"
+    introEnglishText: "你想提高你的英语技能吗？欢迎申请LingoX“英语课堂”项目。 LingoX的课程开发团队针对中国学生量身定制了简单易懂，实用性极强的专属课程。"
+    speakerSeriesText: "LingoX每月定期邀请来自世界排名前20大学的优秀学生，与我们分享他们申请大学选择专业的经历和经验以及他们对所选专业未来发展前景和趋势的分析和看法。"
+</i18n>

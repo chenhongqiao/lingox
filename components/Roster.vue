@@ -10,7 +10,7 @@
           <div class="text-h5">
             {{ person.name }}
           </div>
-          <div v-if="person.position" class="text-h6 secondary--text">
+          <div v-if="person.position" class="text-h6 text-secondary">
             {{ $parent.$t(person.position) }}
           </div>
           <div v-if="person.bio" class="text-body-1 mt-3">

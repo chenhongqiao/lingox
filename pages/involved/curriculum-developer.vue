@@ -6,10 +6,10 @@
       </h3>
       <v-row class="mt-4">
         <v-col cols="12" md="7">
-          <div class="text-uppercase font-weight-bold primary--text mb-2">
+          <div class="text-uppercase font-weight-bold text-primary mb-2">
             {{ $t('getInvolved') }}
           </div>
-          <div v-for="(text,index) in $t('programParagraph')" :key="index">
+          <div v-for="(text, index) in $t('programParagraph')" :key="index">
             <div class="text-body-1 mb-2">
               {{ text }}
             </div>
@@ -27,93 +27,40 @@
               <div class="mt-2">
                 {{ $t('formSubmitted') }}
               </div>
-              <v-btn
-                class="mt-2"
-                color="secondary"
-                block
-                large
-                @click="done=false"
-              >
+              <v-btn class="mt-2" color="secondary" block large @click="done = false">
                 {{ $t('submitAnotherResponse') }}
               </v-btn>
             </v-card-text>
             <v-card-text v-else>
               <v-form ref="form" v-model="valid">
-                <v-text-field
-                  v-model="formData.name"
-                  :label="$t('form.name')"
-                  :rules="[
-                    v => !!v || 'Name is required']"
-                />
-                <v-text-field
-                  v-model="formData.email"
-                  validate-on-blur
-                  :label="$t('form.email')"
-                  :rules="[
-                    v => !!v || 'Email is required',
+                <v-text-field v-model="formData.name" :label="$t('form.name')" :rules="[
+                v => !!v || 'Name is required']" />
+                <v-text-field v-model="formData.email" validate-on-blur :label="$t('form.email')" :rules="[
+                  v => !!v || 'Email is required',
                     v => /.+@.+\..+/.test(v) || 'Please enter an valid E-mail',
-                  ]"
-                />
-                <v-text-field
-                  v-model="formData.cityState"
-                  :label="$t('form.cityState')"
-                  :rules="[
-                    v => !!v || 'City/State is required']"
-                />
-                <v-text-field
-                  v-model="formData.country"
-                  :label="$t('form.country')"
-                  :rules="[
-                    v => !!v || 'Country is required']"
-                />
-                <v-text-field
-                  v-model="formData.language"
-                  :label="$t('form.language')"
-                  hint="Which languages are you fluent in?"
-                  :rules="[
-                    v => !!v || 'Languages are required']"
-                />
-                <v-text-field
-                  v-model="formData.proficiency"
-                  :label="$t('form.proficiency')"
-                  hint="Describe your level of proficiency."
-                  :rules="[
-                    v => !!v || 'Proficiency is required']"
-                />
-                <v-text-field
-                  v-model="formData.experience"
-                  :label="$t('form.experience')"
-                  hint="Discuss any previous experience with teaching (especially in languages)."
-                  :rules="[
-                    v => !!v || 'Experience is required']"
-                />
-                <v-text-field
-                  v-model="formData.subject"
-                  :label="$t('form.subject')"
-                  hint="What subjects are you passionate about? (STEM, humanities, etc.)"
-                  :rules="[
-                    v => !!v || 'Subjects are required']"
-                />
-                <v-text-field
-                  v-model="formData.timeCommitment"
-                  :label="$t('form.timeCommitment')"
-                  hint="How much time are you able to commit to LingoX per week?"
-                  :rules="[
-                    v => !!v || 'Time Commitment is required']"
-                />
-                <v-text-field
-                  v-model="formData.comments"
-                  :label="$t('form.comments')"
-                />
+                ]" />
+                <v-text-field v-model="formData.cityState" :label="$t('form.cityState')" :rules="[
+                v => !!v || 'City/State is required']" />
+                <v-text-field v-model="formData.country" :label="$t('form.country')" :rules="[
+                v => !!v || 'Country is required']" />
+                <v-text-field v-model="formData.language" :label="$t('form.language')"
+                  hint="Which languages are you fluent in?" :rules="[
+                  v => !!v || 'Languages are required']" />
+                <v-text-field v-model="formData.proficiency" :label="$t('form.proficiency')"
+                  hint="Describe your level of proficiency." :rules="[
+                  v => !!v || 'Proficiency is required']" />
+                <v-text-field v-model="formData.experience" :label="$t('form.experience')"
+                  hint="Discuss any previous experience with teaching (especially in languages)." :rules="[
+                  v => !!v || 'Experience is required']" />
+                <v-text-field v-model="formData.subject" :label="$t('form.subject')"
+                  hint="What subjects are you passionate about? (STEM, humanities, etc.)" :rules="[
+                  v => !!v || 'Subjects are required']" />
+                <v-text-field v-model="formData.timeCommitment" :label="$t('form.timeCommitment')"
+                  hint="How much time are you able to commit to LingoX per week?" :rules="[
+                  v => !!v || 'Time Commitment is required']" />
+                <v-text-field v-model="formData.comments" :label="$t('form.comments')" />
               </v-form>
-              <v-btn
-                block
-                color="primary"
-                large
-                :disabled="!valid"
-                :loading="submitting"
-                @click="submit"
-              >
+              <v-btn block color="primary" large :disabled="!valid" :loading="submitting" @click="submit">
                 {{ $t('submit') }}
               </v-btn>
             </v-card-text>
@@ -121,10 +68,7 @@
         </v-col>
       </v-row>
     </v-container>
-    <v-snackbar
-      v-model="error"
-      color="error"
-    >
+    <v-snackbar v-model="error" color="error">
       An error has occurred while submitting the form. Please try again.
     </v-snackbar>
   </div>

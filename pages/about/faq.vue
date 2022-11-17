@@ -8,16 +8,11 @@
     </v-responsive>
 
     <v-row class="mt-md-6 mt-2">
-      <v-col
-        v-for="(item, i) in FAQs"
-        :key="i"
-        cols="12"
-        lg="6"
-      >
+      <v-col v-for="(item, i) in FAQs" :key="i" cols="12" lg="6">
         <div class="text-h6 font-weight-bold">
           {{ item.question }}
         </div>
-        <div class="text-body-1 secondary--text mt-2">
+        <div class="text-body-1 text-secondary mt-2">
           {{ item.answer }}
         </div>
       </v-col>
@@ -27,7 +22,7 @@
 <script lang="ts">
 export default defineComponent({
   name: 'FaqPage',
-  setup () {
+  setup() {
     const FAQs = ref([
       {
         question: 'What is the cost of enrolling in a LingoX program?',

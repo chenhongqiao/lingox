@@ -1,5 +1,42 @@
-# LingoX Website
+# Nuxt 3 Minimal Starter
 
-Source code of LingoX's website.
+Look at the [nuxt 3 documentation](https://v3.nuxtjs.org) to learn more.
 
-LingoX is a 501(c)(3) nonprofit organization that connects English-speaking and Chinese-speaking volunteers to these students for the purpose of providing free live instruction and conversation with native speakers.
+## Setup
+
+Make sure to install the dependencies:
+
+```bash
+# yarn
+yarn install
+
+# npm
+npm install
+
+# pnpm
+pnpm install --shamefully-hoist
+```
+
+## Development Server
+
+Start the development server on http://localhost:3000
+
+```bash
+npm run dev
+```
+
+## Production
+
+Build the application for production:
+
+```bash
+npm run build
+```
+
+Locally preview production build:
+
+```bash
+npm run preview
+```
+
+Checkout the [deployment documentation](https://v3.nuxtjs.org/guide/deploy/presets) for more information.

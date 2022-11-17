@@ -10,16 +10,8 @@
             We have served 600 students across 6 continents and 55 countries.
           </div>
           <v-row class="mt-2">
-            <v-col
-              v-for="(stat, i) in stats"
-              :key="i"
-              class="text-center"
-            >
-              <v-progress-circular
-                :value="stat.value"
-                :size="'80'"
-                rotate="-90"
-              >
+            <v-col v-for="(stat, i) in stats" :key="i" class="text-center">
+              <v-progress-circular :value="stat.value" :size="'80'" rotate="-90">
                 {{ stat.value }}
               </v-progress-circular>
               <div class="mt-2 text-h7">
@@ -29,19 +21,15 @@
           </v-row>
         </v-col>
         <v-col cols="12" md="5" class="pb-1">
-          <v-img
-            src="/images/intro-chinese.jpg"
-            class="rounded-lg elevation-6 mb-2"
-            max-height="480"
-          />
+          <v-img src="/images/intro-chinese.jpg" class="rounded-lg elevation-6 mb-2" max-height="480" />
         </v-col>
       </v-row>
       <v-row class="mt-0 pt-0">
         <v-col cols="12" md="7">
-          <div class="text-uppercase font-weight-bold primary--text mb-2">
+          <div class="text-uppercase font-weight-bold text-primary mb-2">
             {{ $t('programDetails') }}
           </div>
-          <div v-if="$t('notice') !=='notice'" class="mb-2">
+          <div v-if="$t(' n otice') !=='notice'" class="mb-2">
             <b>{{ $t('notice') }}</b>
           </div>
           <div v-if="$t('programParagraph')!=='programParagraph'">
@@ -64,90 +52,40 @@
               <div class="mt-2">
                 {{ $t('formSubmitted') }}
               </div>
-              <v-btn
-                class="mt-2"
-                color="secondary"
-                block
-                large
-                @click="done = false"
-              >
+              <v-btn class="mt-2" color="secondary" block large @click="done = false">
                 {{ $t('submitAnotherResponse') }}
               </v-btn>
             </v-card-text>
             <v-card-text v-else>
               <v-form ref="form" v-model="valid">
-                <v-text-field
-                  v-model="formData.firstName"
-                  :label="$t('form.firstName')"
-                  :rules="[(v) => !!v || 'First Name is required']"
-                />
-                <v-text-field
-                  v-model="formData.lastName"
-                  :label="$t('form.lastName')"
-                  :rules="[(v) => !!v || 'Last Name is required']"
-                />
-                <v-text-field
-                  v-model="formData.email"
-                  validate-on-blur
-                  :label="$t('form.email')"
-                  :rules="[
-                    (v) => !!v || 'Email is required',
-                    (v) =>
-                      /.+@.+\..+/.test(v) || 'Please enter an valid E-mail',
-                  ]"
-                />
-                <v-text-field
-                  v-model="formData.cityState"
-                  :label="$t('form.cityState')"
-                  :rules="[
-                    v => !!v || 'City/State is required']"
-                />
-                <v-text-field
-                  v-model="formData.country"
-                  :label="$t('form.country')"
-                  :rules="[
-                    v => !!v || 'Country is required']"
-                />
-                <v-text-field
-                  v-model="formData.school"
-                  :label="$t('form.school')"
-                  :rules="[(v) => !!v || 'School is required']"
-                />
-                <v-text-field
-                  v-model="formData.grade"
-                  :label="$t('form.grade')"
-                  :rules="[(v) => !!v || 'Grade Level is required']"
-                />
-                <v-text-field
-                  v-model="formData.proficiency"
-                  :label="$t('form.proficiency')"
+                <v-text-field v-model="formData.firstName" :label="$t('form.firstName')"
+                  :rules="[(v) => !!v || 'First Name is required']" />
+                <v-text-field v-model="formData.lastName" :label="$t('form.lastName')"
+                  :rules="[(v) => !!v || 'Last Name is required']" />
+                <v-text-field v-model="formData.email" validate-on-blur :label="$t('form.email')" :rules="[
+                (v) => !!v || 'Email is required',
+                  (v) =>
+                  /.+@.+\..+/.test(v) || 'Please enter an valid E-mail',
+                ]" />
+                <v-text-field v-model="formData.cityState" :label="$t('form.cityState')" :rules="[
+                v => !!v || 'City/State is required']" />
+                <v-text-field v-model="formData.country" :label="$t('form.country')" :rules="[
+                v => !!v || 'Country is required']" />
+                <v-text-field v-model="formData.school" :label="$t('form.school')"
+                  :rules="[(v) => !!v || 'School is required']" />
+                <v-text-field v-model="formData.grade" :label="$t('form.grade')"
+                  :rules="[(v) => !!v || 'Grade Level is required']" />
+                <v-text-field v-model="formData.proficiency" :label="$t('form.proficiency')"
                   hint="Describe your level of proficiency in Chinese"
-                  :rules="[(v) => !!v || 'Proficiency Level is required']"
-                />
-                <v-text-field
-                  v-model="formData.timeZone"
-                  :label="$t('form.timeZone')"
-                  :rules="[(v) => !!v || 'Time Zone is required']"
-                />
-                <v-text-field
-                  v-model="formData.income"
-                  :label="$t('form.income')"
+                  :rules="[(v) => !!v || 'Proficiency Level is required']" />
+                <v-text-field v-model="formData.timeZone" :label="$t('form.timeZone')"
+                  :rules="[(v) => !!v || 'Time Zone is required']" />
+                <v-text-field v-model="formData.income" :label="$t('form.income')"
                   hint="Please state your approximate annual household income per year (for the purpose of determining eligibility)"
-                  :rules="[(v) => !!v || 'Income is required']"
-                />
-                <v-text-field
-                  v-model="formData.comments"
-                  :label="$t('form.comments')"
-                />
+                  :rules="[(v) => !!v || 'Income is required']" />
+                <v-text-field v-model="formData.comments" :label="$t('form.comments')" />
               </v-form>
-              <v-btn
-                block
-                color="primary"
-                large
-                :disabled="!valid"
-                :loading="submitting"
-                @click="submit"
-              >
+              <v-btn block color="primary" large :disabled="!valid" :loading="submitting" @click="submit">
                 {{ $t('submit') }}
               </v-btn>
             </v-card-text>
@@ -162,7 +100,7 @@
 </template>
 <i18n lang="yaml">
 en:
-  notice: "If you have signed up for this program, please consistently check your email (including the spam folder) for updates. All information will be sent to your inbox. You can also follow us @lingoxofficial on Instagram for important announcements."
+  notice: "If you have signed up for this program, please consistently check your email (including the spam folder) for updates. All information will be sent to your inbox. You can also follow us {'@'}lingoxofficial on Instagram for important announcements."
   programParagraph:
     - "Dates: August 28th - November 26th, 2022 | Time: 8:00-8:45am PDT"
     - "Interested in learning Chinese, but find yourself lacking the resources to get started? LingoX is offering a FREE introductory program open to students with demonstrated need! Classes will be live, taking place on Zoom every week. Our curriculum places a heavy emphasis on “speakable” Chinese and aims to have you talking in Mandarin by the end of our time together. With the help of our skilled and attentive teachers, students will find themselves greatly enjoying their educational experience."
