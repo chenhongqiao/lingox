@@ -19,26 +19,40 @@
       <h3 class="text-h3">
         {{ $t('programs') }}
       </h3>
-      <v-row class="mt-1">
-        <v-col v-for="(item, index) in involved" :key="index" cols="12" sm="4">
-          <h2 class="text-h5 mb-3 primary--text">
-            {{ $t(item.title) }}
-          </h2>
-          <div class="text-body-1">
-            {{ $t(item.content) }}
-          </div>
-          <!--v-btn :to="item.link" x-large color="primary" class="mt-4">
-            Learn More
-          </v-btn-->
-        </v-col>
-      </v-row>
-      <v-row align="center" class="mt-n6">
-        <v-col v-for="(item, index) in involved" :key="index" cols="12" sm="4">
-          <v-btn :to="item.link" x-large color="primary" class="mt-4">
-            {{ $t('learnMore') }}
-          </v-btn>
-        </v-col>
-      </v-row>
+      <div class="d-none d-md-block">
+        <v-row class="mt-1">
+          <v-col v-for="(item, index) in involved" :key="index" cols="4">
+            <h2 class="text-h5 mb-3 primary--text">
+              {{ $t(item.title) }}
+            </h2>
+            <div class="text-body-1">
+              {{ $t(item.content) }}
+            </div>
+          </v-col>
+        </v-row>
+        <v-row align="center" class="mt-n6">
+          <v-col v-for="(item, index) in involved" :key="index" cols="4">
+            <v-btn :to="item.link" x-large color="primary" class="mt-4">
+              {{ $t('learnMore') }}
+            </v-btn>
+          </v-col>
+        </v-row>
+      </div>
+      <div class="d-md-none">
+        <v-row class="mt-1">
+          <v-col v-for="(item, index) in involved" :key="index" cols="12">
+            <h2 class="text-h5 mb-3 primary--text">
+              {{ $t(item.title) }}
+            </h2>
+            <div class="text-body-1">
+              {{ $t(item.content) }}
+            </div>
+            <v-btn :to="item.link" large color="primary" class="mt-4 text-right mr-6">
+              Learn More
+            </v-btn>
+          </v-col>
+        </v-row>
+      </div>
     </v-container>
 
     <v-container class="py-4 py-md-10">
