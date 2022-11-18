@@ -30,6 +30,7 @@ en:
     ryan: "Ryan is an aspiring neurosurgeon who takes a great interest in neuroscience and computer science. In his free time he likes to play with Rubik’s cubes, cook, and partake in public speaking events. He is currently fluent in two languages and is learning a third. Although he doesn’t want to go into a music career, Ryan also plays the viola and piano as a hobby. He is a very sociable person who will befriend anyone who approaches him."
     bruno: "Bruno is a sophomore at University High School, where he writes for his school newspaper and participates in Mock Trial, Model United Nations, and Speech & Debate. From these activities, Bruno learned the significance of effective communication. As the son of two immigrants, Bruno was raised hearing stories from his parents about the struggles of learning English. In his free time, you might find Bruno playing with his two cats, eating an In-N-Out burger with friends, or playing board games with family."
     kevin: "Kevin is currently a junior at Northwood High School in Irvine, California. Since he lived in multiple different countries, he realizes the need for students around the world to have an accessible education to help break language barriers. He is interested in computer science, and hopes to use it to benefit the global community. In his free time, Kevin enjoys music production, playing tennis, and sleeping."
+    emma: "As a Thai-American with an extensive cultural background, Emma values the importance of language education in bringing youth all around the world endless opportunities. With fluency in two languages, and currently learning a third, she wishes to share her passion for education and leadership through LingoX. Currently a junior in high school, Emma also enjoys traveling during her breaks and reading."
 zh:
   bio:
     mial: "Mia 对教育充满热情，致力于帮助贫困社区和弱势家庭的学生获得平等、优质的教育资源。Mia 的业余爱好是弹钢琴，打高尔夫，写作和旅行。"
@@ -82,6 +83,11 @@ export default {
           position: 'ADO',
           bio: 'bio.bruno',
           image: '/images/team/bruno.jpg'
+        }, {
+          name: 'Emma Sriprapundh',
+          position: 'ADO',
+          bio: 'bio.emma',
+          image: '/images/team/emma.jpg'
         }, {
           name: 'Sanjana Ramakrishnan',
           position: 'CFO',
