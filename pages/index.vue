@@ -21,7 +21,7 @@
       </h3>
       <v-row class="mt-1">
         <v-col v-for="(item, index) in involved" :key="index" cols="12" sm="4">
-          <h2 class="text-h5 mb-3">
+          <h2 class="text-h5 mb-3 primary--text">
             {{ $t(item.title) }}
           </h2>
           <div class="text-body-1">
