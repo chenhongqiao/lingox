@@ -4,45 +4,21 @@
       <h3 class="text-h3">
         {{ $t('longIntroChinese') }}
       </h3>
-      <v-row class="mt-4 pb-0">
-        <v-col cols="12" md="7" class="pb-1">
-          <div class="text-h6">
-            We have served 600 students across 6 continents and 55 countries.
-          </div>
-          <v-row class="mt-2">
-            <v-col
-              v-for="(stat, i) in stats"
-              :key="i"
-              class="text-center"
-            >
-              <v-progress-circular
-                :value="stat.value"
-                :size="'80'"
-                rotate="-90"
-              >
-                {{ stat.value }}
-              </v-progress-circular>
-              <div class="mt-2 text-h7">
-                {{ stat.label }}
-              </div>
-            </v-col>
-          </v-row>
-        </v-col>
-        <v-col cols="12" md="5" class="pb-1">
-          <v-img
-            src="/images/intro-chinese.jpg"
-            class="rounded-lg elevation-6 mb-2"
-            max-height="480"
-          />
-        </v-col>
-      </v-row>
+      <div class="text-uppercase font-weight-bold primary--text mt-4">
+        {{ $t('programDetails') }}
+      </div>
       <v-row class="mt-0 pt-0">
         <v-col cols="12" md="7">
-          <div class="text-uppercase font-weight-bold primary--text mb-2">
-            {{ $t('programDetails') }}
+          <div class="text-h6 mb-2">
+            Dates: January 14th - March 25th, 2023 | Time: 8:00-9:00am PDT
           </div>
           <div v-if="$t('notice') !=='notice'" class="mb-2">
-            <b>{{ $t('notice') }}</b>
+            <v-alert
+              type="info"
+              color="secondary"
+            >
+              {{ $t('notice') }}
+            </v-alert>
           </div>
           <div v-if="$t('paragraph')!=='paragraph'">
             <div v-for="(text, index) in Object($t('paragraph'))" :key="index">
@@ -53,6 +29,11 @@
           </div>
         </v-col>
         <v-col cols="12" md="5">
+          <v-img
+            src="/images/intro-chinese.jpg"
+            class="rounded-lg elevation-6 mb-2"
+            max-height="480"
+          />
           <v-card class="pa-1" flat>
             <v-card-title>{{ $t('studentSignup') }}</v-card-title>
             <v-card-text v-if="done" class="text-center">
@@ -164,7 +145,6 @@
 en:
   notice: "If you have signed up for this program, please consistently check your email (including the spam folder) for updates. All information will be sent to your inbox. You can also follow us @lingoxofficial on Instagram for important announcements."
   paragraph:
-    - "Dates: August 28th - November 26th, 2022 | Time: 8:00-8:45am PDT"
     - "Interested in learning Chinese, but find yourself lacking the resources to get started? LingoX is offering a FREE introductory program open to students with demonstrated need! Classes will be live, taking place on Zoom every week. Our curriculum places a heavy emphasis on “speakable” Chinese and aims to have you talking in Mandarin by the end of our time together. With the help of our skilled and attentive teachers, students will find themselves greatly enjoying their educational experience."
     - "LingoX strives to aid students from underserved communities, who may normally lack such support. We hope that these interactive, accessible Chinese lessons will motivate students to learn a new language and be inspired to connect with others. These lessons will be supplemented by exciting practice in conversational skills, as well as witnessing the language in various forms of entertainment media. By curriculum design, students should be able to engage in conversation in the first session!"
     - "Our course’s live format allows for students to ask questions and have them answered immediately, whilst also receiving ongoing support. Furthermore, our standby Tech Team is prepared to troubleshoot connectivity and software issues. We will also have after-class practice for participants to review and work on, in order to solidify the new knowledge."
@@ -184,7 +164,7 @@ en:
     income: "Household Income*"
     comments: "Additional Comments"
 zh:
-  notice: "注册已结束。谢谢！"
+  notice: "注册后所有有关课程的信息和更新都会被发到注册时填写的邮箱（可能会被归为垃圾邮件）。您也可以关注我们的Instagram @lingoxofficial。"
   paragraph:
     - "LingoX 为全球需要学习汉语的学生提供免费的汉语入门课程！每周定时将在Zoom上现场直播教学。我们的课程重点教授“用得上，说得了”的实用汉语，帮助我们的学生快速掌握运用汉语进行日常交流。"
     - "LingoX努力帮助来自教育资源匮乏的社区的学生，为他们提供汉语学习的支持。我们希望这些简单易懂的汉语课程将激励学生学习一种新的语言，并鼓励他们与他人交流。根据课程设计，学生很可能在第一节课上就能参与对话。"
@@ -223,20 +203,6 @@ export default {
         timeCommitment: '',
         comments: ''
       },
-      stats: [
-        {
-          label: 'Underserved Students',
-          value: '91.3%'
-        },
-        {
-          label: 'Beginners',
-          value: '97.7%'
-        },
-        {
-          label: 'Found It Helpful',
-          value: '100%'
-        }
-      ],
       valid: false,
       submitting: false,
       done: false,
