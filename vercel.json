@@ -7,18 +7,6 @@
       "config": {}
     }
   ],
-  "redirects": [
-    {
-      "source": "/signup",
-      "destination": "https://eepurl.com/h5_6-z",
-      "permanent": true
-    },
-    {
-      "source": "/signup/",
-      "destination": "https://eepurl.com/h5_6-z",
-      "permanent": true
-    }
-  ],
   "routes": [
     {
       "src": "/sw.js",
@@ -27,6 +15,16 @@
         "Cache-Control": "public, max-age=0, must-revalidate",
         "Service-Worker-Allowed": "/"
       }
+    },
+    {
+      "src": "/signup",
+      "dest": "https://eepurl.com/h5_6-z",
+      "status": 301
+    },
+    {
+      "src": "/signup/",
+      "dest": "https://eepurl.com/h5_6-z",
+      "status": 301
     }
   ]
 }
