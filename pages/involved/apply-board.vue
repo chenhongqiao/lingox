@@ -8,10 +8,10 @@
         <div class="text-uppercase font-weight-bold primary--text mb-2">
           {{ $t('getInvolved') }}
         </div>
-        <div v-if="$t('notice')" class="mb-2">
-          <b>{{ $t('notice') }}</b>
+        <div v-if="$t('notice')" class="mb-2 text-body-1">
+          {{ $t('notice') }}
         </div>
-        <div class="text-body-1 mb-3">
+        <!--div class="text-body-1 mb-3">
           {{ $t('programText') }}
         </div>
         <div v-for="(position,index) in positions" :key="index" class="mt-4 mb-3">
@@ -37,12 +37,22 @@
         </div>
         <div class="text-body-1 mb-3">
           {{ $t('resume') }}
-        </div>
+        </div-->
       </v-col>
       <v-col cols="12" md="5">
         <v-card class="pa-1" flat>
           <v-card-title>{{ $t('applicationForm') }}</v-card-title>
-          <v-card-text v-if="done" class="text-center">
+          <v-card-text v-if="closed" class="text-center">
+            <div class="mt-1">
+              <v-icon size="60" color="warning">
+                mdi-lock
+              </v-icon>
+            </div>
+            <div class="mt-2">
+              Form is currently closed. Thank you for your interest!
+            </div>
+          </v-card-text>
+          <v-card-text v-else-if="done" class="text-center">
             <div class="mt-1">
               <v-icon size="60" color="success">
                 mdi-check-circle
@@ -218,7 +228,8 @@ export default {
       valid: false,
       submitting: false,
       done: false,
-      error: false
+      error: false,
+      closed: true
     }
   },
   head: {
