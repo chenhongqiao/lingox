@@ -1,5 +1,12 @@
 {
   "version": 2,
+  "builds": [
+    {
+      "src": "nuxt.config.js",
+      "use": "@nuxtjs/vercel-builder",
+      "config": {}
+    }
+  ],
   "redirects": [
     {
       "source": "/signup",
@@ -10,6 +17,16 @@
       "source": "/signup/",
       "destination": "https://eepurl.com/h5_6-z",
       "permanent": true
+    }
+  ],
+  "routes": [
+    {
+      "src": "/sw.js",
+      "continue": true,
+      "headers": {
+        "Cache-Control": "public, max-age=0, must-revalidate",
+        "Service-Worker-Allowed": "/"
+      }
     }
   ]
 }
