@@ -50,7 +50,7 @@
             class="mr-1"
           >
             <span>
-              <v-menu offset-y>
+              <v-menu offset-y open-on-hover>
                 <template #activator="{ on, attrs }">
                   <v-btn
                     text
