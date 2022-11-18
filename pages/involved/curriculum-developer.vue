@@ -9,7 +9,7 @@
           <div class="text-uppercase font-weight-bold primary--text mb-2">
             {{ $t('getInvolved') }}
           </div>
-          <div v-for="(text,index) in $t('programParagraph')" :key="index">
+          <div v-for="(text,index) in Object($t('paragraph'))" :key="index">
             <div class="text-body-1 mb-2">
               {{ text }}
             </div>
@@ -131,7 +131,7 @@
 </template>
 <i18n lang="yaml">
 en:
-  programParagraph:
+  paragraph:
     - "UPDATE: We provide PVSA certificates to our volunteers."
     - "A major component of LingoX’s mission to convey accessible language education to communities in need is the provision of free lessons. These can be both live and asynchronous in format. In order to service as many people as possible, we are constantly working hard to create new language curriculums. If you’re passionate about teaching, communication, and international collaboration, sign up today to become a LingoX curriculum developer! Upon request, volunteer hours may be awarded."
   form:
@@ -146,7 +146,7 @@ en:
     timeCommitment: "Time Commitment*"
     comments: "Any additional comments?"
 zh:
-  programParagraph:
+  paragraph:
     - "LingoX的使命是为有需要帮助的社区和个人提供免费的语言教育。因此，我们最主要的工作是为他们提供免费课程。它们可以是实时的，也可以是录播，阅读材料，和其它形式。为了尽可能帮助更多的人，我们不断努力设计，编写并完善我们的语言课程。如果你热衷于教学、交流和国际合作，请立即注册成为LingoX的课程开发者！如有需要，我们也可授予您志愿者时间。"
   form:
     name: "姓名*"
@@ -160,43 +160,44 @@ zh:
     timeCommitment: "您可以付出多少时间*"
     comments: "任何补充信息?"
 </i18n>
-<script lang="ts">
-export default defineComponent({
-  name: 'BecomeDeveloper',
-  setup () {
-    const { $axios } = useNuxtApp()
-    const formData = ref({
-      name: '',
-      email: '',
-      cityState: '',
-      country: '',
-      language: '',
-      proficiency: '',
-      experience: '',
-      subject: '',
-      timeCommitment: '',
-      comments: ''
-    })
-    const valid = ref(false)
-    const form: any = ref(null)
-    const submitting = ref(false)
-    const done = ref(false)
-    const error = ref(false)
-    const submit = async () => {
-      submitting.value = true
-      try {
-        await $axios.$post('https://form-submission.harrychen.workers.dev/VKaslvLgUOSutcvm', formData.value)
-        done.value = true
-        form.value.reset()
-      } catch (err) {
-        error.value = true
-      }
-      submitting.value = false
+<script>
+export default {
+  name: 'BecomeCDPage',
+  data () {
+    return {
+      formData: {
+        name: '',
+        email: '',
+        cityState: '',
+        country: '',
+        language: '',
+        proficiency: '',
+        experience: '',
+        subject: '',
+        timeCommitment: '',
+        comments: ''
+      },
+      valid: false,
+      submitting: false,
+      done: false,
+      error: false
     }
-    return { formData, valid, submit, submitting, form, done, error }
   },
   head: {
     title: 'Become a Curriculum Developer'
+  },
+  methods: {
+    async submit () {
+      this.submitting = true
+      try {
+        await this.$axios.$post('https://form-submission.harrychen.workers.dev/VKaslvLgUOSutcvm', this.formData)
+        this.done = true
+        this.$refs.form.reset()
+      } catch (err) {
+        this.error = true
+      }
+      this.submitting = false
+    }
   }
-})
+}
 </script>

@@ -14,7 +14,7 @@
         <div class="text-body-1 mb-3">
           {{ $t('programText') }}
         </div>
-        <div v-for="(position,index) in $t('positions')" :key="index" class="mt-4 mb-3">
+        <div v-for="(position,index) in positions" :key="index" class="mt-4 mb-3">
           <div class="text-h6">
             <b>{{ position.name }}</b>
           </div>
@@ -165,67 +165,77 @@
 en:
   programText: "Positions for the 2022-2023 LingoX Executive Board are listed below!"
   notice: "The form is now closed as we have met this application cycle’s deadline. Please check back in April 2023 for information regarding next year’s Executive Board selection process. You can also check out our Instagram @lingoxofficial for all the newest updates. Thanks for your interest."
-  positions:
-    - name: "ATO (Assistant Technology Officer)"
-      responsibilities:
-      - "Managing and updating LingoX’s website"
-      - "Working with the Tech Department to create new products, such as apps"
-      - "Editing footage for programs"
-      - "Attending weekly Executive Meetings"
-      requirements:
-      - "Hardworking and communicative"
-      - "Experience in web development and JavaScript UI framework (preferably with Vue)"
-      - "Experience with GitHub and Git"
-    - name: "ADO (Assistant Development Officer)"
-      responsibilities:
-      - "Preparing project proposals"
-      - "Conducting outreach and expansion"
-      - "Research new opportunities (collaborations, sponsorships, promotions, etc.)"
-      - "Attending weekly Executive Meetings"
-      requirements:
-      - "Diligent and attentive"
-      - "Adept at research"
-      - "High-level professional writing skills"
   resume: "You may also submit your resume to contact@lingox.org, with “Your Name - Executive Board Application (Desired Position)” in the subject line."
 </i18n>
-<script lang="ts">
-export default defineComponent({
-  name: 'ApplyBoard',
-  setup () {
-    const { $axios } = useNuxtApp()
-    const formData = ref({
-      name: '',
-      email: '',
-      cityState: '',
-      country: '',
-      school: '',
-      grade: '',
-      position: '',
-      reasons: '',
-      qualifications: '',
-      languages: '',
-      commitment: ''
-    })
-    const valid = ref(false)
-    const form: any = ref(null)
-    const submitting = ref(false)
-    const done = ref(false)
-    const error = ref(false)
-    const submit = async () => {
-      submitting.value = true
-      try {
-        await $axios.$post('https://form-submission.harrychen.workers.dev/wYERlUcXJqvAYqXk', formData.value)
-        done.value = true
-        form.value.reset()
-      } catch (err) {
-        error.value = true
-      }
-      submitting.value = false
+<script>
+export default {
+  name: 'ApplyBoardPage',
+  data () {
+    return {
+      positions: [
+        {
+          name: 'ATO (Assistant Technology Officer)',
+          responsibilities: [
+            'Managing and updating LingoX’s website',
+            'Working with the Tech Department to create new products, such as apps',
+            'Editing footage for programs',
+            'Attending weekly Executive Meetings'
+          ],
+          requirements: [
+            'Hardworking and communicative',
+            'Experience in web development and JavaScript UI framework (preferably with Vue)',
+            'Experience with GitHub and Git'
+          ]
+        },
+        {
+          name: 'ADO (Assistant Development Officer)',
+          responsibilities: [
+            'Preparing project proposals',
+            'Conducting outreach and expansion',
+            'Research new opportunities (collaborations, sponsorships, promotions, etc.)',
+            'Attending weekly Executive Meetings'
+          ],
+          requirements: [
+            'Diligent and attentive',
+            'Adept at research',
+            'High-level professional writing skills'
+          ]
+        }
+      ],
+      formData: {
+        name: '',
+        email: '',
+        cityState: '',
+        country: '',
+        school: '',
+        grade: '',
+        position: '',
+        reasons: '',
+        qualifications: '',
+        languages: '',
+        commitment: ''
+      },
+      valid: false,
+      submitting: false,
+      done: false,
+      error: false
     }
-    return { formData, valid, submit, submitting, form, done, error }
   },
   head: {
     title: 'Apply to Board'
+  },
+  methods: {
+    async submit () {
+      this.submitting = true
+      try {
+        await this.$axios.$post('https://form-submission.harrychen.workers.dev/wYERlUcXJqvAYqXk', this.formData)
+        this.done = true
+        this.$refs.form.reset()
+      } catch (err) {
+        this.error = true
+      }
+      this.submitting = false
+    }
   }
-})
+}
 </script>

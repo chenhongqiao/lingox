@@ -44,8 +44,8 @@
           <div v-if="$t('notice') !=='notice'" class="mb-2">
             <b>{{ $t('notice') }}</b>
           </div>
-          <div v-if="$t('programParagraph')!=='programParagraph'">
-            <div v-for="(text, index) in $t('programParagraph')" :key="index">
+          <div v-if="$t('paragraph')!=='paragraph'">
+            <div v-for="(text, index) in Object($t('paragraph'))" :key="index">
               <div class="text-body-1 mb-2">
                 {{ text }}
               </div>
@@ -163,7 +163,7 @@
 <i18n lang="yaml">
 en:
   notice: "If you have signed up for this program, please consistently check your email (including the spam folder) for updates. All information will be sent to your inbox. You can also follow us @lingoxofficial on Instagram for important announcements."
-  programParagraph:
+  paragraph:
     - "Dates: August 28th - November 26th, 2022 | Time: 8:00-8:45am PDT"
     - "Interested in learning Chinese, but find yourself lacking the resources to get started? LingoX is offering a FREE introductory program open to students with demonstrated need! Classes will be live, taking place on Zoom every week. Our curriculum places a heavy emphasis on “speakable” Chinese and aims to have you talking in Mandarin by the end of our time together. With the help of our skilled and attentive teachers, students will find themselves greatly enjoying their educational experience."
     - "LingoX strives to aid students from underserved communities, who may normally lack such support. We hope that these interactive, accessible Chinese lessons will motivate students to learn a new language and be inspired to connect with others. These lessons will be supplemented by exciting practice in conversational skills, as well as witnessing the language in various forms of entertainment media. By curriculum design, students should be able to engage in conversation in the first session!"
@@ -185,7 +185,7 @@ en:
     comments: "Additional Comments"
 zh:
   notice: "注册已结束。谢谢！"
-  programParagraph:
+  paragraph:
     - "LingoX 为全球需要学习汉语的学生提供免费的汉语入门课程！每周定时将在Zoom上现场直播教学。我们的课程重点教授“用得上，说得了”的实用汉语，帮助我们的学生快速掌握运用汉语进行日常交流。"
     - "LingoX努力帮助来自教育资源匮乏的社区的学生，为他们提供汉语学习的支持。我们希望这些简单易懂的汉语课程将激励学生学习一种新的语言，并鼓励他们与他人交流。根据课程设计，学生很可能在第一节课上就能参与对话。"
     - "我们的直播授课形式允许学生提出问题并立即得到解答，同时还能得到长期的课后铺导。此外，我们的技术团队随时准备好解决网络连接和软件的问题。我们还将提供课后练习，供学生复习和练习，以巩固新知识。"
@@ -205,60 +205,65 @@ zh:
     income: "家庭收入*"
     comments: "额外补充信息"
 </i18n>
-<script lang="ts" setup>
-useHead({ title: 'Intro to Chinese' })
+<script>
+export default {
+  name: 'IntroChinesePage',
+  data () {
+    return {
+      formData: {
+        name: '',
+        email: '',
+        cityState: '',
+        country: '',
+        occupation: '',
+        school: '',
+        parentOccupation: '',
+        reason: '',
+        plan: '',
+        timeCommitment: '',
+        comments: ''
+      },
+      stats: [
+        {
+          label: 'Underserved Students',
+          value: '91.3%'
+        },
+        {
+          label: 'Beginners',
+          value: '97.7%'
+        },
+        {
+          label: 'Found It Helpful',
+          value: '100%'
+        }
+      ],
+      valid: false,
+      submitting: false,
+      done: false,
+      error: false
+    }
+  },
+  head: {
+    title: 'Shoujen Scholars Program'
+  },
+  methods: {
+    async submit () {
+      this.submitting = true
+      try {
+        await this.$axios.$post('https://form-submission.harrychen.workers.dev/wQKrboWxpYGrcgwc', this.formData)
+        this.done = true
+        this.$refs.form.reset()
 
-const { $axios, $gtm } = useNuxtApp()
-const formData = ref({
-  firstName: '',
-  lastName: '',
-  email: '',
-  cityState: '',
-  country: '',
-  school: '',
-  grade: '',
-  proficiency: '',
-  timeZone: '',
-  income: '',
-  comments: ''
-})
-const valid = ref(false)
-const form: any = ref(null)
-const submitting = ref(false)
-const done = ref(false)
-const error = ref(false)
-const submit = async () => {
-  submitting.value = true
-  try {
-    await $axios.$post(
-      'https://form-submission.harrychen.workers.dev/wQKrboWxpYGrcgwc',
-      formData.value
-    )
-    done.value = true
-    form.value.reset()
-  } catch (err) {
-    error.value = true
-  }
-  submitting.value = false
-  try {
-    $gtm.push({ event: 'chinese-signup' })
-  } catch (err) {
-    console.error(err)
+        try {
+          this.$gtm.push({ event: 'chinese-signup' })
+        } catch (err) {
+          console.error(err)
+        }
+      } catch (err) {
+        this.error = true
+      }
+      this.submitting = false
+    }
   }
 }
-
-const stats = ref([
-  {
-    label: 'Underserved Students',
-    value: '91.3%'
-  },
-  {
-    label: 'Beginners',
-    value: '97.7%'
-  },
-  {
-    label: 'Found It Helpful',
-    value: '100%'
-  }
-])
 </script>

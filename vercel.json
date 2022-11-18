@@ -1,15 +1,30 @@
 {
   "version": 2,
-  "redirects": [
+  "builds": [
     {
-      "source": "/signup",
-      "destination": "https://eepurl.com/h5_6-z",
-      "permanent": true
+      "src": "nuxt.config.js",
+      "use": "@nuxtjs/vercel-builder",
+      "config": {}
+    }
+  ],
+  "routes": [
+    {
+      "src": "/sw.js",
+      "continue": true,
+      "headers": {
+        "Cache-Control": "public, max-age=0, must-revalidate",
+        "Service-Worker-Allowed": "/"
+      }
     },
     {
-      "source": "/signup/",
-      "destination": "https://eepurl.com/h5_6-z",
-      "permanent": true
+      "src": "/signup",
+      "dest": "https://eepurl.com/h5_6-z",
+      "status": 301
+    },
+    {
+      "src": "/signup/",
+      "dest": "https://eepurl.com/h5_6-z",
+      "status": 301
     }
   ]
 }

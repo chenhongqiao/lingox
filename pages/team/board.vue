@@ -46,93 +46,93 @@ zh:
     shivali: Shivali Shrivastava的父母是来自印度的第一代移民，她精通多门语言。她希望通过LingoX作为连接贫困社区并为他们提供优质教育的桥梁。Shivali喜欢在海滩上散步，与好友共享休闲时光。
     sarah: 作为一名曾在多个国家留学的美籍华裔学生，Sarah深知英语在学习和生活以及各个方面的重要性。她希望通过LingoX来帮助贫困社区的学生获得实现梦想的机会。闲暇时，Sarah喜欢打网球、画画以及旅游。
 </i18n>
-<script lang="ts">
-export default defineComponent({
+<script>
+export default {
   name: 'BoardPage',
-  setup() {
-    const team = ref([
-      {
-        name: 'Mia Lee',
-        position: 'CEO',
-        bio: 'bio.mial',
-        image: '/images/team/mial.jpg'
-      }, {
-        name: 'David Chen',
-        position: 'CMO',
-        bio: 'bio.david',
-        image: '/images/team/david.jpg'
-      }, {
-        name: 'Hannah Choi',
-        position: 'AMO',
-        bio: 'bio.hannah',
-        image: '/images/team/hannah.jpg'
-      }, {
-        name: 'Jane Wang',
-        position: 'AMO',
-        bio: 'bio.jane',
-        image: '/images/team/jane.jpg'
-      }, {
-        name: 'Sarah Xie',
-        position: 'ADO',
-        bio: 'bio.sarah',
-        image: '/images/team/sarah.jpg'
-      }, {
-        name: 'Bruno Diaz',
-        position: 'ADO',
-        bio: 'bio.bruno',
-        image: '/images/team/bruno.jpg'
-      }, {
-        name: 'Sanjana Ramakrishnan',
-        position: 'CFO',
-        bio: 'bio.sanjana',
-        image: '/images/team/sanjana.jpg'
-      }, {
-        name: 'Jia An',
-        position: 'AFO',
-        bio: 'bio.jia',
-        image: '/images/team/jia.jpg'
-      }, {
-        name: 'Harry Chen',
-        position: 'CTO',
-        bio: 'bio.harry',
-        image: '/images/team/harry.jpg'
-      }, {
-        name: 'Tyler Truong',
-        position: 'ATO',
-        bio: 'bio.tyler',
-        image: '/images/team/tyler.jpg'
-      }, {
-        name: 'Ryan Shahbaba',
-        position: 'ATO',
-        bio: 'bio.ryan',
-        image: '/images/team/ryan.jpg'
-      }, {
-        name: 'Kevin Chu',
-        position: 'ATO',
-        bio: 'bio.kevin',
-        image: '/images/team/kevin.jpg'
-      }, {
-        name: 'Simone Rothaupt',
-        position: 'CPRO',
-        bio: 'bio.simone',
-        image: '/images/team/simone.jpg'
-      }, {
-        name: 'Abby Warnock',
-        position: 'APRO',
-        bio: 'bio.abby',
-        image: '/images/team/abby.jpg'
-      }, {
-        name: 'Judy Tao',
-        position: 'APRO',
-        bio: 'bio.judy',
-        image: '/images/team/judy.jpg'
-      }
-    ])
-
-    return { team }
+  data () {
+    return {
+      team: [
+        {
+          name: 'Mia Lee',
+          position: 'CEO',
+          bio: 'bio.mial',
+          image: '/images/team/mial.jpg'
+        }, {
+          name: 'David Chen',
+          position: 'CMO',
+          bio: 'bio.david',
+          image: '/images/team/david.jpg'
+        }, {
+          name: 'Hannah Choi',
+          position: 'AMO',
+          bio: 'bio.hannah',
+          image: '/images/team/hannah.jpg'
+        }, {
+          name: 'Jane Wang',
+          position: 'AMO',
+          bio: 'bio.jane',
+          image: '/images/team/jane.jpg'
+        }, {
+          name: 'Sarah Xie',
+          position: 'ADO',
+          bio: 'bio.sarah',
+          image: '/images/team/sarah.jpg'
+        }, {
+          name: 'Bruno Diaz',
+          position: 'ADO',
+          bio: 'bio.bruno',
+          image: '/images/team/bruno.jpg'
+        }, {
+          name: 'Sanjana Ramakrishnan',
+          position: 'CFO',
+          bio: 'bio.sanjana',
+          image: '/images/team/sanjana.jpg'
+        }, {
+          name: 'Jia An',
+          position: 'AFO',
+          bio: 'bio.jia',
+          image: '/images/team/jia.jpg'
+        }, {
+          name: 'Harry Chen',
+          position: 'CTO',
+          bio: 'bio.harry',
+          image: '/images/team/harry.jpg'
+        }, {
+          name: 'Tyler Truong',
+          position: 'ATO',
+          bio: 'bio.tyler',
+          image: '/images/team/tyler.jpg'
+        }, {
+          name: 'Ryan Shahbaba',
+          position: 'ATO',
+          bio: 'bio.ryan',
+          image: '/images/team/ryan.jpg'
+        }, {
+          name: 'Kevin Chu',
+          position: 'ATO',
+          bio: 'bio.kevin',
+          image: '/images/team/kevin.jpg'
+        }, {
+          name: 'Simone Rothaupt',
+          position: 'CPRO',
+          bio: 'bio.simone',
+          image: '/images/team/simone.jpg'
+        }, {
+          name: 'Abby Warnock',
+          position: 'APRO',
+          bio: 'bio.abby',
+          image: '/images/team/abby.jpg'
+        }, {
+          name: 'Judy Tao',
+          position: 'APRO',
+          bio: 'bio.judy',
+          image: '/images/team/judy.jpg'
+        }
+      ]
+    }
   },
   head: {
     title: 'Executive Board'
   }
-})
+}
 </script>

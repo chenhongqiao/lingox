@@ -21,20 +21,14 @@
     </div>
   </div>
 </template>
-<script lang="ts">
-interface Member {
-  name: string
-  image?: string
-  bio?: string
-  position?: string
-}
-export default defineComponent({
+<script>
+export default {
   name: 'RosterComponent',
   props: {
     team: {
-      type: Array as () => Member[],
+      type: Array,
       required: true
     }
   }
-})
+}
 </script>

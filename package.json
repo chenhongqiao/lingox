@@ -1,39 +1,37 @@
 {
-  "name": "lingox-website",
+  "name": "lingox",
   "version": "1.0.0",
   "private": true,
   "scripts": {
-    "dev": "nuxi dev",
-    "build": "nuxi build",
-    "preview": "nuxi preview",
-    "lint:js": "eslint --ext \".js,.ts,.vue\" --ignore-path .gitignore .",
+    "dev": "nuxt",
+    "build": "nuxt build",
+    "start": "nuxt start",
+    "generate": "nuxt generate",
+    "lint:js": "eslint --ext \".js,.vue\" --ignore-path .gitignore .",
     "lint": "yarn lint:js",
     "lintfix": "yarn lint:js --fix"
   },
-  "devDependencies": {
-    "@babel/eslint-parser": "^7.16.3",
-    "@nuxt/types": "^2.15.8",
-    "@nuxtjs/eslint-config-typescript": "^8.0.0",
-    "@nuxtjs/eslint-module": "^3.0.2",
-    "eslint": "^8.4.1",
-    "eslint-plugin-nuxt": "^3.1.0",
-    "eslint-plugin-vue": "^8.2.0",
-    "typescript": "^4.8.2"
-  },
   "dependencies": {
-    "@nuxt/bridge": "^0.10.1",
     "@nuxtjs/axios": "^5.13.6",
     "@nuxtjs/google-fonts": "^2.0.0",
     "@nuxtjs/gtm": "^2.4.0",
-    "@nuxtjs/i18n": "^7.2.2",
-    "@nuxtjs/vuetify": "^1.12.3",
-    "buffer": "^6.0.3",
-    "consola": "^2.15.3",
-    "core-js": "^3.19.3",
-    "date-fns": "^2.28.0",
-    "nuxt-edge": "^2.16.0-27707061.54e852f",
-    "vue": "^2.6.14",
-    "vuetify": "^2.6.1",
+    "@nuxtjs/i18n": "^7.3.0",
+    "core-js": "^3.25.3",
+    "date-fns": "^2.29.3",
+    "nuxt": "^2.15.8",
+    "vue": "^2.7.10",
+    "vue-server-renderer": "^2.7.10",
+    "vue-template-compiler": "^2.7.10",
+    "vuetify": "^2.6.10",
     "yaml-loader": "^0.8.0"
+  },
+  "devDependencies": {
+    "@babel/eslint-parser": "^7.19.1",
+    "@nuxtjs/eslint-config": "^11.0.0",
+    "@nuxtjs/eslint-module": "^3.1.0",
+    "@nuxtjs/vuetify": "^1.12.3",
+    "eslint": "^8.24.0",
+    "eslint-plugin-nuxt": "^4.0.0",
+    "eslint-plugin-vue": "^9.5.1"
   }
 }

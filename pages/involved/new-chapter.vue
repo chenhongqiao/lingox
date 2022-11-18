@@ -9,7 +9,7 @@
           <div class="text-uppercase font-weight-bold primary--text mb-2">
             {{ $t('getInvolved') }}
           </div>
-          <div v-for="(text,index) in $t('programParagraph')" :key="index">
+          <div v-for="(text,index) in Object($t('paragraph'))" :key="index">
             <div class="text-body-1 mb-2">
               {{ text }}
             </div>
@@ -131,7 +131,7 @@
 </template>
 <i18n lang="yaml">
 en:
-  programParagraph:
+  paragraph:
     - "Although founded in California, LingoX is proud to be represented by many chapters all over the world: from Toronto, Canada to Auckland, New Zealand! We are always looking for passionate minds to carry forth our mission and expand our operations to more communities. Now, you have the opportunity to start your own chapter!"
     - "You may also submit your resume to contact@lingox.org, with “Your Name - Start a Chapter” in the subject line."
   form:
@@ -147,7 +147,7 @@ en:
     timeCommitment: "Time Commitment*"
     comments: "Any additional comments?"
 zh:
-  programParagraph:
+  paragraph:
     - "LingoX成立于美国加利福尼亚州，目前我们已经在全球多个国家和地区设立了分部：加拿大（多伦多），新西兰（奥克兰），英国（伦敦），中国（深圳、重庆）以及更多其它地区！我们一直在寻找对语言教育充满激情和热爱的志愿者来加入我们，并将我们的服务拓展到更多的地区。现在，欢迎你加入我们并建立新的LingoX分部！"
   form:
     name: "姓名*"
@@ -163,43 +163,44 @@ zh:
     comments: "任何补充信息?"
 </i18n>
 <script lang="ts">
-export default defineComponent({
-  name: 'StartChapter',
-  setup () {
-    const { $axios } = useNuxtApp()
-    const formData = ref({
-      name: '',
-      email: '',
-      cityState: '',
-      country: '',
-      occupation: '',
-      school: '',
-      parentOccupation: '',
-      reason: '',
-      plan: '',
-      timeCommitment: '',
-      comments: ''
-    })
-    const valid = ref(false)
-    const form: any = ref(null)
-    const submitting = ref(false)
-    const done = ref(false)
-    const error = ref(false)
-    const submit = async () => {
-      submitting.value = true
-      try {
-        await $axios.$post('https://form-submission.harrychen.workers.dev/CPuMfhpdWCDJGuOe', formData.value)
-        done.value = true
-        form.value.reset()
-      } catch (err) {
-        error.value = true
-      }
-      submitting.value = false
+export default {
+  name: 'NewChapterPage',
+  data () {
+    return {
+      formData: {
+        name: '',
+        email: '',
+        cityState: '',
+        country: '',
+        occupation: '',
+        school: '',
+        parentOccupation: '',
+        reason: '',
+        plan: '',
+        timeCommitment: '',
+        comments: ''
+      },
+      valid: false,
+      submitting: false,
+      done: false,
+      error: false
     }
-    return { formData, valid, submit, submitting, form, done, error }
   },
   head: {
     title: 'Start a Chapter'
+  },
+  methods: {
+    async submit () {
+      this.submitting = true
+      try {
+        await this.$axios.$post('https://form-submission.harrychen.workers.dev/CPuMfhpdWCDJGuOe', this.formData)
+        this.done = true
+        this.$refs.form.reset()
+      } catch (err) {
+        this.error = true
+      }
+      this.submitting = false
+    }
   }
-})
+}
 </script>
