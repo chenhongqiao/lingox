@@ -9,7 +9,7 @@
           <div class="text-uppercase font-weight-bold primary--text mb-2">
             {{ $t('getInvolved') }}
           </div>
-          <div v-for="(text,index) in $t('programParagraph')" :key="index">
+          <div v-for="(text,index) in Object($t('paragraph'))" :key="index">
             <div class="text-body-1 mb-2">
               {{ text }}
             </div>
@@ -123,7 +123,7 @@
 </template>
 <i18n lang="yaml">
 en:
-  programParagraph:
+  paragraph:
     - "Our monthly speaker series serves numerous students from all around the world, offering them formal introductions into pathways they may have had little exposure to prior. We are always searching for new guests with interesting stories to tell. If this sounds like you, please apply to become an educational consultant below! Speakers also have the opportunity to discuss interesting projects they may be working on, such as exciting research, app development, or new publications. To express our gratitude, LingoX educational consultants also receive a gratitude package to celebrate our partnership!"
   form:
     name: "Full Name*"
@@ -136,42 +136,43 @@ en:
     career: "Career*"
     recordingDevice: "Recording Device*"
 </i18n>
-<script lang="ts">
-export default defineComponent({
-  name: 'BecomeDeveloper',
-  setup () {
-    const { $axios } = useNuxtApp()
-    const formData = ref({
-      name: '',
-      email: '',
-      cityState: '',
-      country: '',
-      school: '',
-      educationLevel: '',
-      major: '',
-      career: '',
-      recordingDevice: ''
-    })
-    const valid = ref(false)
-    const form: any = ref(null)
-    const submitting = ref(false)
-    const done = ref(false)
-    const error = ref(false)
-    const submit = async () => {
-      submitting.value = true
-      try {
-        await $axios.$post('https://form-submission.harrychen.workers.dev/ctybDghzUYyYyrPu', formData.value)
-        done.value = true
-        form.value.reset()
-      } catch (err) {
-        error.value = true
-      }
-      submitting.value = false
+<script>
+export default {
+  name: 'BecomeECPage',
+  data () {
+    return {
+      formData: {
+        name: '',
+        email: '',
+        cityState: '',
+        country: '',
+        school: '',
+        educationLevel: '',
+        major: '',
+        career: '',
+        recordingDevice: ''
+      },
+      valid: false,
+      submitting: false,
+      done: false,
+      error: false
     }
-    return { formData, valid, submit, submitting, form, done, error }
   },
   head: {
-    title: 'Become a Curriculum Developer'
+    title: 'Become a Educational Consultant'
+  },
+  methods: {
+    async submit () {
+      this.submitting = true
+      try {
+        await this.$axios.$post('https://form-submission.harrychen.workers.dev/ctybDghzUYyYyrPu', this.formData)
+        this.done = true
+        this.$refs.form.reset()
+      } catch (err) {
+        this.error = true
+      }
+      this.submitting = false
+    }
   }
-})
+}
 </script>

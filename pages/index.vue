@@ -123,57 +123,62 @@ zh:
   introEnglishText: "你想提高你的英语技能吗？欢迎申请LingoX“英语课堂”项目。 LingoX的课程开发团队针对中国学生量身定制了简单易懂，实用性极强的专属课程。"
   speakerSeriesText: "LingoX每月定期邀请来自世界排名前20大学的优秀学生，与我们分享他们申请大学选择专业的经历和经验以及他们对所选专业未来发展前景和趋势的分析和看法。"
 </i18n>
-<script lang="ts" setup>
-
-const involved = ref([{
-  title: 'introChinese',
-  content: 'introChineseText',
-  link: '/programs/intro-chinese'
-},
-{
-  title: 'englishClassroom',
-  content: 'introEnglishText',
-  link: '/programs/english-classroom'
-}, {
-  title: 'speakerSeries',
-  content: 'speakerSeriesText',
-  link: '/programs/speaker-series'
-}])
-
-const stats = ref([
-  {
-    label: 'Total Students',
-    value: '600'
-  },
-  {
-    label: 'Countries',
-    value: '55'
-  },
-  {
-    label: 'Continents',
-    value: '6'
-  },
-  {
-    label: 'Underserved Students',
-    value: '91.3%'
-  },
-  {
-    label: 'Beginners',
-    value: '97.7%'
-  },
-  {
-    label: 'Found It Helpful',
-    value: '100%'
-  }
-])
-useHead({
-  title: 'Home',
-  meta: [
-    {
-      hid: 'description',
-      name: 'description',
-      content: 'LingoX provides free language tutoring to students from underserved communities all over the world.'
+<script>
+export default {
+  name: 'HomePage',
+  data () {
+    return {
+      involved: [{
+        title: 'introChinese',
+        content: 'introChineseText',
+        link: '/programs/intro-chinese'
+      },
+      {
+        title: 'englishClassroom',
+        content: 'introEnglishText',
+        link: '/programs/english-classroom'
+      }, {
+        title: 'speakerSeries',
+        content: 'speakerSeriesText',
+        link: '/programs/speaker-series'
+      }],
+      stats: [
+        {
+          label: 'Total Students',
+          value: '600'
+        },
+        {
+          label: 'Countries',
+          value: '55'
+        },
+        {
+          label: 'Continents',
+          value: '6'
+        },
+        {
+          label: 'Underserved Students',
+          value: '91.3%'
+        },
+        {
+          label: 'Beginners',
+          value: '97.7%'
+        },
+        {
+          label: 'Found It Helpful',
+          value: '100%'
+        }
+      ]
     }
-  ]
-})
+  },
+  head: {
+    title: 'Home',
+    meta: [
+      {
+        hid: 'description',
+        name: 'description',
+        content: 'LingoX provides free language tutoring to students from underserved communities all over the world.'
+      }
+    ]
+  }
+}
 </script>

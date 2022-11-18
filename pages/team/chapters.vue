@@ -37,144 +37,144 @@ en:
     kayden: "Kayden is a future engineer that balances athleticism with his academics. He takes up a range of disciplines, including hockey, where he is well decorated. He enjoys being on the ice, science, math and english in his free time."
     botond: "Botond Horvath is a talented, aspiring astrophysicist and year 11 student at Upper Canada College. He is a proficient communicator, and fully trilingual in English, French and Hungarian, with a desire to learn more languages like Italian! In his free time, Botond enjoys reading, researching, martial arts, and performing traditional dances."
 </i18n>
-<script lang="ts">
-export default defineComponent({
+<script>
+export default {
   name: 'ChapterPage',
-  setup () {
-    const chapters = ref([
-      {
-        name: 'Southwest China',
-        members: [{
-          name: 'Christina Chen',
-          position: 'Director of Development',
-          bio: 'bio.christina',
-          image: '/images/team/christina.jpg'
+  data () {
+    return {
+      chapters: [
+        {
+          name: 'Southwest China',
+          members: [{
+            name: 'Christina Chen',
+            position: 'Director of Development',
+            bio: 'bio.christina',
+            image: '/images/team/christina.jpg'
+          },
+          {
+            name: 'Lynn Zhang',
+            position: 'Director of Human Resouces',
+            bio: 'bio.lynn',
+            image: '/images/team/lynn.jpg'
+          },
+          {
+            name: 'Anastasia Mo',
+            bio: 'bio.anastasia',
+            image: '/images/team/anastasia.jpg'
+          },
+          {
+            name: 'Ethan Chen',
+            bio: 'bio.ethan',
+            image: '/images/team/ethan.jpg'
+          },
+          {
+            name: 'Daisy Wang',
+            bio: 'bio.daisy',
+            image: '/images/team/daisy.jpg'
+          }]
         },
         {
-          name: 'Lynn Zhang',
-          position: 'Director of Human Resouces',
-          bio: 'bio.lynn',
-          image: '/images/team/lynn.jpg'
+          name: 'South China',
+          members: [{
+            name: 'Maggie Liu',
+            position: 'Regional Director of Development',
+            bio: 'bio.maggie',
+            image: '/images/team/maggie.jpg'
+          }, {
+            name: 'Derek Zhang',
+            position: 'Director of Development',
+            bio: 'bio.derek',
+            image: '/images/team/derek.jpg'
+          },
+          {
+            name: 'Vicky Zheng',
+            position: 'Director of Human Resources',
+            bio: 'bio.vicky',
+            image: '/images/team/vicky.jpg'
+          },
+          {
+            name: 'Gary Yukun',
+            position: 'Director of Marketing',
+            bio: 'bio.gary',
+            image: '/images/team/gary.jpg'
+          }
+          ]
         },
         {
-          name: 'Anastasia Mo',
-          bio: 'bio.anastasia',
-          image: '/images/team/anastasia.jpg'
+          name: 'New Zealand',
+          members: [
+            {
+              name: 'Kristine Peng',
+              position: 'Director of Development',
+              bio: 'bio.kristine',
+              image: '/images/team/kristine.jpg'
+            }
+          ]
         },
         {
-          name: 'Ethan Chen',
-          bio: 'bio.ethan',
-          image: '/images/team/ethan.jpg'
+          name: 'Canada',
+          members: [
+            {
+              name: 'Eugenio Ciarlandini',
+              bio: 'bio.eugenio',
+              image: '/images/team/eugenio.jpg'
+            },
+            {
+              name: 'Jerry Jia',
+              bio: 'bio.jerry',
+              image: '/images/team/jerry.jpg'
+            },
+            {
+              name: 'Roy Feng',
+              bio: 'bio.roy'
+            },
+            {
+              name: 'Botond Horvath',
+              bio: 'bio.botond'
+            },
+            {
+              name: 'Caleb Chong',
+              bio: 'bio.caleb'
+            },
+            {
+              name: 'Jungly Chen',
+              bio: 'bio.jungly'
+            },
+            {
+              name: 'Jeffrey Li',
+              bio: 'bio.jeffrey'
+            },
+            {
+              name: 'Kayden Visram',
+              bio: 'bio.kayden'
+            },
+            {
+              name: 'Noah Stein'
+            },
+            {
+              name: 'Oliver Wong'
+            },
+            {
+              name: 'Khushi Sharma'
+            }
+          ]
         },
         {
-          name: 'Daisy Wang',
-          bio: 'bio.daisy',
-          image: '/images/team/daisy.jpg'
-        }]
-      },
-      {
-        name: 'South China',
-        members: [{
-          name: 'Maggie Liu',
-          position: 'Regional Director of Development',
-          bio: 'bio.maggie',
-          image: '/images/team/maggie.jpg'
-        }, {
-          name: 'Derek Zhang',
-          position: 'Director of Development',
-          bio: 'bio.derek',
-          image: '/images/team/derek.jpg'
-        },
-        {
-          name: 'Vicky Zheng',
-          position: 'Director of Human Resources',
-          bio: 'bio.vicky',
-          image: '/images/team/vicky.jpg'
-        },
-        {
-          name: 'Gary Yukun',
-          position: 'Director of Marketing',
-          bio: 'bio.gary',
-          image: '/images/team/gary.jpg'
+          name: 'UK',
+          members: [
+            {
+              name: 'Alvin Zhou',
+              position: 'Director of Development',
+              bio: 'bio.alvin',
+              image: '/images/team/alvin.jpg'
+            }
+          ]
         }
-        ]
-      },
-      {
-        name: 'New Zealand',
-        members: [
-          {
-            name: 'Kristine Peng',
-            position: 'Director of Development',
-            bio: 'bio.kristine',
-            image: '/images/team/kristine.jpg'
-          }
-        ]
-      },
-      {
-        name: 'Canada',
-        members: [
-          {
-            name: 'Eugenio Ciarlandini',
-            bio: 'bio.eugenio',
-            image: '/images/team/eugenio.jpg'
-          },
-          {
-            name: 'Jerry Jia',
-            bio: 'bio.jerry',
-            image: '/images/team/jerry.jpg'
-          },
-          {
-            name: 'Roy Feng',
-            bio: 'bio.roy'
-          },
-          {
-            name: 'Botond Horvath',
-            bio: 'bio.botond'
-          },
-          {
-            name: 'Caleb Chong',
-            bio: 'bio.caleb'
-          },
-          {
-            name: 'Jungly Chen',
-            bio: 'bio.jungly'
-          },
-          {
-            name: 'Jeffrey Li',
-            bio: 'bio.jeffrey'
-          },
-          {
-            name: 'Kayden Visram',
-            bio: 'bio.kayden'
-          },
-          {
-            name: 'Noah Stein'
-          },
-          {
-            name: 'Oliver Wong'
-          },
-          {
-            name: 'Khushi Sharma'
-          }
-        ]
-      },
-      {
-        name: 'UK',
-        members: [
-          {
-            name: 'Alvin Zhou',
-            position: 'Director of Development',
-            bio: 'bio.alvin',
-            image: '/images/team/alvin.jpg'
-          }
-        ]
-      }
-    ])
-
-    return { chapters }
+      ]
+    }
   },
   head: {
     title: 'International Chapters'
   }
-})
+}
 </script>

@@ -214,104 +214,106 @@
     </v-snackbar>
   </v-app>
 </template>
-
-<script lang="ts" setup>
-const locales = ref([
-  {
-    code: 'en',
-    displayName: 'English'
-  },
-  {
-    code: 'zh',
-    displayName: '简体中文'
-  }
-])
-
-const { $i18n } = useNuxtApp()
-const activeLocale = ref($i18n.locale)
-
-const route = useRoute()
-const banner = ref(false)
-
-if (!route.path.startsWith('/programs/intro-chinese')) {
-  banner.value = true
-}
-
-watch(activeLocale, (currentValue) => {
-  $i18n.setLocale(currentValue)
-})
-
-const routes = ref([
-  {
-    text: 'aboutUs',
-    base: '/about',
-    routes: [
-      { text: 'ourMission', link: '/mission' },
-      { text: 'faqShort', link: '/faq' },
-      { text: 'letterFromFounder', link: '/founder' }
-    ]
-  },
-  {
-    text: 'ourTeam',
-    base: '/team',
-    routes: [
-      { text: 'executiveBoard', link: '/board' },
-      { text: 'International Chapters', link: '/chapters' },
-      { text: 'educationalConsultants', link: '/consultants' }
-      //, { text: 'Featured Tutors', link: '/tutors' }
-    ]
-  },
-  {
-    text: 'programs',
-    base: '/programs',
-    routes: [
-      { text: 'introChinese', link: '/intro-chinese' },
-      { text: 'englishClassroom', link: '/english-classroom' },
-      { text: 'speakerSeries', link: '/speaker-series' }
-    ]
-  },
-  {
-    text: 'getInvolved',
-    base: '/involved',
-    routes: [
-      { text: 'startChapter', link: '/new-chapter' },
-      { text: 'becomeCurriculumDeveloper', link: '/curriculum-developer' },
-      { text: 'applyToBoard', link: '/apply-board' },
-      { text: 'becomeEducationalConsultant', link: '/educational-consultant' }
-    ]
-  },
-  {
-    text: 'resources',
-    base: '/resources',
-    routes: [
-      { text: 'mentalHealth', link: '/mental-health' }
-    ]
-  }
-  /*,
+<script>
+export default {
+  data () {
+    return {
+      locales: [
+        {
+          code: 'en',
+          displayName: 'English'
+        },
+        {
+          code: 'zh',
+          displayName: '简体中文'
+        }
+      ],
+      routes: [
+        {
+          text: 'aboutUs',
+          base: '/about',
+          routes: [
+            { text: 'ourMission', link: '/mission' },
+            { text: 'faqShort', link: '/faq' },
+            { text: 'letterFromFounder', link: '/founder' }
+          ]
+        },
+        {
+          text: 'ourTeam',
+          base: '/team',
+          routes: [
+            { text: 'executiveBoard', link: '/board' },
+            { text: 'International Chapters', link: '/chapters' },
+            { text: 'educationalConsultants', link: '/consultants' }
+            //, { text: 'Featured Tutors', link: '/tutors' }
+          ]
+        },
+        {
+          text: 'programs',
+          base: '/programs',
+          routes: [
+            { text: 'introChinese', link: '/intro-chinese' },
+            { text: 'englishClassroom', link: '/english-classroom' },
+            { text: 'speakerSeries', link: '/speaker-series' }
+          ]
+        },
+        {
+          text: 'getInvolved',
+          base: '/involved',
+          routes: [
+            { text: 'startChapter', link: '/new-chapter' },
+            { text: 'becomeCurriculumDeveloper', link: '/curriculum-developer' },
+            { text: 'applyToBoard', link: '/apply-board' },
+            { text: 'becomeEducationalConsultant', link: '/educational-consultant' }
+          ]
+        },
+        {
+          text: 'resources',
+          base: '/resources',
+          routes: [
+            { text: 'mentalHealth', link: '/mental-health' }
+          ]
+        }
+        /*,
       { text: 'Partners', link: '/partners' },
       { text: 'Press', link: '/press' },
       { text: 'Contact', link: '/contact' } */
-])
+      ],
+      drawer: false,
+      currentGroup: -1,
+      banner: false,
+      activeLocale: null
+    }
+  },
+  fetch () {
+    this.activeLocale = this.$i18n.locale
+    if (!this.$route.path.startsWith('/programs/intro-chinese')) {
+      this.banner = true
+    }
+  },
+  computed: {
+    displayMenuRoutes () {
+      if (this.currentGroup !== -1) {
+        // @ts-ignore
+        return this.routes[this.currentGroup].routes.map((route) => { return { text: route.text, link: this.routes[this.currentGroup].base + route.link } })
+      } else {
+        return this.routes
+      }
+    },
+    displayMenuTitle () {
+      if (this.currentGroup !== -1) {
+        // @ts-ignore
+        return this.routes[this.currentGroup].text
+      } else {
+        return 'LingoX'
+      }
+    }
+  },
 
-const drawer = ref(false)
-
-const currentGroup = ref(-1)
-
-const displayMenuRoutes = computed(() => {
-  if (currentGroup.value !== -1) {
-    // @ts-ignore
-    return routes.value[currentGroup.value].routes.map((route) => { return { text: route.text, link: routes.value[currentGroup.value].base + route.link } })
-  } else {
-    return routes.value
+  watch: {
+    activeLocale (currentValue) {
+      this.$i18n.setLocale(currentValue)
+    }
   }
-})
-
-const displayMenuTitle = computed(() => {
-  if (currentGroup.value !== -1) {
-    // @ts-ignore
-    return routes.value[currentGroup.value].text
-  } else {
-    return 'LingoX'
-  }
-})
+}
 </script>

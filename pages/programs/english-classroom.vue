@@ -9,7 +9,7 @@
           <div class="text-uppercase font-weight-bold primary--text mb-2">
             {{ $t('programDetails') }}
           </div>
-          <div v-for="(text,index) in $t('programParagraph')" :key="index">
+          <div v-for="(text,index) in Object($t('paragraph'))" :key="index">
             <div class="text-body-1 mb-2">
               {{ text }}
             </div>
@@ -131,7 +131,7 @@
 </template>
 <i18n lang="yaml">
 en:
-  programParagraph:
+  paragraph:
     - "Do you want to improve your English skills? Register to join English Classroom, LingoX’s English amazing curriculum delivery program! This service is directed toward underprivileged school communities and aims to provide comprehensive, useful language instruction. LingoX’s curriculum developers have spent much time synthesizing materials and preparing these lessons to ensure optimal utility. In order to request these lessons, one must verify their school’s need and ability to distribute the information to all students."
     - "English Classroom’s 2-in-1 lessons revolve around “Everyday English” and “Phonics”. Both being subjects that are integral components to achieving fluency in English -— yet rarely taught in a holistic manner by educational institutions overseas. The former places an emphasis on conversational speaking, while the latter revolves around reading aloud and pronunciation."
     - "With specially curated audio files, participants will also have an opportunity to engage in conversation with native speakers to learn proper pronunciation and grammar. Unlike any other English-teaching program, English Classroom does not impose a rigid curriculum upon its audience, and instead, allows for flexibility in selecting lessons that match one’s need. Additionally, our curriculum is ever-evolving, meaning that you can rest assured that our participants will always be at the forefront of language development. So as to promote maximized outreach, English Classroom operates asynchronously. This means that students will be able to work at their own pace! Best part is? All expenses are covered. This includes curriculum costs, instructors’ time, worksheets, and costs of delivery."
@@ -151,7 +151,7 @@ en:
     verification: "Verification*"
     verificationHint: "Please type “Yes” to verify that you will make these resources available to all students at your school."
 zh:
-  programParagraph:
+  paragraph:
     - "你想提高你的英语技能吗？欢迎申请LingoX“英语课堂”项目. 此项目旨在为偏远山区学校和贫困学生提供免费的英语教学。LingoX的课程开发团队针对中国学生量身定制了简单易懂，实用性极强的专属课程。"
     - "“英语教室”的课程围绕 “日常英语” 和 “自然拼读” 展开。这两部分内容是实现学生流利说英语的必要环节-- 前者强调对话式口语，而后者则围绕着朗读和发音。"
     - "课堂上学生将与英语为母语的教学导师互动和对话，学习正确的发音和语法。与其他英语教学项目不同的是，“英语课室”并不是将公式化的枯燥课程强行灌输给学生，而是让学生灵活选择符合个人需要的全免费课程。"
@@ -172,36 +172,50 @@ zh:
     verification: "证明"
     verificationHint: "请在输入“Yes”以保证您会让贵校所有的学生都有使用材料的权利。"
 </i18n>
-<script lang="ts" setup>
-useHead({ title: 'English Classroom' })
+<script>
+export default {
+  name: 'EnglishClassroomPage',
+  data () {
+    return {
+      formData: {
+        firstName: '',
+        lastName: '',
+        email: '',
+        cityState: '',
+        country: '',
+        school: '',
+        occupation: '',
+        needs: '',
+        distribution: '',
+        verification: ''
+      },
+      valid: false,
+      submitting: false,
+      done: false,
+      error: false
+    }
+  },
+  head: {
+    title: 'English Classroom'
+  },
+  methods: {
+    async submit () {
+      this.submitting = true
+      try {
+        await this.$axios.$post('https://form-submission.harrychen.workers.dev/vwnRCzydUaCPbqrP', this.formData)
+        this.done = true
+        this.$refs.form.reset()
 
-const { $axios } = useNuxtApp()
-const formData = ref({
-  firstName: '',
-  lastName: '',
-  email: '',
-  cityState: '',
-  country: '',
-  school: '',
-  occupation: '',
-  needs: '',
-  distribution: '',
-  verification: ''
-})
-const valid = ref(false)
-const form: any = ref(null)
-const submitting = ref(false)
-const done = ref(false)
-const error = ref(false)
-const submit = async () => {
-  submitting.value = true
-  try {
-    await $axios.$post('https://form-submission.harrychen.workers.dev/vwnRCzydUaCPbqrP', formData.value)
-    done.value = true
-    form.value.reset()
-  } catch (err) {
-    error.value = true
+        try {
+          this.$gtm.push({ event: 'english-signup' })
+        } catch (err) {
+          console.error(err)
+        }
+      } catch (err) {
+        this.error = true
+      }
+      this.submitting = false
+    }
   }
-  submitting.value = false
 }
 </script>

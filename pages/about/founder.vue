@@ -5,7 +5,7 @@
     </h3>
     <v-row class="mt-4">
       <v-col cols="12">
-        <div v-for="(text,index) in $t('paragraph')" :key="index">
+        <div v-for="(text,index) in Object($t('paragraph'))" :key="index">
           <div class="text-body-1 mb-2">
             {{ text }}
           </div>
@@ -37,11 +37,11 @@ zh:
     - "感谢您的支持，我很开心在这趟旅程中有您们相伴！"
   signature: "Mia Lee（创始人兼首席执行官）"
 </i18n>
-<script lang="ts">
-export default defineComponent({
+<script>
+export default {
   name: 'FounderPage',
   head: {
     title: 'Founder\'s Letter'
   }
-})
+}
 </script>
