@@ -57,7 +57,7 @@
         </v-col>
       </v-row>
     </v-container>
-    <!--
+
     <v-container class="py-4">
       <h3 class="text-h3">
         {{ $t('ourImpact') }}
@@ -70,25 +70,25 @@
           md="4"
           class="text-center"
         >
-          <v-card class="pa-4" outlined>
+          <v-card class="pa-4" outlined height="95%">
             <div class="text-h2">
               {{ item.value }}
             </div>
-            <div class="text-h6 text-lg-h5 mt-1">
+            <div class="text-h6 text-lg-h5 mt-2">
               {{ item.label }}
             </div>
           </v-card>
         </v-col>
       </v-row>
     </v-container>
-    -->
+    
     <v-container class="py-4 py-md-8">
       <h3 class="text-h3">
         {{ $t('programs') }}
       </h3>
       <v-row class="mt-1">
-        <v-col v-for="(item, index) in involved" :key="index" cols="12" sm="4">
-          <div class="text-uppercase font-weight-bold primary--text mb-2">
+        <v-col v-for="(item, index) in involved" :key="index" cols="12" sm="4" >
+          <div class="text-uppercase font-weight-bold primary--text text-h5 mb-2">
             {{ $t(item.title) }}
           </div>
           <div class="text-body-1">
@@ -97,12 +97,17 @@
           <!--v-btn :to="item.link" x-large color="primary" class="mt-4">
             Learn More
           </v-btn-->
+        </v-col>
+      </v-row>
+      <v-row align="center" class="mt-n6">
+        <v-col v-for="(item, index) in involved" :key="index" cols="12" sm="4">
           <v-btn :to="item.link" x-large color="primary" class="mt-4">
             {{ $t('learnMore') }}
           </v-btn>
         </v-col>
       </v-row>
     </v-container>
+
   </div>
 </template>
 <i18n lang="yaml">
@@ -144,27 +149,27 @@ export default {
       }],
       stats: [
         {
-          label: 'Total Students',
-          value: '600'
-        },
-        {
-          label: 'Countries',
-          value: '55'
-        },
-        {
-          label: 'Continents',
+          label: 'Continents Reached',
           value: '6'
         },
         {
-          label: 'Underserved Students',
-          value: '91.3%'
+          label: 'Countries Reached',
+          value: '95'
         },
         {
-          label: 'Beginners',
-          value: '97.7%'
+          label: 'Below Average US Household Income',
+          value: '97%'
         },
         {
-          label: 'Found It Helpful',
+          label: 'Hours of Collective Instruction Offered',
+          value: '4950'
+        },
+        {
+          label: 'Worth of Free Tuition Offered',
+          value: '$756K'
+        },
+        {
+          label: 'Felt Their Chinese Improved',
           value: '100%'
         }
       ]
