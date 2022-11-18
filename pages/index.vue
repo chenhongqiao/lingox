@@ -14,6 +14,33 @@
       </div>
     </v-container>
     <v-parallax max-height="600" class="mt-4" src="/images/hero.jpg" />
+
+    <v-container class="py-4 py-md-8">
+      <h3 class="text-h3">
+        {{ $t('programs') }}
+      </h3>
+      <v-row class="mt-1">
+        <v-col v-for="(item, index) in involved" :key="index" cols="12" sm="4">
+          <h2 class="text-h5 mb-3">
+            {{ $t(item.title) }}
+          </h2>
+          <div class="text-body-1">
+            {{ $t(item.content) }}
+          </div>
+          <!--v-btn :to="item.link" x-large color="primary" class="mt-4">
+            Learn More
+          </v-btn-->
+        </v-col>
+      </v-row>
+      <v-row align="center" class="mt-n6">
+        <v-col v-for="(item, index) in involved" :key="index" cols="12" sm="4">
+          <v-btn :to="item.link" x-large color="primary" class="mt-4">
+            {{ $t('learnMore') }}
+          </v-btn>
+        </v-col>
+      </v-row>
+    </v-container>
+
     <v-container class="py-4 py-md-10">
       <v-row align="center">
         <v-col cols="12" md="6">
@@ -34,6 +61,31 @@
         </v-col>
       </v-row>
     </v-container>
+
+    <v-container class="pt-4 pb-2">
+      <h3 class="text-h3 text-center">
+        {{ $t('ourImpact') }}
+      </h3>
+      <v-row class="mt-8" dense>
+        <v-col
+          v-for="(item, i) in stats"
+          :key="i"
+          cols="12"
+          md="4"
+          class="text-center"
+        >
+          <v-card class="pa-4" height="95%">
+            <div class="text-h2">
+              {{ item.value }}
+            </div>
+            <div class="text-h6 text-lg-h5 mt-2">
+              {{ item.label }}
+            </div>
+          </v-card>
+        </v-col>
+      </v-row>
+    </v-container>
+
     <v-container class="py-4 py-md-10">
       <v-row align="center">
         <v-col cols="12" md="6" class="d-md-none">
@@ -57,57 +109,6 @@
         </v-col>
       </v-row>
     </v-container>
-
-    <v-container class="py-4">
-      <h3 class="text-h3">
-        {{ $t('ourImpact') }}
-      </h3>
-      <v-row class="mt-6" dense>
-        <v-col
-          v-for="(item, i) in stats"
-          :key="i"
-          cols="12"
-          md="4"
-          class="text-center"
-        >
-          <v-card class="pa-4" outlined height="95%">
-            <div class="text-h2">
-              {{ item.value }}
-            </div>
-            <div class="text-h6 text-lg-h5 mt-2">
-              {{ item.label }}
-            </div>
-          </v-card>
-        </v-col>
-      </v-row>
-    </v-container>
-    
-    <v-container class="py-4 py-md-8">
-      <h3 class="text-h3">
-        {{ $t('programs') }}
-      </h3>
-      <v-row class="mt-1">
-        <v-col v-for="(item, index) in involved" :key="index" cols="12" sm="4" >
-          <div class="text-uppercase font-weight-bold primary--text text-h5 mb-2">
-            {{ $t(item.title) }}
-          </div>
-          <div class="text-body-1">
-            {{ $t(item.content) }}
-          </div>
-          <!--v-btn :to="item.link" x-large color="primary" class="mt-4">
-            Learn More
-          </v-btn-->
-        </v-col>
-      </v-row>
-      <v-row align="center" class="mt-n6">
-        <v-col v-for="(item, index) in involved" :key="index" cols="12" sm="4">
-          <v-btn :to="item.link" x-large color="primary" class="mt-4">
-            {{ $t('learnMore') }}
-          </v-btn>
-        </v-col>
-      </v-row>
-    </v-container>
-
   </div>
 </template>
 <i18n lang="yaml">
