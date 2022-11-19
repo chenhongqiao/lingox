@@ -14,7 +14,7 @@
             {{ region.title }}
           </h4>
           <v-row align="center">
-            <v-col cols="8">
+            <v-col cols="12" md="8">
               <div
                 v-for="(resource, rindex) in region.items"
                 :key="rindex"
@@ -28,8 +28,8 @@
                 </div>
               </div>
             </v-col>
-            <v-col cols="4">
-              <v-img :src="region.image" />
+            <v-col cols="12" md="4">
+              <v-img :src="region.image" max-height="200" contain />
             </v-col>
           </v-row>
         </div>
