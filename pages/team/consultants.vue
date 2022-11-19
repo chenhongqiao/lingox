@@ -54,45 +54,45 @@ export default {
           name: 'Eric Gao',
           position: 'stanford',
           bio: 'bio.eric',
-          image: '/images/team/eric.jpg'
+          image: '/images/team/consultants/eric.jpg'
         },
         {
           name: 'Joseph Hwang',
           position: 'havard',
           bio: 'bio.joseph',
-          image: '/images/team/joseph.jpg'
+          image: '/images/team/consultants/joseph.jpg'
         }, {
           name: 'Yuhua Chen',
           position: 'upenn',
           bio: 'bio.yuhua',
-          image: '/images/team/yuhua.jpg'
+          image: '/images/team/consultants/yuhua.jpg'
         }, {
           name: 'William Choi',
           position: 'jhuAndOthers',
           bio: 'bio.william',
-          image: '/images/team/william.jpg'
+          image: '/images/team/consultants/william.jpg'
         }, {
           name: 'Audrey Pe',
           position: 'stanford',
           bio: 'bio.audrey',
-          image: '/images/team/audrey.jpg'
+          image: '/images/team/consultants/audrey.jpg'
         },
         {
           name: 'Rey Shankar',
           position: 'berkeley',
           bio: 'bio.rey',
-          image: '/images/team/rey.jpg'
+          image: '/images/team/consultants/rey.jpg'
         }, {
           name: 'Anjali Anbu',
           bio: 'bio.anjali',
           position: 'cornell',
-          image: '/images/team/anjali.jpg'
+          image: '/images/team/consultants/anjali.jpg'
         },
         {
           name: 'Alex Fu',
           bio: 'bio.alex',
           position: 'ucla',
-          image: '/images/team/alex.jpg'
+          image: '/images/team/consultants/alex.jpg'
         }
       ]
     }

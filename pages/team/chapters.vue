@@ -49,28 +49,28 @@ export default {
             name: 'Christina Chen',
             position: 'Director of Development',
             bio: 'bio.christina',
-            image: '/images/team/christina.jpg'
+            image: '/images/team/chapters/christina.jpg'
           },
           {
             name: 'Lynn Zhang',
             position: 'Director of Human Resouces',
             bio: 'bio.lynn',
-            image: '/images/team/lynn.jpg'
+            image: '/images/team/chapters/lynn.jpg'
           },
           {
             name: 'Anastasia Mo',
             bio: 'bio.anastasia',
-            image: '/images/team/anastasia.jpg'
+            image: '/images/team/chapters/anastasia.jpg'
           },
           {
             name: 'Ethan Chen',
             bio: 'bio.ethan',
-            image: '/images/team/ethan.jpg'
+            image: '/images/team/chapters/ethan.jpg'
           },
           {
             name: 'Daisy Wang',
             bio: 'bio.daisy',
-            image: '/images/team/daisy.jpg'
+            image: '/images/team/chapters/daisy.jpg'
           }]
         },
         {
@@ -79,24 +79,24 @@ export default {
             name: 'Maggie Liu',
             position: 'Regional Director of Development',
             bio: 'bio.maggie',
-            image: '/images/team/maggie.jpg'
+            image: '/images/team/chapters/maggie.jpg'
           }, {
             name: 'Derek Zhang',
             position: 'Director of Development',
             bio: 'bio.derek',
-            image: '/images/team/derek.jpg'
+            image: '/images/team/chapters/derek.jpg'
           },
           {
             name: 'Vicky Zheng',
             position: 'Director of Human Resources',
             bio: 'bio.vicky',
-            image: '/images/team/vicky.jpg'
+            image: '/images/team/chapters/vicky.jpg'
           },
           {
             name: 'Gary Yukun',
             position: 'Director of Marketing',
             bio: 'bio.gary',
-            image: '/images/team/gary.jpg'
+            image: '/images/team/chapters/gary.jpg'
           }
           ]
         },
@@ -107,7 +107,7 @@ export default {
               name: 'Kristine Peng',
               position: 'Director of Development',
               bio: 'bio.kristine',
-              image: '/images/team/kristine.jpg'
+              image: '/images/team/chapters/kristine.jpg'
             }
           ]
         },
@@ -117,12 +117,12 @@ export default {
             {
               name: 'Eugenio Ciarlandini',
               bio: 'bio.eugenio',
-              image: '/images/team/eugenio.jpg'
+              image: '/images/team/chapters/eugenio.jpg'
             },
             {
               name: 'Jerry Jia',
               bio: 'bio.jerry',
-              image: '/images/team/jerry.jpg'
+              image: '/images/team/chapters/jerry.jpg'
             },
             {
               name: 'Roy Feng',
@@ -166,7 +166,7 @@ export default {
               name: 'Alvin Zhou',
               position: 'Director of Development',
               bio: 'bio.alvin',
-              image: '/images/team/alvin.jpg'
+              image: '/images/team/chapters/alvin.jpg'
             }
           ]
         }

@@ -1,14 +1,16 @@
 <template>
-  <v-container class="py-4 py-lg-8">
-    <v-responsive max-width="1200" class="mx-auto text-center">
-      <h2 class="text-h3">
-        {{ $t('executiveBoard') }}
-      </h2>
-      <div style="width: 80px; height: 4px" class="my-4 secondary mx-auto" />
-    </v-responsive>
+  <div>
+    <v-container class="py-4 py-lg-8">
+      <v-responsive max-width="1200" class="mx-auto text-center">
+        <h2 class="text-h3">
+          {{ $t('executiveBoard') }}
+        </h2>
+        <div style="width: 80px; height: 4px" class="my-4 secondary mx-auto" />
+      </v-responsive>
 
-    <Roster :team="team" />
-  </v-container>
+      <Roster :team="team" />
+    </v-container>
+  </div>
 </template>
 <i18n lang="yaml">
 en:
@@ -52,87 +54,87 @@ export default {
   name: 'BoardPage',
   data () {
     return {
-      team: [
+      board: [
         {
           name: 'Mia Lee',
           position: 'CEO',
           bio: 'bio.mial',
-          image: '/images/team/mial.jpg'
+          image: '/images/team/board/mial.jpg'
         }, {
           name: 'David Chen',
           position: 'CMO',
           bio: 'bio.david',
-          image: '/images/team/david.jpg'
+          image: '/images/team/board/david.jpg'
         }, {
           name: 'Hannah Choi',
           position: 'AMO',
           bio: 'bio.hannah',
-          image: '/images/team/hannah.jpg'
+          image: '/images/team/board/hannah.jpg'
         }, {
           name: 'Jane Wang',
           position: 'AMO',
           bio: 'bio.jane',
-          image: '/images/team/jane.jpg'
+          image: '/images/team/board/jane.jpg'
         }, {
           name: 'Sarah Xie',
           position: 'ADO',
           bio: 'bio.sarah',
-          image: '/images/team/sarah.jpg'
+          image: '/images/team/board/sarah.jpg'
         }, {
           name: 'Bruno Diaz',
           position: 'ADO',
           bio: 'bio.bruno',
-          image: '/images/team/bruno.jpg'
+          image: '/images/team/board/bruno.jpg'
         }, {
           name: 'Emma Sriprapundh',
           position: 'ADO',
           bio: 'bio.emma',
-          image: '/images/team/emma.jpg'
+          image: '/images/team/board/emma.jpg'
         }, {
           name: 'Sanjana Ramakrishnan',
           position: 'CFO',
           bio: 'bio.sanjana',
-          image: '/images/team/sanjana.jpg'
+          image: '/images/team/board/sanjana.jpg'
         }, {
           name: 'Jia An',
           position: 'AFO',
           bio: 'bio.jia',
-          image: '/images/team/jia.jpg'
+          image: '/images/team/board/jia.jpg'
         }, {
           name: 'Harry Chen',
           position: 'CTO',
           bio: 'bio.harry',
-          image: '/images/team/harry.jpg'
+          image: '/images/team/board/harry.jpg'
         }, {
           name: 'Tyler Truong',
           position: 'ATO',
           bio: 'bio.tyler',
-          image: '/images/team/tyler.jpg'
+          image: '/images/team/board/tyler.jpg'
         }, {
           name: 'Ryan Shahbaba',
           position: 'ATO',
           bio: 'bio.ryan',
-          image: '/images/team/ryan.jpg'
+          image: '/images/team/board/ryan.jpg'
         }, {
           name: 'Kevin Chu',
           position: 'ATO',
           bio: 'bio.kevin',
-          image: '/images/team/kevin.jpg'
+          image: '/images/team/board/kevin.jpg'
         }, {
           name: 'Simone Rothaupt',
           position: 'CPRO',
           bio: 'bio.simone',
-          image: '/images/team/simone.jpg'
+          image: '/images/team/board/simone.jpg'
         }, {
           name: 'Abby Warnock',
           position: 'APRO',
           bio: 'bio.abby',
-          image: '/images/team/abby.jpg'
+          image: '/images/team/board/abby.jpg'
         }, {
           name: 'Judy Tao',
           position: 'APRO',
           bio: 'bio.judy',
-          image: '/images/team/judy.jpg'
+          image: '/images/team/board/judy.jpg'
         }
       ]
     }
