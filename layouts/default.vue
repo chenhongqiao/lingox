@@ -235,7 +235,8 @@ export default {
           routes: [
             { text: 'ourMission', link: '/mission' },
             { text: 'faqShort', link: '/faq' },
-            { text: 'letterFromFounder', link: '/founder' }
+            { text: 'letterFromFounder', link: '/founder' },
+            { text: 'ourImpact', link: '/impact' }
           ]
         },
         {
