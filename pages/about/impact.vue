@@ -12,30 +12,28 @@
       </div>
     </v-container>
     <v-container class="pb-2">
-      <v-container class="py-2 ma-2">
-        <v-row align="center">
+      <v-container class="py-2 ma-0">
+        <v-row align="center" justify="center">
           <v-col
             cols="12"
             md="6"
           >
-            <v-row class="align-center">
-              <v-col
-                v-for="(item, i) in stats.slice(0, 2)"
-                :key="i"
-                cols="12"
-                class="text-center"
-                color="blue"
-              >
-                <v-card class="pa-3" height="100%">
-                  <div class="text-h2">
-                    {{ item.value }}
-                  </div>
-                  <div class="text-h6 text-lg-h5 mt-2">
-                    {{ item.label }}
-                  </div>
-                </v-card>
-              </v-col>
-            </v-row>
+            <v-col
+              v-for="(item, i) in stats.slice(0, 2)"
+              :key="i"
+              cols="12"
+              class="text-center"
+              color="blue"
+            >
+              <v-card class="pa-3" height="100%">
+                <div class="text-h2">
+                  {{ item.value }}
+                </div>
+                <div class="text-h6 text-lg-h5 mt-2">
+                  {{ item.label }}
+                </div>
+              </v-card>
+            </v-col>
           </v-col>
           <v-col cols="12" md="6">
             <v-img src="/images/maps/pink-world.png" max-height="300" contain />
