@@ -25,7 +25,7 @@
               class="text-center"
               color="blue"
             >
-              <v-card class="py-3" height="100%">
+              <v-card class="pa-3" height="100%">
                 <div class="text-h2">
                   {{ item.value }}
                 </div>
@@ -58,7 +58,7 @@
                 class="text-center"
                 color="blue"
               >
-                <v-card class="py-3" height="100%">
+                <v-card class="pa-3" height="100%">
                   <div class="text-h2">
                     {{ item.value }}
                   </div>
@@ -86,7 +86,7 @@
                 class="text-center"
                 color="blue"
               >
-                <v-card class="py-3" height="100%">
+                <v-card class="pa-3" height="100%">
                   <div class="text-h2">
                     {{ item.value }}
                   </div>
