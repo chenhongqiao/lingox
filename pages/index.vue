@@ -92,7 +92,7 @@
             <div class="text-h2">
               {{ item.value }}
             </div>
-            <div class="text-h6 text-lg-h5 mt-2">
+            <div class="text-h6  mt-2">
               {{ item.label }}
             </div>
           </v-card>

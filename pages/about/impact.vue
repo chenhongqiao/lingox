@@ -12,93 +12,84 @@
       </div>
     </v-container>
     <v-container class="pb-2">
-      <v-container class="py-3 ma-0">
-        <v-row align="center" justify="center">
-          <v-col
-            cols="12"
-            md="6"
+      <v-col cols="12" class="d-md-none">
+        <v-img src="/images/maps/pink-world.png" max-height="300" contain />
+      </v-col>
+      <v-row align="center">
+        <v-col
+          cols="12"
+          md="6"
+        >
+          <v-card
+            v-for="(item, i) in stats.slice(0, 2)"
+            :key="i"
+            class="pa-4 text-center mx-2 my-6"
           >
-            <v-col
-              v-for="(item, i) in stats.slice(0, 2)"
-              :key="i"
-              cols="12"
-              class="text-center"
-            >
-              <v-card class="pa-3" height="100%">
-                <div class="text-h2">
-                  {{ item.value }}
-                </div>
-                <div class="text-h6 text-lg-h5 mt-2">
-                  {{ item.label }}
-                </div>
-              </v-card>
-            </v-col>
-          </v-col>
-          <v-col cols="12" md="6">
-            <v-img src="/images/maps/pink-world.png" max-height="300" contain />
-          </v-col>
-        </v-row>
-      </v-container>
+            <div class="text-h2">
+              {{ item.value }}
+            </div>
+            <div class="text-h6  mt-2">
+              {{ item.label }}
+            </div>
+          </v-card>
+        </v-col>
+        <v-col cols="6" class="d-none d-md-flex">
+          <v-img src="/images/maps/pink-world.png" max-height="300" contain />
+        </v-col>
+      </v-row>
 
-      <v-container class="py-3 ma-0">
-        <v-row align="center">
-          <v-col cols="12" md="6">
-            <v-img src="/images/intro-chinese.jpg" max-height="300" contain class="rounded-lg" />
-          </v-col>
-          <v-col
-            cols="12"
-            md="6"
+      <v-row align="center">
+        <v-col cols="12" md="6">
+          <v-img src="/images/intro-chinese.jpg" max-height="300" contain class="rounded-lg" />
+        </v-col>
+        <v-col
+          cols="12"
+          md="6"
+        >
+          <v-card
+            v-for="(item, i) in stats.slice(2, 4)"
+            :key="i"
+            class="pa-4 text-center mx-2 my-6"
           >
-            <v-row class="align-center">
-              <v-col
-                v-for="(item, i) in stats.slice(2, 4)"
-                :key="i"
-                cols="12"
-                class="text-center"
-              >
-                <v-card class="pa-3" height="100%">
-                  <div class="text-h2">
-                    {{ item.value }}
-                  </div>
-                  <div class="text-h6 text-lg-h5 mt-2">
-                    {{ item.label }}
-                  </div>
-                </v-card>
-              </v-col>
-            </v-row>
-          </v-col>
-        </v-row>
-      </v-container>
+            <div class="text-h2">
+              {{ item.value }}
+            </div>
+            <div class="text-h6  mt-2">
+              {{ item.label }}
+            </div>
+          </v-card>
+        </v-col>
+      </v-row>
 
-      <v-container class="py-3 ma-0">
-        <v-row align="center">
-          <v-col
-            cols="12"
-            md="6"
+      <v-row align="center">
+        <v-col cols="12" class="text-center d-md-none">
+          <v-icon size="400" color="primary" class="my-n8">
+            mdi-currency-usd
+          </v-icon>
+        </v-col>
+        <v-col
+          cols="12"
+          md="6"
+        >
+          <v-card
+            v-for="(item, i) in stats.slice(4, 6)"
+            :key="i"
+            class="pa-4 text-center mx-2 my-6"
           >
-            <v-row class="align-center">
-              <v-col
-                v-for="(item, i) in stats.slice(4, 6)"
-                :key="i"
-                cols="12"
-                class="text-center"
-              >
-                <v-card class="pa-3" height="100%">
-                  <div class="text-h2">
-                    {{ item.value }}
-                  </div>
-                  <div class="text-h6 text-lg-h5 mt-2">
-                    {{ item.label }}
-                  </div>
-                </v-card>
-              </v-col>
-            </v-row>
-          </v-col>
-          <v-col cols="12" md="6">
-            <v-img src="/images/money.png" max-height="300" contain />
-          </v-col>
-        </v-row>
-      </v-container>
+            <div class="text-h2">
+              {{ item.value }}
+            </div>
+            <div class="text-h6 mt-2">
+              {{ item.label }}
+            </div>
+          </v-card>
+        </v-col>
+        <v-col cols="6" class="text-center d-none d-md-flex">
+          <v-icon size="400" color="primary">
+            mdi-currency-usd
+          </v-icon>
+        </v-col>
+      </v-row>
     </v-container>
   </div>
 </template>
