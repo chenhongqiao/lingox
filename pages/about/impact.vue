@@ -33,7 +33,7 @@
             </div>
           </v-card>
         </v-col>
-        <v-col cols="6" class="d-none d-md-flex">
+        <v-col cols="6" class="d-none d-md-block">
           <v-img src="/images/maps/pink-world.png" max-height="300" contain />
         </v-col>
       </v-row>
@@ -62,7 +62,7 @@
       </v-row>
 
       <v-row align="center">
-        <v-col cols="12" class="text-center d-md-none">
+        <v-col cols="12" class="d-md-none text-center">
           <v-icon size="400" color="primary" class="my-n8">
             mdi-currency-usd
           </v-icon>
@@ -84,7 +84,7 @@
             </div>
           </v-card>
         </v-col>
-        <v-col cols="6" class="text-center d-none d-md-flex">
+        <v-col cols="6" class="d-none d-md-block text-center">
           <v-icon size="400" color="primary">
             mdi-currency-usd
           </v-icon>
