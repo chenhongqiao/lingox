@@ -12,7 +12,7 @@
       </div>
     </v-container>
     <v-container class="pb-2">
-      <v-container class="py-2 ma-0">
+      <v-container class="py-3 ma-0">
         <v-row align="center" justify="center">
           <v-col
             cols="12"
@@ -23,7 +23,6 @@
               :key="i"
               cols="12"
               class="text-center"
-              color="blue"
             >
               <v-card class="pa-3" height="100%">
                 <div class="text-h2">
@@ -41,7 +40,7 @@
         </v-row>
       </v-container>
 
-      <v-container class="py-2 ma-0">
+      <v-container class="py-3 ma-0">
         <v-row align="center">
           <v-col cols="12" md="6">
             <v-img src="/images/intro-chinese.jpg" max-height="300" contain class="rounded-lg" />
@@ -56,7 +55,6 @@
                 :key="i"
                 cols="12"
                 class="text-center"
-                color="blue"
               >
                 <v-card class="pa-3" height="100%">
                   <div class="text-h2">
@@ -72,7 +70,7 @@
         </v-row>
       </v-container>
 
-      <v-container class="py-2 ma-0">
+      <v-container class="py-3 ma-0">
         <v-row align="center">
           <v-col
             cols="12"
@@ -84,7 +82,6 @@
                 :key="i"
                 cols="12"
                 class="text-center"
-                color="blue"
               >
                 <v-card class="pa-3" height="100%">
                   <div class="text-h2">
