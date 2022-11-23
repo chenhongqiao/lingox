@@ -7,7 +7,7 @@
       <div class="text-h4 primary--text mt-6 text-center">
         Shoujen Scholars Program
       </div>
-      <div class="text-h5 mt-4 text-center">
+      <div class="text-h6 mt-4 text-center">
         {{ sspText }}
       </div>
     </v-container>
