@@ -38,7 +38,7 @@
         </v-col>
       </v-row>
 
-      <v-row align="center">
+      <v-row align="center" class="mt-0">
         <v-col cols="12" md="6">
           <v-img src="/images/intro-chinese.jpg" max-height="300" contain class="rounded-lg" />
         </v-col>
@@ -61,7 +61,7 @@
         </v-col>
       </v-row>
 
-      <v-row align="center">
+      <v-row align="center" class="mt-0">
         <v-col cols="12" class="d-md-none text-center">
           <v-icon size="400" color="primary" class="my-n8">
             mdi-currency-usd
