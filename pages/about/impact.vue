@@ -2,13 +2,13 @@
   <div>
     <v-container class="pt-4 pt-lg-8">
       <h3 class="text-h3">
-        Our Impact
+        {{ $t('ourImpact') }}
       </h3>
       <div class="text-h4 primary--text mt-6 text-center">
-        Shoujen Scholars Program
+        {{ $t('introChinese') }}
       </div>
       <div class="text-h6 mt-4 text-center">
-        {{ sspText }}
+        {{ $t('sspText') }}
       </div>
     </v-container>
     <v-container class="pb-2">
@@ -94,11 +94,14 @@
   </div>
 </template>
 
+<i18n lang="yaml">
+en:
+  sspText: "The SSP offers the equivalent of an 3-month introductory college-level Mandarin Chinese course with weekly live sessions, 24/7 support, and after-class homework."
+</i18n>
 <script>
 export default {
   data () {
     return {
-      sspText: 'The SSP offers the equivalent of an 3-month introductory college-level Mandarin Chinese course with weekly live sessions, 24/7 support, and after-class homework.',
       stats: [
         {
           label: 'Continents Reached',
