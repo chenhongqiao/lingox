@@ -25,7 +25,7 @@
               class="text-center"
               color="blue"
             >
-              <v-card class="pa-3" height="100%">
+              <v-card class="py-3" height="100%">
                 <div class="text-h2">
                   {{ item.value }}
                 </div>
@@ -41,7 +41,7 @@
         </v-row>
       </v-container>
 
-      <v-container class="py-2 ma-2">
+      <v-container class="py-2 ma-0">
         <v-row align="center">
           <v-col cols="12" md="6">
             <v-img src="/images/intro-chinese.jpg" max-height="300" contain class="rounded-lg" />
@@ -58,7 +58,7 @@
                 class="text-center"
                 color="blue"
               >
-                <v-card class="pa-3" height="100%">
+                <v-card class="py-3" height="100%">
                   <div class="text-h2">
                     {{ item.value }}
                   </div>
@@ -72,7 +72,7 @@
         </v-row>
       </v-container>
 
-      <v-container class="py-2 ma-2">
+      <v-container class="py-2 ma-0">
         <v-row align="center">
           <v-col
             cols="12"
@@ -86,7 +86,7 @@
                 class="text-center"
                 color="blue"
               >
-                <v-card class="pa-3" height="100%">
+                <v-card class="py-3" height="100%">
                   <div class="text-h2">
                     {{ item.value }}
                   </div>
