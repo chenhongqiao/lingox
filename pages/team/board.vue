@@ -10,16 +10,6 @@
 
       <Roster :team="board" />
     </v-container>
-    <v-container class="py-4 py-lg-8">
-      <v-responsive max-width="1200" class="mx-auto text-center">
-        <h2 class="text-h3">
-          Graphic Design Team
-        </h2>
-        <div style="width: 80px; height: 4px" class="my-4 secondary mx-auto" />
-      </v-responsive>
-
-      <Roster :team="graphics" />
-    </v-container>
   </div>
 </template>
 <i18n lang="yaml">
@@ -43,9 +33,6 @@ en:
     bruno: "Bruno is a sophomore at University High School, where he writes for his school newspaper and participates in Mock Trial, Model United Nations, and Speech & Debate. From these activities, Bruno learned the significance of effective communication. As the son of two immigrants, Bruno was raised hearing stories from his parents about the struggles of learning English. In his free time, you might find Bruno playing with his two cats, eating an In-N-Out burger with friends, or playing board games with family."
     kevin: "Kevin is currently a junior at Northwood High School in Irvine, California. Since he lived in multiple different countries, he realizes the need for students around the world to have an accessible education to help break language barriers. He is interested in computer science, and hopes to use it to benefit the global community. In his free time, Kevin enjoys music production, playing tennis, and sleeping."
     emma: "As a Thai-American with an extensive cultural background, Emma values the importance of language education in bringing youth all around the world endless opportunities. With fluency in two languages, and currently learning a third, she wishes to share her passion for education and leadership through LingoX. Currently a junior in high school, Emma also enjoys traveling during her breaks and reading."
-    lauryn: "Lauryn is a freshman from Northwood High School. Through her experience as an active Girl Scout and former kid reporter for TIME for Kids, she has learned that communication and collaboration are essential to overcoming challenges in all aspects of life. Lauryn hopes to empower students of all backgrounds by ensuring quality education and equal opportunity through LingoX. When she’s older, she plans on continuing to  help those in underserved communities as a public health major. In her spare time, she enjoys taking ballet classes, playing clarinet and piano, and participating in MUN conferences."
-    sarea: "Growing up speaking multiple languages, Sarea is passionate about language-learning and communication. She recognizes the influence that language has on connecting people as a community. Through LingoX, she hopes to promote equality through language education, combining her skills in graphic design with her passion for languages. In her free time, Sarea enjoys journaling and dancing, and you will often find her watching movies of different cultures as well!"
-    chloe: "Experiencing life in both Korea and America, Chloe has been able to showcase both cultures in her everyday life and hopes to help others do the same! She emphasizes the importance of education for students all around the world and seeks to provide new opportunities for them. With lots of experience in teaching languages, Chloe has gained skills in communication, collaboration, and leadership. Through LingoX, she implements her passion for art into her love for language!"
 zh:
   bio:
     mial: "Mia 对教育充满热情，致力于帮助贫困社区和弱势家庭的学生获得平等、优质的教育资源。Mia 的业余爱好是弹钢琴，打高尔夫，写作和旅行。"
@@ -148,21 +135,6 @@ export default {
           position: 'APRO',
           bio: 'bio.judy',
           image: '/images/team/board/judy.jpg'
-        }
-      ],
-      graphics: [
-        {
-          name: 'Lauryn Chew',
-          bio: 'bio.lauryn',
-          image: '/images/team/graphics/lauryn.jpg'
-        }, {
-          name: 'Sarea Leung',
-          bio: 'bio.sarea',
-          image: '/images/team/graphics/sarea.jpg'
-        }, {
-          name: 'Chloe Park',
-          bio: 'bio.chloe',
-          image: '/images/team/graphics/chloe.jpg'
         }
       ]
     }

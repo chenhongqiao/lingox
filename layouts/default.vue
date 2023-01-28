@@ -88,7 +88,7 @@
           <v-col cols="12" sm="7" md="9">
             <div class="mb-2">
               <div class="text-uppercase text-h7 text-truncate">
-                © 2022 LingoX
+                © 2023 LingoX
               </div>
             </div>
             <div class="text-body-1">
@@ -245,7 +245,8 @@ export default {
           routes: [
             { text: 'executiveBoard', link: '/board' },
             { text: 'International Chapters', link: '/chapters' },
-            { text: 'educationalConsultants', link: '/consultants' }
+            { text: 'educationalConsultants', link: '/consultants' },
+            { text: 'Featured Volunteers', link: '/featured' }
             //, { text: 'Featured Tutors', link: '/tutors' }
           ]
         },
