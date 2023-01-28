@@ -35,6 +35,6 @@
     "eslint-plugin-vue": "^9.5.1"
   },
   "engines": {
-    "node": ">=17.0.0"
+    "node": ">=18.0.0"
   }
 }
