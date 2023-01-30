@@ -36,6 +36,7 @@ en:
     jeffrey: "Jeffrey is a high level thinker and creator in year 11 at Upper Canada College. Speaking multiple languages, he also enjoys playing hockey and baseball, hiking and researching in his free time."
     kayden: "Kayden is a future engineer that balances athleticism with his academics. He takes up a range of disciplines, including hockey, where he is well decorated. He enjoys being on the ice, science, math and english in his free time."
     botond: "Botond Horvath is a talented, aspiring astrophysicist and year 11 student at Upper Canada College. He is a proficient communicator, and fully trilingual in English, French and Hungarian, with a desire to learn more languages like Italian! In his free time, Botond enjoys reading, researching, martial arts, and performing traditional dances."
+    evan: "Evan Hudson is currently finishing up his Masters of Arts in Education in Teaching English as a Second Language at the University of Alabama at Birmingham. His program offers a free Community English program for adult learners in the Birmingham area, and he is proud to offer the LingoX curriculum to the student teachers who lead the classes. Evan is passionate about the power of communication and its ability to benefit people in multiple ways, and he has worked previously as a health coach focused on improving outcomes based on behavior change. Evan is hoping to do further research utilizing second language acquisition into pre-existing behavior change models to show how learning languages can improve health outcomes in a future doctorate program."
 </i18n>
 <script>
 export default {
@@ -167,6 +168,17 @@ export default {
               position: 'Director of Development',
               bio: 'bio.alvin',
               image: '/images/team/chapters/alvin.jpg'
+            }
+          ]
+        },
+        {
+          name: 'Birmingham, Alabama',
+          members: [
+            {
+              name: 'Evan Hudson',
+              position: 'President',
+              bio: 'bio.evan',
+              image: '/images/team/chapters/evan.png'
             }
           ]
         }
