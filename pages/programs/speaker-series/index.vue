@@ -15,11 +15,11 @@
     </v-container>
     <v-container class="mt-n2 pt-0">
       <v-row>
-        <v-col v-for="event in events" :key="event.title" cols="4">
-          <v-card :to="'/programs/speaker-series/'+event.slug">
-            <v-img :src="event.thumbnail" />
-            <v-card-title>{{ event.speaker }}</v-card-title>
-            <v-card-subtitle>{{ event.title }}</v-card-subtitle>
+        <v-col v-for="video in videos" :key="video.title" cols="4">
+          <v-card :to="'/programs/speaker-series/'+video.slug">
+            <v-img :src="video.thumbnail" />
+            <v-card-title>{{ video.speaker }}</v-card-title>
+            <v-card-subtitle>{{ video.title }}</v-card-subtitle>
           </v-card>
         </v-col>
       </v-row>
@@ -59,8 +59,8 @@ zh:
 export default {
   name: 'SpeakerSeriesPage',
   async asyncData ({ params, error, $content }) {
-    const events = await $content('speakers').sortBy('date', 'desc').fetch()
-    return { events }
+    const videos = await $content('videos').sortBy('date', 'desc').fetch()
+    return { videos }
   },
   data () {
     return {
