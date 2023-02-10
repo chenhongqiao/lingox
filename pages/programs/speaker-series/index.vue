@@ -62,15 +62,8 @@ export default {
     const videos = await $content('videos').sortBy('date', 'desc').fetch()
     return { videos }
   },
-  data () {
-    return {
-
-    }
-  },
   head: {
     title: 'Speaker Series'
-  },
-  methods: {
   }
 }
 </script>

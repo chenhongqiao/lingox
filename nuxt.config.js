@@ -46,11 +46,11 @@ export default {
   // Modules: https://go.nuxtjs.dev/config-modules
   modules: [
     // https://go.nuxtjs.dev/vuetify
+    '@nuxt/content',
     '@nuxtjs/google-fonts',
     '@nuxtjs/i18n',
     '@nuxtjs/axios',
-    '@nuxtjs/gtm',
-    '@nuxt/content'
+    '@nuxtjs/gtm'
   ],
 
   gtm: {
