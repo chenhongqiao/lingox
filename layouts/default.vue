@@ -123,6 +123,7 @@
                 depressed
                 color="secondary"
                 target="_blank"
+                class="ml-n1"
                 href="https://www.instagram.com/lingoxofficial/"
               >
                 <v-icon>mdi-instagram</v-icon>
@@ -148,6 +149,17 @@
                 class="ml-2"
               >
                 <v-icon>mdi-hand-coin</v-icon>
+              </v-btn>
+              <v-btn
+                fab
+                small
+                depressed
+                color="secondary"
+                target="_blank"
+                href="mailto:contact@lingox.org"
+                class="ml-2"
+              >
+                <v-icon>mdi-email</v-icon>
               </v-btn>
             </div>
           </v-col>
