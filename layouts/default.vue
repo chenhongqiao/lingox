@@ -95,10 +95,10 @@
               <div>"{{ $t('makingLanguageAccessible') }}"</div>
             </div>
             <div class="mt-1 text-body-2">
-              LingoX is a 501(c)(3) nonprofit organization.
+              {{ $t('nonprofitStatement') }}
             </div>
             <v-btn color="primary" class="mt-4" href="https://www.lingox.org/signup" target="_blank">
-              Subscribe to Our Newsletter
+              {{ $t('subscribeNewsletter') }}
             </v-btn>
           </v-col>
           <v-col cols="12" sm="5" md="3">
@@ -285,7 +285,8 @@ export default {
           text: 'resources',
           base: '/resources',
           routes: [
-            { text: 'mentalHealth', link: '/mental-health' }
+            { text: 'mentalHealth', link: '/mental-health' },
+            { text: 'Language Learning', link: '/language-learning' }
           ]
         }
         /*,

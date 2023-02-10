@@ -93,7 +93,7 @@
               {{ item.value }}
             </div>
             <div class="text-h6  mt-2">
-              {{ item.label }}
+              {{ $t(item.label) }}
             </div>
           </v-card>
         </v-col>
@@ -129,19 +129,31 @@
 en:
   educate: Educate.
   heroText: We provide free language tutoring to students from underserved communities all over the world.
-  missionText: Ensuring that all students have access to quality, authentic foreign language education, regardless of income level.
+  missionText: "Ensuring that all students have access to quality, authentic foreign language education, regardless of income level."
   teamText: Meet the people behind the scenes of LingoX.
   introChineseText: Interested in learning Chinese, but find yourself lacking the resources to get started? LingoX is offering a FREE introductory program open to students with demonstrated need!
   introEnglishText: Do you want to improve your English skills? Register to join English Classroom, LingoX’s English amazing curriculum delivery program!
   speakerSeriesText: Interested in learning about different pathways and careers, such as business, medicine, computer science, and international relations? Check out our Speaker Series!
+  continentsReached: "Continents Reached"
+  countriesReached: "Countries Reached"
+  belowAverageIncome: "Below Average US Household Income"
+  collectiveInstruction: "Hours of Collective Instruction Offered"
+  freeTuition: "Worth of Free Tuition Offered"
+  feltImproved: "Felt Their Chinese Improved"
 zh:
-  educate: 教育
-  heroText: 我们为全世界未得到充分服务的群体提供免费的语言辅导。
-  missionText: 致力于让所有学生，无论收入水平，都能获得高质量的地道外语教育。
+  educate: 传播知识
+  heroText: LingoX为全世界的弱势群体提供免费便捷的语言教育。
+  missionText: 确保全世界任何好奇的学生都能获得免费，地道的语言教育。无论家庭条件。
   teamText: 在幕后运作LingoX的人们。
   introChineseText: "LingoX 为全球需要学习汉语的学生提供免费的汉语入门课程！我们的课程重点教授“用得上，说得了”的实用汉语，帮助我们的学生快速掌握运用汉语进行日常交流。"
   introEnglishText: "你想提高你的英语技能吗？欢迎申请LingoX“英语课堂”项目。 LingoX的课程开发团队针对中国学生量身定制了简单易懂，实用性极强的专属课程。"
   speakerSeriesText: "LingoX每月定期邀请来自世界排名前20大学的优秀学生，与我们分享他们申请大学选择专业的经历和经验以及他们对所选专业未来发展前景和趋势的分析和看法。"
+  continentsReached: "个大陆"
+  countriesReached: "个国家"
+  belowAverageIncome: "来自低收入家庭"
+  collectiveInstruction: "人次课程"
+  freeTuition: "节省学费"
+  feltImproved: "认为课程有帮助"
 </i18n>
 <script>
 export default {
@@ -164,27 +176,27 @@ export default {
       }],
       stats: [
         {
-          label: 'Continents Reached',
+          label: 'continentsReached',
           value: '6'
         },
         {
-          label: 'Countries Reached',
+          label: 'countriesReached',
           value: '95'
         },
         {
-          label: 'Below Average US Household Income',
+          label: 'belowAverageIncome',
           value: '97%'
         },
         {
-          label: 'Hours of Collective Instruction Offered',
+          label: 'collectiveInstruction',
           value: '4950'
         },
         {
-          label: 'Worth of Free Tuition Offered',
+          label: 'freeTuition',
           value: '$756K'
         },
         {
-          label: 'Felt Their Chinese Improved',
+          label: 'feltImproved',
           value: '100%'
         }
       ]
