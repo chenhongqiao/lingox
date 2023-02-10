@@ -1,6 +1,6 @@
 <template>
-  <div>
-    <v-container class="pt-4 pt-lg-8">
+  <div class="py-4 py-lg-8">
+    <v-container>
       <div class="text-h4">
         {{ content.title }}
       </div>
@@ -15,7 +15,7 @@
 <script>
 export default {
   async asyncData ({ params, error, $content }) {
-    const content = (await $content('speakers').where({ slug: params.slug }).fetch())[0]
+    const content = (await $content('videos').where({ slug: params.slug }).fetch())[0]
     if (!content) {
       error({ statusCode: 404, message: '404 Not Found' })
     } else {

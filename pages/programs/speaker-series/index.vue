@@ -18,6 +18,7 @@
         <v-col v-for="event in events" :key="event.title" cols="4">
           <v-card :to="'/programs/speaker-series/'+event.slug">
             <v-img :src="event.thumbnail" />
+            <v-card-title>{{ event.speaker }}</v-card-title>
             <v-card-subtitle>{{ event.title }}</v-card-subtitle>
           </v-card>
         </v-col>
@@ -30,7 +31,6 @@ en:
   paragraph:
     - "Interested in learning about different pathways and careers, such as business, medicine, computer science, and international relations? Look no further! LingoX has invited a collection of extraordinary speakers to deliver lectures and answer questions on their major of choice. Our speaker series features a different spotlighted educational consultant every month. These experienced guests speakers are highly-qualified and attend institutions such as Harvard, Stanford, UPenn, Johns Hopkins, Cornell, UCLA, UC Berkeley, and more."
     - "Their expertise is heightened by the fact that all of them have gone through the same trials and tribulations that most students do. As such, tuning in to their firsthand experiences offers spectacular foresight into what one should expect when progressing through   certain academic or career journeys. Speakers will give you the insider’s perspective on their specialization, both the good and the bad, helping you to make an informed choice when it comes to the crossroads of life. After hearing their stories, you may even be inspired to pursue interdisciplinary studies, combining your favorite subjects. The possibilities are endless!"
-    - "By following along with the series, you’ll learn about opportunities for high school students, the US college application process, how to make a college list, finding research internships, applying to jobs, and more! Sign up below to tune in!"
   form:
     firstName: "First Name*"
     lastName: "Last Name*"
