@@ -37,6 +37,7 @@ en:
     kayden: "Kayden is a future engineer that balances athleticism with his academics. He takes up a range of disciplines, including hockey, where he is well decorated. He enjoys being on the ice, science, math and english in his free time."
     botond: "Botond Horvath is a talented, aspiring astrophysicist and year 11 student at Upper Canada College. He is a proficient communicator, and fully trilingual in English, French and Hungarian, with a desire to learn more languages like Italian! In his free time, Botond enjoys reading, researching, martial arts, and performing traditional dances."
     evan: "Evan Hudson is currently finishing up his Masters of Arts in Education in Teaching English as a Second Language at the University of Alabama at Birmingham. His program offers a free Community English program for adult learners in the Birmingham area, and he is proud to offer the LingoX curriculum to the student teachers who lead the classes. Evan is passionate about the power of communication and its ability to benefit people in multiple ways, and he has worked previously as a health coach focused on improving outcomes based on behavior change. Evan is hoping to do further research utilizing second language acquisition into pre-existing behavior change models to show how learning languages can improve health outcomes in a future doctorate program."
+    cilo: "I grew up in China, and for us, English was simply another evaluation in our school system. I learned grammar and vocabulary for testing, but I never focused much on conversation. It wasn’t until I moved to the USA that I started to see language as a tool. Not just a tool for evaluation, but a tool to be used to connect with your local community. Grocery stores, restaurants, and doctor’s visits are one thing, but the ability to have genuine conversations with people around you means a lot. I am a lifelong learner, and the more fluent I have become in English, the more I have seen the differences between that and my first language of Chinese. These differences have helped me understand English even more. I want to teach other adult learners in my community to help them make the same connections that I have."
 </i18n>
 <script>
 export default {
@@ -179,6 +180,10 @@ export default {
               position: 'President',
               bio: 'bio.evan',
               image: '/images/team/chapters/evan.png'
+            },
+            {
+              name: 'Cilo Wang',
+              bio: 'bio.cilo'
             }
           ]
         }
