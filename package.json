@@ -12,6 +12,7 @@
     "lintfix": "yarn lint:js --fix"
   },
   "dependencies": {
+    "@nuxt/content": "^1",
     "@nuxtjs/axios": "^5.13.6",
     "@nuxtjs/google-fonts": "^2.0.0",
     "@nuxtjs/gtm": "^2.4.0",
@@ -22,6 +23,7 @@
     "vue": "^2.7.10",
     "vue-server-renderer": "^2.7.10",
     "vue-template-compiler": "^2.7.10",
+    "vue-youtube": "^1.4.0",
     "vuetify": "^2.6.10",
     "yaml-loader": "^0.8.0"
   },

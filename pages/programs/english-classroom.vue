@@ -4,11 +4,11 @@
       <h3 class="text-h3">
         {{ $t('englishClassroom') }}
       </h3>
-      <v-row class="mt-4">
+      <div class="text-uppercase font-weight-bold primary--text mb-2 mt-4">
+        {{ $t('programDetails') }}
+      </div>
+      <v-row>
         <v-col cols="12" md="7">
-          <div class="text-uppercase font-weight-bold primary--text mb-2">
-            {{ $t('programDetails') }}
-          </div>
           <div v-for="(text,index) in Object($t('paragraph'))" :key="index">
             <div class="text-body-1 mb-2">
               {{ text }}

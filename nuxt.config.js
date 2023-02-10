@@ -28,7 +28,8 @@ export default {
     { src: '~/filters/trim.js' },
     { src: '~/filters/placeholder.js' },
     { src: '~/filters/formatDate.js' },
-    { src: '~/filters/ordinal.js' }
+    { src: '~/filters/ordinal.js' },
+    { src: '~/plugins/youtube.js', mode: 'client' }
   ],
 
   // Auto import components: https://go.nuxtjs.dev/config-components
@@ -48,7 +49,8 @@ export default {
     '@nuxtjs/google-fonts',
     '@nuxtjs/i18n',
     '@nuxtjs/axios',
-    '@nuxtjs/gtm'
+    '@nuxtjs/gtm',
+    '@nuxt/content'
   ],
 
   gtm: {
