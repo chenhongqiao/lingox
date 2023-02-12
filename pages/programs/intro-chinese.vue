@@ -10,7 +10,7 @@
       <v-row class="mt-0 pt-0">
         <v-col cols="12" md="7">
           <div class="text-h6 mb-2">
-            Dates: Feburary 12th - April 30th, 2023 | Time: 8:00-9:00am PDT
+            Dates: Feburary 12th - April 30th, 2023 | Time: 8:00-8:45am PDT
           </div>
           <div v-if="$t('notice') !=='notice'" class="mb-2">
             <v-alert

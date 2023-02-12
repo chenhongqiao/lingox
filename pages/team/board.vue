@@ -111,15 +111,15 @@ export default {
           bio: 'bio.tyler',
           image: '/images/team/board/tyler.jpg'
         }, {
-          name: 'Ryan Shahbaba',
-          position: 'ATO',
-          bio: 'bio.ryan',
-          image: '/images/team/board/ryan.jpg'
-        }, {
           name: 'Kevin Chu',
           position: 'ATO',
           bio: 'bio.kevin',
           image: '/images/team/board/kevin.jpg'
+        }, {
+          name: 'Ryan Shahbaba',
+          position: 'ATO',
+          bio: 'bio.ryan',
+          image: '/images/team/board/ryan.jpg'
         }, {
           name: 'Simone Rothaupt',
           position: 'CPRO',
