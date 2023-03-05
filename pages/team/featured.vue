@@ -8,17 +8,7 @@
         <div style="width: 80px; height: 4px" class="my-4 secondary mx-auto" />
       </v-responsive>
 
-      <Roster :team="others" />
-    </v-container>
-    <v-container class="py-4 py-lg-8">
-      <v-responsive max-width="1200" class="mx-auto text-center">
-        <h2 class="text-h3">
-          Graphic Design Team
-        </h2>
-        <div style="width: 80px; height: 4px" class="my-4 secondary mx-auto" />
-      </v-responsive>
-
-      <Roster :team="graphics" />
+      <Roster :team="featured" />
     </v-container>
   </div>
 </template>
@@ -35,7 +25,7 @@ export default {
   name: 'BoardPage',
   data () {
     return {
-      graphics: [
+      featured: [
         {
           name: 'Lauryn Chew',
           bio: 'bio.lauryn',
@@ -48,9 +38,7 @@ export default {
           name: 'Chloe Park',
           bio: 'bio.chloe',
           image: '/images/team/graphics/chloe.jpg'
-        }
-      ],
-      others: [
+        },
         {
           name: 'Joyce Wang',
           bio: 'bio.joyce',

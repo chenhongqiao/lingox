@@ -181,7 +181,7 @@ export default {
         },
         {
           label: 'countriesReached',
-          value: '95'
+          value: '117'
         },
         {
           label: 'belowAverageIncome',

@@ -46,7 +46,7 @@ export default {
     return {
       chapters: [
         {
-          name: 'Southwest China',
+          name: 'China',
           members: [{
             name: 'Christina Chen',
             position: 'Director of Development',
@@ -73,11 +73,8 @@ export default {
             name: 'Daisy Wang',
             bio: 'bio.daisy',
             image: '/images/team/chapters/daisy.jpg'
-          }]
-        },
-        {
-          name: 'South China',
-          members: [{
+          },
+          {
             name: 'Maggie Liu',
             position: 'Regional Director of Development',
             bio: 'bio.maggie',
@@ -99,8 +96,7 @@ export default {
             position: 'Director of Marketing',
             bio: 'bio.gary',
             image: '/images/team/chapters/gary.jpg'
-          }
-          ]
+          }]
         },
         {
           name: 'New Zealand',
@@ -173,7 +169,7 @@ export default {
           ]
         },
         {
-          name: 'Birmingham, Alabama',
+          name: 'US',
           members: [
             {
               name: 'Evan Hudson',
