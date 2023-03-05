@@ -91,6 +91,16 @@
         </v-col>
       </v-row>
     </v-container>
+    <v-container>
+      <div class="text-h4 primary--text mt-6 text-center">
+        Our Students' Work
+      </div>
+      <v-row class="mt-4">
+        <v-col v-for="(image, i) in images" :key="i" cols="4">
+          <v-img :src="image" contain class="rounded-xl elevation-5" />
+        </v-col>
+      </v-row>
+    </v-container>
   </div>
 </template>
 
@@ -109,7 +119,7 @@ export default {
         },
         {
           label: 'Countries Reached',
-          value: '95'
+          value: '117'
         },
 
         {
@@ -128,6 +138,11 @@ export default {
           label: 'Below Average US Household Income',
           value: '97%'
         }
+      ],
+      images: [
+        '/images/impact/notes1.jpg',
+        '/images/impact/notes2.jpg',
+        '/images/impact/notes3.jpg'
       ]
     }
   },
