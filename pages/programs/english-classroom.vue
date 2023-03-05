@@ -9,6 +9,14 @@
       </div>
       <v-row>
         <v-col cols="12" md="7">
+          <div v-if="$t('notice') !=='notice'" class="mb-2">
+            <v-alert
+              type="info"
+              color="secondary"
+            >
+              {{ $t('notice') }}
+            </v-alert>
+          </div>
           <div v-for="(text,index) in Object($t('paragraph'))" :key="index">
             <div class="text-body-1 mb-2">
               {{ text }}
@@ -16,6 +24,14 @@
           </div>
         </v-col>
         <v-col cols="12" md="5">
+          <v-img
+            src="/images/english_classroom.png"
+            class="rounded-lg elevation-6 mb-2"
+            max-height="480"
+          />
+          <div class="text-caption mb-2">
+            {{ $t('caption') }}
+          </div>
           <v-card class="pa-1" flat>
             <v-card-title>{{ $t('recipientInfo') }}</v-card-title>
             <v-card-text v-if="done" class="text-center">
@@ -131,6 +147,8 @@
 </template>
 <i18n lang="yaml">
 en:
+  caption: "The English Classroom curriculum in use at the University of Alabama, Birmingham’s Community English Program"
+  notice: "As of now, English Classroom is primarily intended toward scholastic and organizational units, rather than individuals"
   paragraph:
     - "Do you want to improve your English skills? Register to join English Classroom, LingoX’s English amazing curriculum delivery program! This service is directed toward underprivileged school communities and aims to provide comprehensive, useful language instruction. LingoX’s curriculum developers have spent much time synthesizing materials and preparing these lessons to ensure optimal utility. In order to request these lessons, one must verify their school’s need and ability to distribute the information to all students."
     - "English Classroom’s 2-in-1 lessons revolve around “Everyday English” and “Phonics”. Both being subjects that are integral components to achieving fluency in English — yet rarely taught in a holistic manner by educational institutions overseas. The former places an emphasis on conversational speaking, while the latter revolves around reading aloud and pronunciation."
