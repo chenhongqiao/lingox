@@ -144,7 +144,7 @@
         Our Reviews
       </div>
       <v-row class="mt-4">
-        <v-col v-for="(testimonial, i) in testimonials" :key="i">
+        <v-col v-for="(testimonial, i) in testimonials" :key="i" cols="12" md="6">
           <v-card height="100%" color="primary lighten-1">
             <v-card-title class="text-h5 font-weight-bold white--text mb-2">
               {{ testimonial.name }}
