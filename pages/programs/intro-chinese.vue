@@ -117,6 +117,11 @@
                   :rules="[(v) => !!v || 'Income is required']"
                 />
                 <v-text-field
+                  v-model="formData.learnAbout"
+                  :label="$t('form.learnAbout')"
+                  :rules="[(v) => !!v || 'How you learned about us is required']"
+                />
+                <v-text-field
                   v-model="formData.comments"
                   :label="$t('form.comments')"
                 />
@@ -135,6 +140,24 @@
           </v-card>
         </v-col>
       </v-row>
+      <div class="text-uppercase text-h4 font-weight-bold primary--text mt-6 text-center">
+        Our Reviews
+      </div>
+      <v-row class="mt-4">
+        <v-col v-for="(testimonial, i) in testimonials" :key="i">
+          <v-card height="100%" color="primary lighten-1">
+            <v-card-title class="text-h5 font-weight-bold white--text mb-2">
+              {{ testimonial.name }}
+            </v-card-title>
+            <v-card-subtitle class="text-subtitle-1 white--text">
+              {{ testimonial.location }}
+            </v-card-subtitle>
+            <v-card-text class="white--text mb-2 text-body-1">
+              {{ testimonial.quote }}
+            </v-card-text>
+          </v-card>
+        </v-col>
+      </v-row>
     </v-container>
     <v-snackbar v-model="error" color="error">
       An error has occurred while submitting the form. Please try again.
@@ -149,6 +172,7 @@ en:
     - "LingoX strives to aid students from underserved communities, who may normally lack such support. We hope that these interactive, accessible Chinese lessons will motivate students to learn a new language and be inspired to connect with others. These lessons will be supplemented by exciting practice in conversational skills, as well as witnessing the language in various forms of entertainment media. By curriculum design, students should be able to engage in conversation in the first session!"
     - "Our course’s live format allows for students to ask questions and have them answered immediately, whilst also receiving ongoing support. Furthermore, our standby Tech Team is prepared to troubleshoot connectivity and software issues. We will also have after-class practice for participants to review and work on, in order to solidify the new knowledge."
     - "It is our firm belief that all those interested in learning Chinese should be granted the means to do so. Ready to study the most spoken language in the world? Sign up now, while limited spots last! No prior background in Chinese is required."
+    - "While all classes will be filmed and subsequently emailed out, in order to obtain the official LingoX Certificate of Program Completion (which you can add to your resume or CV), you must attend at least 6 out of 11 live meetings."
     - "Note: As part of its commitment to serving impoverished students, LingoX may prioritize certain applicants based on their circumstances."
   longIntroChinese: "Shoujen Scholars Program"
   form:
@@ -162,6 +186,7 @@ en:
     proficiency: "Proficiency*"
     timeZone: "Time Zone*"
     income: "Household Income*"
+    learnAbout: "How did you learn about this program?*"
     comments: "Additional Comments"
 zh:
   notice: "注册后所有有关课程的信息和更新都会被发到注册时填写的邮箱（可能会被归为垃圾邮件）。您也可以关注我们的Instagram @lingoxofficial。"
@@ -201,12 +226,26 @@ export default {
         reason: '',
         plan: '',
         timeCommitment: '',
+        learnAbout: '',
         comments: ''
       },
       valid: false,
       submitting: false,
       done: false,
-      error: false
+      error: false,
+
+      testimonials: [
+        {
+          name: 'Angelica',
+          location: 'Mexico City, Mexico',
+          quote: "I am grateful to Lingo for sharing this amazing course! As a worker and student, I don't have a lot of time to spend hours studying Chinese, but the structure of the class allows me to retain new information in short amounts of time. Thank you, Lingox! 非常感谢!"
+        },
+        {
+          name: 'Deena',
+          location: 'Karnataka, India',
+          quote: 'Shoujen Scholars Program is really the best platform to learn Chinese. I am lucky to be a student of this program, especially with the amazing teaching methods. Thank you for this program! iAtiht!'
+        }
+      ]
     }
   },
   head: {
