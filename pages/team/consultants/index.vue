@@ -30,6 +30,7 @@ en:
   berkeley: UC Berkeley
   cornell: Cornell University
   ucla: UCLA
+  umich: University of Michigan
 zh:
   stanford: 斯坦福大学
   havard: 哈佛大学
@@ -38,6 +39,7 @@ zh:
   berkeley: UC Berkeley
   cornell: Cornell University
   ucla: UCLA
+  umich: University of Michigan
 </i18n>
 <script>
 export default {
@@ -96,6 +98,13 @@ export default {
           position: 'ucla',
           image: '/images/team/consultants/alex.jpg',
           slug: 'alex'
+        },
+        {
+          name: 'Benjamin Moy',
+          bio: 'bio.benjamin',
+          position: 'umich',
+          image: '/images/team/consultants/benjamin.jpg',
+          slug: 'benjamin'
         }
       ]
     }

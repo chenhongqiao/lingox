@@ -38,6 +38,7 @@ en:
     botond: "Botond Horvath is a talented, aspiring astrophysicist and year 11 student at Upper Canada College. He is a proficient communicator, and fully trilingual in English, French and Hungarian, with a desire to learn more languages like Italian! In his free time, Botond enjoys reading, researching, martial arts, and performing traditional dances."
     evan: "Evan Hudson is currently finishing up his Masters of Arts in Education in Teaching English as a Second Language at the University of Alabama at Birmingham. His program offers a free Community English program for adult learners in the Birmingham area, and he is proud to offer the LingoX curriculum to the student teachers who lead the classes. Evan is passionate about the power of communication and its ability to benefit people in multiple ways, and he has worked previously as a health coach focused on improving outcomes based on behavior change. Evan is hoping to do further research utilizing second language acquisition into pre-existing behavior change models to show how learning languages can improve health outcomes in a future doctorate program."
     cilo: "I grew up in China, and for us, English was simply another evaluation in our school system. I learned grammar and vocabulary for testing, but I never focused much on conversation. It wasn’t until I moved to the USA that I started to see language as a tool. Not just a tool for evaluation, but a tool to be used to connect with your local community. Grocery stores, restaurants, and doctor’s visits are one thing, but the ability to have genuine conversations with people around you means a lot. I am a lifelong learner, and the more fluent I have become in English, the more I have seen the differences between that and my first language of Chinese. These differences have helped me understand English even more. I want to teach other adult learners in my community to help them make the same connections that I have."
+    gabriela: "Gabriela Romero grew up in La Chorrera, Panama. She is an ESL teacher and reading and cultural promoter. In 2011, she traveled to South Korea for a Korean language and culture program and that’s when she started her tutoring journey. She is currently finishing a Post Graduate in Reading Pedagogy with the Argentinian Foundation Mempo Giardinelli. Since 2010, she is deeply interested in accessibility and inclusive education, this encourage her to learn Panamanian sign language and other teaching strategies to be able to support all her students. She has been teaching English at a local cultural center since 2021."
 </i18n>
 <script>
 export default {
@@ -46,16 +47,14 @@ export default {
     return {
       chapters: [
         {
-          name: 'China',
+          name: 'Asia',
           members: [{
             name: 'Christina Chen',
-            position: 'Director of Development',
             bio: 'bio.christina',
             image: '/images/team/chapters/christina.jpg'
           },
           {
             name: 'Lynn Zhang',
-            position: 'Director of Human Resouces',
             bio: 'bio.lynn',
             image: '/images/team/chapters/lynn.jpg'
           },
@@ -76,42 +75,41 @@ export default {
           },
           {
             name: 'Maggie Liu',
-            position: 'Regional Director of Development',
             bio: 'bio.maggie',
             image: '/images/team/chapters/maggie.jpg'
           }, {
             name: 'Derek Zhang',
-            position: 'Director of Development',
             bio: 'bio.derek',
             image: '/images/team/chapters/derek.jpg'
           },
           {
             name: 'Vicky Zheng',
-            position: 'Director of Human Resources',
             bio: 'bio.vicky',
             image: '/images/team/chapters/vicky.jpg'
           },
           {
             name: 'Gary Yukun',
-            position: 'Director of Marketing',
             bio: 'bio.gary',
             image: '/images/team/chapters/gary.jpg'
           }]
         },
         {
-          name: 'New Zealand',
+          name: 'North America',
           members: [
             {
-              name: 'Kristine Peng',
-              position: 'Director of Development',
-              bio: 'bio.kristine',
-              image: '/images/team/chapters/kristine.jpg'
-            }
-          ]
-        },
-        {
-          name: 'Canada',
-          members: [
+              name: 'Evan Hudson',
+              bio: 'bio.evan',
+              image: '/images/team/chapters/evan.png'
+            },
+            {
+              name: 'Gabriela Romero',
+              bio: 'bio.gabriela',
+              image: '/images/team/chapters/gabriela.jpg'
+            },
+            {
+              name: 'Cilo Wang',
+              bio: 'bio.cilo'
+            },
             {
               name: 'Eugenio Ciarlandini',
               bio: 'bio.eugenio',
@@ -158,28 +156,23 @@ export default {
           ]
         },
         {
-          name: 'UK',
+          name: 'Europe',
           members: [
             {
               name: 'Alvin Zhou',
-              position: 'Director of Development',
               bio: 'bio.alvin',
               image: '/images/team/chapters/alvin.jpg'
             }
           ]
         },
         {
-          name: 'US',
+          name: 'New Zealand',
           members: [
             {
-              name: 'Evan Hudson',
-              position: 'President',
-              bio: 'bio.evan',
-              image: '/images/team/chapters/evan.png'
-            },
-            {
-              name: 'Cilo Wang',
-              bio: 'bio.cilo'
+              name: 'Kristine Peng',
+              position: 'Director of Development',
+              bio: 'bio.kristine',
+              image: '/images/team/chapters/kristine.jpg'
             }
           ]
         }
