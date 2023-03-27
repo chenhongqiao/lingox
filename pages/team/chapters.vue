@@ -166,7 +166,7 @@ export default {
           ]
         },
         {
-          name: 'New Zealand',
+          name: 'Oceania',
           members: [
             {
               name: 'Kristine Peng',
