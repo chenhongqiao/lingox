@@ -100,6 +100,9 @@
           <v-img :src="image" contain class="rounded-xl elevation-5" />
         </v-col>
       </v-row>
+      <div class="text-center text-subtitle-1 mt-4">
+        Notes from "Vincent Banh, SSP Cohort I"
+      </div>
     </v-container>
   </div>
 </template>
