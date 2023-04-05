@@ -16,7 +16,7 @@
     <v-container class="mt-n2 pt-0">
       <v-row>
         <v-col v-for="video in videos" :key="video.title" md="4" xs="6" cols="12">
-          <v-card :to="'/programs/speaker-series/'+video.slug">
+          <v-card :to="'/programs/speaker-series/'+video.slug" class="fill-height">
             <v-img :src="video.thumbnail" />
             <v-card-title>{{ video.speaker }}</v-card-title>
             <v-card-subtitle>{{ video.title }}</v-card-subtitle>
