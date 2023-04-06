@@ -4,7 +4,10 @@
       Language Learning
     </h3>
     <div class="mt-4 text-body-1">
-      Do you have any questions regarding language learning? Whether it be about vocabulary usage, grammar rules, or even study method recommendations, leave us a message below! We have volunteers available 24/7 to provide support, but may need more time for responses during busy periods. Please only submit one question at a time!
+      Do you have any questions regarding language learning? Whether it be about vocabulary usage, grammar rules, or even study method recommendations, leave us a message below!
+    </div>
+    <div class="mt-2 text-body-1">
+      We have volunteers available 24/7 to provide support, but may need more time for responses during busy periods. Please only submit one question at a time!
     </div>
     <v-card class="pa-1 mt-4" flat>
       <v-card-text v-if="done" class="text-center">
@@ -32,7 +35,7 @@
             <v-col cols="12" sm="3">
               <v-select
                 v-model="formData.type"
-                :items="['Content-based','Study tips','Resources']"
+                :items="['Content','Study tips','Resources', 'Other']"
                 :label="$t('form.type')"
                 :rules="[(v) => !!v || 'Question Type is required']"
               />
@@ -80,7 +83,7 @@ en:
   form:
     type: "Question Type*"
     subject: "Question Subject*"
-    question: "Please enter your here (please specify the language if it's language-specific)*"
+    question: "Please enter your question here (please specify the language if it's language-specific)*"
     email: "Email*"
 </i18n>
 
