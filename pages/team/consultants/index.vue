@@ -51,7 +51,7 @@ export default {
           name: 'Eric Gao',
           position: 'stanford',
           bio: 'bio.eric',
-          image: '/images/team/consultants/eric.jpg',
+          image: '/images/team/consultants/eric.png',
           slug: 'eric'
         },
         {
