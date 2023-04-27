@@ -189,7 +189,7 @@ export default {
         },
         {
           label: 'collectiveInstruction',
-          value: '4950'
+          value: '12K'
         },
         {
           label: 'freeTuition',
