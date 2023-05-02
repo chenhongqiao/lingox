@@ -38,6 +38,7 @@ en:
     botond: "Botond Horvath is a talented, aspiring astrophysicist and year 11 student at Upper Canada College. He is a proficient communicator, and fully trilingual in English, French and Hungarian, with a desire to learn more languages like Italian! In his free time, Botond enjoys reading, researching, martial arts, and performing traditional dances."
     evan: "Evan Hudson is currently finishing up his Masters of Arts in Education in Teaching English as a Second Language at the University of Alabama at Birmingham. His program offers a free Community English program for adult learners in the Birmingham area, and he is proud to offer the LingoX curriculum to the student teachers who lead the classes. Evan is passionate about the power of communication and its ability to benefit people in multiple ways, and he has worked previously as a health coach focused on improving outcomes based on behavior change. Evan is hoping to do further research utilizing second language acquisition into pre-existing behavior change models to show how learning languages can improve health outcomes in a future doctorate program."
     cilo: "I grew up in China, and for us, English was simply another evaluation in our school system. I learned grammar and vocabulary for testing, but I never focused much on conversation. It wasn’t until I moved to the USA that I started to see language as a tool. Not just a tool for evaluation, but a tool to be used to connect with your local community. Grocery stores, restaurants, and doctor’s visits are one thing, but the ability to have genuine conversations with people around you means a lot. I am a lifelong learner, and the more fluent I have become in English, the more I have seen the differences between that and my first language of Chinese. These differences have helped me understand English even more. I want to teach other adult learners in my community to help them make the same connections that I have."
+    facundina: "Facundina Chacón is from La Chorrera. She has been in the educational sector for more than 25 years. She has a Master's in Human Resources and is currently collaborating with her daughter in a language and cultural program. She is also interested in promoting inclusive education and accessibility."
     gabriela: "Gabriela Romero grew up in La Chorrera, Panama. She is an ESL teacher and reading and cultural promoter. In 2011, she traveled to South Korea for a Korean language and culture program and that’s when she started her tutoring journey. She is currently finishing a Post Graduate in Reading Pedagogy with the Argentinian Foundation Mempo Giardinelli. Since 2010, she is deeply interested in accessibility and inclusive education, this encourage her to learn Panamanian sign language and other teaching strategies to be able to support all her students. She has been teaching English at a local cultural center since 2021."
 </i18n>
 <script>
@@ -110,6 +111,11 @@ export default {
               name: 'Cilo Wang',
               bio: 'bio.cilo',
               image: '/images/team/chapters/cilo.jpg'
+            },
+            {
+              name: 'Facundina Chacón',
+              bio: 'bio.facundina',
+              image: '/images/team/chapters/facundina.jpg'
             },
             {
               name: 'Eugenio Ciarlandini',
