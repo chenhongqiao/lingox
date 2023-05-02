@@ -108,7 +108,8 @@ export default {
             },
             {
               name: 'Cilo Wang',
-              bio: 'bio.cilo'
+              bio: 'bio.cilo',
+              image: '/images/team/chapters/cilo.jpg'
             },
             {
               name: 'Eugenio Ciarlandini',
