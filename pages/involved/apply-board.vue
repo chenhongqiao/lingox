@@ -9,7 +9,7 @@
           {{ $t('getInvolved') }}
         </div>
         <div class="text-body-1 mb-2">
-          Applications for the 2023-2024 LingoX Executive Board are currently open! You may apply to one or several of the positions on the Executive Board. All materials are due by <b>May 21st, 11:59 pm PDT</b> and we require an <b>application</b> and a <b>resume</b>.
+          Applications for the 2023-2024 LingoX Executive Board are currently open! You may apply to one or several of the positions on the Executive Board. All materials are due by <b>June 4th, 11:59 pm PDT</b> and we require an <b>application</b> and a <b>resume</b>.
         </div>
         <div class="text-body-1 mb-2">
           Please make a copy of the application and type your answers below each question. In order for your application to be considered complete, you must send a PDF of your application to hr@lingox.org along with your resume by the deadline. Make sure that we have viewing access to all documents or attachments provided!
