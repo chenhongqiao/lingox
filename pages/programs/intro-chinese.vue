@@ -10,7 +10,7 @@
       <v-row class="mt-0 pt-0">
         <v-col cols="12" md="7">
           <div class="text-h6 mb-2">
-            Cohort III | Dates: 10/22/23 - 1/07/24
+            Cohort III | Dates: 10/29/23 - 1/14/24
           </div>
           <div v-if="$t('notice') !=='notice'" class="mb-2">
             <v-alert
