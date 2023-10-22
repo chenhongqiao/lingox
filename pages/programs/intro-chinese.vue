@@ -168,12 +168,11 @@
 en:
   notice: "If you have signed up for this program, please consistently check your email (including the spam folder) for updates. All information will be sent to your inbox. You can also follow us @lingoxofficial on Instagram for important announcements."
   paragraph:
-    - "Interested in learning Chinese, but find yourself lacking the resources to get started? LingoX is offering a FREE introductory program open to students with demonstrated need! Classes will be live, taking place on Zoom every week. Our curriculum places a heavy emphasis on “speakable” Chinese and aims to have you talking in Mandarin by the end of our time together. With the help of our skilled and attentive teachers, students will find themselves greatly enjoying their educational experience."
-    - "LingoX strives to aid students from underserved communities, who may normally lack such support. We hope that these interactive, accessible Chinese lessons will motivate students to learn a new language and be inspired to connect with others. These lessons will be supplemented by exciting practice in conversational skills, as well as witnessing the language in various forms of entertainment media. By curriculum design, students should be able to engage in conversation in the first session!"
-    - "Our course’s live format allows for students to ask questions and have them answered immediately, whilst also receiving ongoing support. Furthermore, our standby Tech Team is prepared to troubleshoot connectivity and software issues. We will also have after-class practice for participants to review and work on, in order to solidify the new knowledge."
-    - "It is our firm belief that all those interested in learning Chinese should be granted the means to do so. Ready to study the most spoken language in the world? Sign up now, while limited spots last! No prior background in Chinese is required."
-    - "While all classes will be filmed and subsequently emailed out, in order to obtain the official LingoX Certificate of Program Completion (which you can add to your resume or CV), you must attend at least 6 out of 11 live meetings."
-    - "Note: As part of its commitment to serving impoverished students, LingoX may prioritize certain applicants based on their circumstances."
+    - "The Shoujen Scholars Program is a transformative 11-week Mandarin language-learning initiative, entirely funded by LingoX, with the core mission of breaking down barriers and providing accessible Chinese education for individuals who are enthusiastic about learning but may encounter resource limitations."
+    - "With a hybrid learning format (both synchronous and asynchronous), SSP offers an empowering solution for those eager to embrace the Mandarin language. Participants not only receive free online lessons and comprehensive course materials, including engaging video lessons and a dedicated course book, but they also benefit from unwavering support and guidance throughout their journey, including access to the thriving SSP Scholar Network."
+    - "SSP is a remarkable opportunity to unlock the mysteries of Mandarin, forge meaningful cultural connections, and immerse oneself in the rich world of the Chinese language. At LingoX, we believe that all those interested in learning Chinese should be granted the means to do so. That's why SSP is fully funded, ensuring that cost is never a barrier to education."
+    - "Our first few lessons are held virtually on Zoom for the purpose of allowing the cohort to familiarize themselves with each other and build community, while also providing opportunities for students to ask questions live. We understand that due to the busy nature of our scholars’ lives, not everyone can make the same time for online classes. So for our later lessons, we transition to an asynchronous format, allowing students to learn at their own pace."
+    - "In addition to our engaging video lessons, we've introduced a complementary course book. This comprehensive resource provides a robust foundation for your language journey. "
   longIntroChinese: "Shoujen Scholars Program"
   form:
     firstName: "First Name*"
@@ -243,7 +242,7 @@ export default {
         {
           name: 'Deena',
           location: 'Karnataka, India',
-          quote: 'Shoujen Scholars Program is really the best platform to learn Chinese. I am lucky to be a student of this program, especially with the amazing teaching methods. Thank you for this program! iAtiht!'
+          quote: 'Shoujen Scholars Program is really the best platform to learn Chinese. I am lucky to be a student of this program, especially with the amazing teaching methods. Thank you for this program!'
         }
       ]
     }
