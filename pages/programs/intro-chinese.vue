@@ -243,6 +243,16 @@ export default {
           name: 'Deena',
           location: 'Karnataka, India',
           quote: 'Shoujen Scholars Program is really the best platform to learn Chinese. I am lucky to be a student of this program, especially with the amazing teaching methods. Thank you for this program!'
+        },
+        {
+          name: 'Andrea',
+          location: 'Los Angeles, United States',
+          quote: 'This is my first approach to the Chinese language. I really appreciate the Shoujen Scholars Program, for your time and effort to make it possible for me to discover China from a more enjoyable perspective.'
+        },
+         {
+          name: 'Roxann',
+          location: 'Toronto, Canada',
+          quote: 'I am so thankful to SSP, Mia, and the rest of the staffs! As a complete beginner of the language, you guys helped me learn Mandarin effectively and yet have fun at the same time! Xiè Xiè!'
         }
       ]
     }
