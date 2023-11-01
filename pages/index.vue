@@ -197,7 +197,7 @@ export default {
         },
         {
           label: 'feltImproved',
-          value: '110K'
+          value: '$110K'
         }
       ]
     }
