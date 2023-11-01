@@ -137,9 +137,9 @@ en:
   continentsReached: "Continents Reached"
   countriesReached: "Countries Reached"
   belowAverageIncome: "Below Average US Household Income"
-  collectiveInstruction: "Hours of Collective Instruction Offered"
-  freeTuition: "Worth of Free Tuition Offered"
-  feltImproved: "Felt Their Chinese Improved"
+  collectiveInstruction: "Hours of Free Learning Provided"
+  freeTuition: "Worth of Classes Offered"
+  feltImproved: "Worth of Grants Received"
 zh:
   educate: 传播知识
   heroText: LingoX为全世界的弱势群体提供免费便捷的语言教育。
@@ -181,7 +181,7 @@ export default {
         },
         {
           label: 'countriesReached',
-          value: '117'
+          value: '136'
         },
         {
           label: 'belowAverageIncome',
@@ -189,15 +189,15 @@ export default {
         },
         {
           label: 'collectiveInstruction',
-          value: '12K'
+          value: '97K'
         },
         {
           label: 'freeTuition',
-          value: '$756K'
+          value: '$1M+'
         },
         {
           label: 'feltImproved',
-          value: '100%'
+          value: '110K'
         }
       ]
     }
