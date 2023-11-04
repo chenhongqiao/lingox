@@ -18,21 +18,13 @@ en:
     mial: "Mia is greatly passionate about education and strives to make learning resources more accessible for all. She founded LingoX with the goal construct an inclusive, welcoming environment for all students to pursue their passion, background notwithstanding. In her free time, Mia enjoys playing the piano, creative writing, and traveling to new places. She is always happy to make new friends and answer any questions you may have about LingoX!"
     harry: "Growing up in China and spending his first seven years of K-12 education in a non-English environment, Harry recognizes that for all English learners to unleash their full potential, creating an inclusive community with equitable access to quality education is essential. Having been exploring computer science for many years, Harry hopes to connect people in different regions around the world with the help of technology and pursue the goals of LingoX. Harry also plays tennis and likes to code while cooking."
     tyler: "Tyler, being the older of two siblings, finds tremendous value in the power of education as a means to open up doors of possibility and reshape the world. As a part of LingoX, he hopes to make English education accessible to ALL. Aside from his passion for education, Tyler’s identity stands as a volleyball player and a photographer who would not hesitate to hang out and meet new friends whenever the opportunity arises."
-    david: "David is currently a senior at University High School in Irvine, California. Being involved in different activities such as MUN and FBLA, he has learned about the importance of both communication and the importance of trying to help out one's community. At LingoX, he hopes to achieve this goal by making English a more accessible language to those who may not have the opportunities. Outside of school, David enjoys playing golf and listening to music."
-    hannah: "Coming from a multicultural background, Hannah values learning about different cultures and languages. Through LingoX, she hopes that she will be able to encourage and empower other students to also be passionate about their culture. During her free time, Hannah enjoys drawing, going to the beach, and playing the piano."
+    hannah: "Coming from a multicultural background, Hannah values learning about different cultures and languages and sharing it with others. Through LingoX, she hopes that she will be able to encourage and empower other students through language education to also be passionate about their culture. During her free time, Hannah enjoys drawing, going to the beach, and playing tennis."
     jane: "As a first-generation immigrant with parents in the education industry, Jane Wang recognizes the importance of English education for youth in underserved communities. It is essential for those to communicate and connect with people they could not understand before and therefore understand the world in a more enormous scope. Jane hopes to utilize her previous experience in advertising and marketing to reach a larger international audience, especially young women wanting to pursue higher education. Outside of her academics, Jane enjoys pursuing visual arts and designing escape rooms."
-    sanjana: "Sanjana is a rising senior in Irvine, California. Being a first-generation immigrant and her Indian heritage has exposed her to a multitude of different languages and how valuable language and words can be. Being able to speak 4 languages has opened her eyes to the beauty that each language possesses, and she hopes she can share her love of languages with others through LingoX. Aside from education, Sanjana is an avid badminton player and is really passionate about mental health awareness."
-    jia: "As a Korean immigrant, her own very personal ties to education and language have spurred her passion for education and motivated her to join this program. She wishes to share her enthusiasm for Lingo X with others and contribute to the objective of spreading knowledge and the beauty of education elsewhere. Jia enjoys golf and reading outside of school."
-    simone: "Simone Rothaupt is a rising senior at Rancho Solano Preparatory School in Phoenix, Arizona. She intends on majoring in economics and public policy in college. Through LingoX, she aims to assist in its global endeavor to improve language education. Her outside interests include long-distance running and creative writing."
-    abby: "As an incipient junior in Southern California, Abby Warnock is looking forward to encouraging all students to pursue their interests regardless of their situation. She believes that there is a plethora of information to learn from one another, which is why she hopes that working with LingoX will help others understand that everyone deserves a chance to learn about topics they are passionate about. When not involved in academics, Abby enjoys making new friends and developing her skills in visual arts."
-    miah: "Through her contributions to LingoX she hopes to help spread access to education around the world. Mia is looking forward to being able to utilize her experiences in other organizations to help LingoX encourage students to follow their passions. During her free time, Mia loves to go on hikes, explore outside, and hang out with her friends to make new experiences."
-    shivali: "Shivali Shrivastava is a rising sophomore. Being raised as a first-generation immigrant with Indian parents, she has been exposed to many valuable languages. She plans to use LingoX as a bridge to connect impoverished communities with quality education. During her free time, Shivali enjoys taking walks on the beach or making memories with her friends."
-    sarah: "As a Chinese-American student who studied in multiple countries, Sarah Xie deeply comprehends how English serves as a vital tool in every educational aspect. She wishes to help youngsters in underserved communities get the chance to achieve their dreams through LingoX. In her free time, Sarah enjoys playing tennis, painting as well as traveling."
-    judy: "Judy Tao, an uprising junior who completed her first seven years of education in China, recognized the significance of studying and appreciating diverse languages and cultures. Thus, she wished to explore and enhance the education of languages through LingoX, and also assist the students who want to learn languages. During her free time, she enjoys dancing, painting, playing card games, and hanging out with her friends."
-    ryan: "Ryan is an aspiring neurosurgeon who takes a great interest in neuroscience and computer science. In his free time he likes to play with Rubik’s cubes, cook, and partake in public speaking events. He is currently fluent in two languages and is learning a third. Although he doesn’t want to go into a music career, Ryan also plays the viola and piano as a hobby. He is a very sociable person who will befriend anyone who approaches him."
-    bruno: "Bruno is a sophomore at University High School, where he writes for his school newspaper and participates in Mock Trial, Model United Nations, and Speech & Debate. From these activities, Bruno learned the significance of effective communication. As the son of two immigrants, Bruno was raised hearing stories from his parents about the struggles of learning English. In his free time, you might find Bruno playing with his two cats, eating an In-N-Out burger with friends, or playing board games with family."
     kevin: "Kevin is currently a junior at Northwood High School in Irvine, California. Since he lived in multiple different countries, he realizes the need for students around the world to have an accessible education to help break language barriers. He is interested in computer science, and hopes to use it to benefit the global community. In his free time, Kevin enjoys music production, playing tennis, and sleeping."
-    emma: "As a Thai-American with an extensive cultural background, Emma values the importance of language education in bringing youth all around the world endless opportunities. With fluency in two languages, and currently learning a third, she wishes to share her passion for education and leadership through LingoX. Currently a junior in high school, Emma also enjoys traveling during her breaks and reading."
+    tei: "Tei, a multiracial person who has lived in four different countries and speaks four languages fluently, has a steadfast love for linguistic diversity. Her zeal is firmly anchored in multiculturalism and the appreciation of difference as ideals. Tei is convinced that languages act as bridges, opening up doors to new opportunities while also establishing close relationships between people. She finds the process of learning a language to be beautiful as well. As a member of LingoX, she hopes to share her passion and make it accessible for all. She enjoys programming and playing the piano in her free time."
+    sarea: "Sarea's passion for language learning and communication is driven by her fluency in four languages, which inspires her creativity and deepens her understanding of the world around her. Growing up surrounded by diverse cultures, she recognizes the transformative power of language in empowering individuals and fostering connections across communities. At LingoX, she hopes to promote equality through language education, inviting more students to appreciate cultural and linguistic diversity as well. In her free time, Sarea enjoys journaling and dancing, and you will also often find her immersing herself in different cultures through watching movies!"
+    safa: "Safa is currently a senior at West Fargo High School in West Fargo, North Dakota. Being a first-generation immigrant from Kenya has exposed her to a multitude of different languages and cultures and how valuable education access can be in assisting to break language barriers. She hopes to achieve this goal at LingoX. Safa is interested in pharmacy and hopes to use medicine to give back to underprivileged communities around the world. In her free time, she enjoys drawing, playing tennis, and volunteering."
+    eric: "Eric is a junior at Stanford studying economics and mathematics. He is interested in understanding human decision-making and how institutions should be shaped in response to achieve societal objectives. Eric is also passionate about economics education, making interesting concepts beyond “econ 1” accessible."
 zh:
   bio:
     mial: "Mia 对教育充满热情，致力于帮助贫困社区和弱势家庭的学生获得平等、优质的教育资源。Mia 的业余爱好是弹钢琴，打高尔夫，写作和旅行。"
@@ -61,45 +53,15 @@ export default {
           bio: 'bio.mial',
           image: '/images/team/board/mial.jpg'
         }, {
-          name: 'David Chen',
-          position: 'CMO',
-          bio: 'bio.david',
-          image: '/images/team/board/david.jpg'
-        }, {
           name: 'Hannah Choi',
           position: 'AMO',
           bio: 'bio.hannah',
           image: '/images/team/board/hannah.jpg'
         }, {
-          name: 'Jane Wang',
-          position: 'AMO',
-          bio: 'bio.jane',
-          image: '/images/team/board/jane.jpg'
-        }, {
-          name: 'Sarah Xie',
+          name: 'Sarea Leung',
           position: 'ADO',
-          bio: 'bio.sarah',
-          image: '/images/team/board/sarah.jpg'
-        }, {
-          name: 'Bruno Diaz',
-          position: 'ADO',
-          bio: 'bio.bruno',
-          image: '/images/team/board/bruno.jpg'
-        }, {
-          name: 'Emma Sriprapundh',
-          position: 'ADO',
-          bio: 'bio.emma',
-          image: '/images/team/board/emma.jpg'
-        }, {
-          name: 'Sanjana Ramakrishnan',
-          position: 'CFO',
-          bio: 'bio.sanjana',
-          image: '/images/team/board/sanjana.jpg'
-        }, {
-          name: 'Jia An',
-          position: 'AFO',
-          bio: 'bio.jia',
-          image: '/images/team/board/jia.jpg'
+          bio: 'bio.sarea',
+          image: '/images/team/board/sarea.png'
         }, {
           name: 'Harry Chen',
           position: 'CTO',
@@ -114,27 +76,21 @@ export default {
           name: 'Kevin Chu',
           position: 'ATO',
           bio: 'bio.kevin',
-          image: '/images/team/board/kevin.jpg'
+          image: '/images/team/board/kevin.jpeg'
         }, {
-          name: 'Ryan Shahbaba',
-          position: 'ATO',
-          bio: 'bio.ryan',
-          image: '/images/team/board/ryan.jpg'
-        }, {
-          name: 'Simone Rothaupt',
-          position: 'CPRO',
-          bio: 'bio.simone',
-          image: '/images/team/board/simone.jpg'
-        }, {
-          name: 'Abby Warnock',
+          name: 'Tei Mercedes',
           position: 'APRO',
-          bio: 'bio.abby',
-          image: '/images/team/board/abby.jpg'
+          bio: 'bio.tei',
+          image: '/images/team/board/tei.jpg'
         }, {
-          name: 'Judy Tao',
+          name: 'Safa Ibrahim',
           position: 'APRO',
-          bio: 'bio.judy',
-          image: '/images/team/board/judy.jpg'
+          bio: 'bio.safa',
+          image: '/images/team/board/safa.png'
+        }, {
+          name: 'Eric Gao',
+          bio: 'bio.eric',
+          image: '/images/team/board/eric.png'
         }
       ]
     }
