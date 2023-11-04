@@ -53,6 +53,11 @@ export default {
           bio: 'bio.mial',
           image: '/images/team/board/mial.jpg'
         }, {
+          name: 'Eric Gao',
+          position: 'COO',
+          bio: 'bio.eric',
+          image: '/images/team/board/eric.png'
+        }, {
           name: 'Hannah Choi',
           position: 'AMO',
           bio: 'bio.hannah',
@@ -87,10 +92,6 @@ export default {
           position: 'APRO',
           bio: 'bio.safa',
           image: '/images/team/board/safa.png'
-        }, {
-          name: 'Eric Gao',
-          bio: 'bio.eric',
-          image: '/images/team/board/eric.png'
         }
       ]
     }
