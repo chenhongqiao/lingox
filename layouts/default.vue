@@ -88,7 +88,7 @@
           <v-col cols="12" sm="7" md="9">
             <div class="mb-2">
               <div class="text-uppercase text-h7 text-truncate">
-                © 2023 LingoX
+                Copyright © 2024 LingoX
               </div>
             </div>
             <div class="text-body-1">
